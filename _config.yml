@@ -1,12 +1,12 @@
 # Site settings
-title: 
+title: Code Hannah
 header-img: img/home-bg.png
 email: hecarnes@gmail.com
 copyright_name: hcarnes
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Hannah learns to code.
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: 
+twitter_username: KetoAustin
 github_username:  hcarnes
 learn_profile: hcarnes
 email_username: hecarnes@gmail.com
