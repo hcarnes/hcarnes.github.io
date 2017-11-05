@@ -8,7 +8,7 @@ permalink:  why_software_development
 
 My background is in art education and nonprofits. I am motivated by work that improves the lives of real people. I am happiest when I am immersed in learning. Last year, I learned VBA to increase my productivity in Excel and Outlook. During this experience, I learned how much I enjoy the process of coding. 
 
-I also attended a SXSW event focused on how technology can improve outcomes in women’s health. I was inspired by the passion of each panelist as they explained how their web applications were increasing healthcare access to underserved populations. Through this experience, I realized software has the power to solve tough social problems.
+I also attended a SXSW event focused on how technology can improve outcomes in women’s health. I was inspired by the passion of each panelist as they explained how their web applications increased healthcare access to vulnerable populations. Through this experience, I realized software has the power to solve tough social problems.
 
 I have a lot of ideas about how technology could help nonprofits increase their impact, and I want to connect my ideas with coding skills. As much as I love a challenge, the decision to learn software development feels like a no-brainer.
 
