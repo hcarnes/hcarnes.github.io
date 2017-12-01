@@ -12,15 +12,11 @@ Both methods below accomplish the same task: accept an argument of a phone numbe
 
 **Code smell:**
 
-`def valid_phone_number?(phone)
-  phone.match?(/\d{10}|^\d{3}-\d{3}-\d{4}$|^[(]\d{3}+[)]\d{3}-\d{4}|^\d{3}.\d{3}.\d{4}|^[(]\d{3}[)]\d{7}/)
-end`
- 
+![smell](https://i.imgur.com/B9JJC0F.png)
+
 **Clean clode:**
 
-`def valid_phone_number?(phone)
-  phone.match?/\(?\d{3}\)?(\s|-)?\d{3}(\s|-)?\d{4}/
-end`
+![clean](https://i.imgur.com/MEJbA8U.png)
 
 I initially approached the problem by creating a separate RegEx method for each different version of valid phone number. I enclosed the method in extraneous parentheses and inserted unnecessary characters, such as  “`^`” and "`$`". Each method was separated by a pipe “`|`” to represent “or”. Here is the breakdown on the RegEx for each valid number.
 
