@@ -18,6 +18,8 @@ Both methods below accomplish the same task: accept an argument of a phone numbe
 
 ![clean](https://i.imgur.com/MEJbA8U.png)
 
+### What was I thinking?
+
 I initially approached the problem by creating a separate RegEx method for each different version of valid phone number. I enclosed the method in extraneous parentheses and inserted unnecessary characters, such as  “`^`” and "`$`". Each method was separated by a pipe “`|`” to represent “or”. Here is the breakdown on the RegEx for each valid number.
 
 *  `/\d{10}`
@@ -25,6 +27,8 @@ I initially approached the problem by creating a separate RegEx method for each 
 *  `^[(]\d{3}+[)]\d{3}-\d{4}`
 *  `^\d{3}.\d{3}.\d{4}`
 *  `^[(]\d{3}[)]\d{7}` 
+
+### The Refactoring Process
 
 To begin refactoring, I found commonalities in the valid phone numbers. All of the numbers include 10 digits. The first three digits are sometimes preceded by an open parentheses. The next three digits are also sometimes divided by a closed parentheses, a space, or a dash. I created a skeleton number with these separate digit groups. If you test the code below against the valid numbers in Rubular, only 1234567890 will match. 
 
