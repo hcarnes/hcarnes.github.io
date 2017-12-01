@@ -27,7 +27,8 @@ I initially approached the problem by creating a separate RegEx method for each 
 *  `^\d{3}-\d{3}-\d{4}$`
 *  `^[(]\d{3}+[)]\d{3}-\d{4}`
 *  `^\d{3}.\d{3}.\d{4}`
-*  `^[(]\d{3}[)]\d{7}` <br>
+*  `^[(]\d{3}[)]\d{7}` 
+
 
 ### The Refactoring Process
 
