@@ -30,7 +30,7 @@ I initially approached the problem by creating a separate RegEx method for each 
 *  `^[(]\d{3}[)]\d{7}` 
 
 
-<br>
+
 ### The Refactoring Process
 
 To begin refactoring, I found commonalities in the valid phone numbers. All of the numbers include 10 digits. The first three digits are sometimes preceded by an open parentheses. The next three digits are also sometimes divided by a closed parentheses, a space, or a dash. I created a skeleton number with these separate digit groups. If you test the code below against the valid numbers in Rubular, only 1234567890 will match. 
