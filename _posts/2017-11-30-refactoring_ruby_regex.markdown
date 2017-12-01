@@ -18,6 +18,7 @@ Both methods below accomplish the same task: accept an argument of a phone numbe
 
 ![clean](https://i.imgur.com/MEJbA8U.png)
 
+
 ### What was I thinking?
 
 I initially approached the problem by creating a separate RegEx method for each different version of valid phone number. I enclosed the RegEx in extraneous parentheses and inserted unnecessary characters, such as  “`^`” and "`$`". Each expression was separated by a pipe “`|`” to represent “or”. Here is the breakdown on the RegEx for each valid number.
@@ -27,6 +28,7 @@ I initially approached the problem by creating a separate RegEx method for each 
 *  `^[(]\d{3}+[)]\d{3}-\d{4}`
 *  `^\d{3}.\d{3}.\d{4}`
 *  `^[(]\d{3}[)]\d{7}` 
+*  
 
 ### The Refactoring Process
 
