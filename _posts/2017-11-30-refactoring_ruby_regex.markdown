@@ -12,11 +12,19 @@ Both methods below accomplish the same task: accept an argument of a phone numbe
 
 **Code smell:**
 
-![smell](https://i.imgur.com/B9JJC0F.png)
+```ruby
+def valid_phone_number?(phone)
+  phone.match?(/\d{10}|^\d{3}-\d{3}-\d{4}$|^[(]\d{3}+[)]\d{3}-\d{4}|^\d{3}.\d{3}.\d{4}|^[(]\d{3}[)]\d{7}/)
+end
+```
 
 **Clean clode:**
 
-![clean](https://i.imgur.com/MEJbA8U.png)<br>
+```ruby
+def valid_phone_number?(phone)
+  phone.match?/\(?\d{3}\)?(\s|-)?\d{3}(\s|-)?\d{4}/
+end
+```
 
 
 ### What was I thinking?
