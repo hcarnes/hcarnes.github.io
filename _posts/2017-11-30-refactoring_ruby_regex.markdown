@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      " Refactoring Ruby RegEx"
+title:      "Refactoring Ruby Regex"
 date:       2017-11-30 20:01:42 -0500
 permalink:  refactoring_ruby_regex
 ---
@@ -29,7 +29,7 @@ end
 
 ### What was I thinking?
 
-I initially approached the problem by creating a separate RegEx method for each different version of valid phone number. I enclosed the RegEx in extraneous parentheses and inserted unnecessary characters, such as  “`^`” and "`$`". Each expression was separated by a pipe “`|`” to represent “or”. Here is the breakdown on the RegEx for each valid number.
+I initially approached the problem by creating a separate regular expression pattern for each different version of valid phone number. I enclosed the regex in extraneous parentheses and inserted unnecessary characters, such as  “`^`” and "`$`". Each expression was separated by a pipe “`|`” to represent “or”. Here is the breakdown on the regex for each valid number.
 
 *  `/\d{10}`
 *  `^\d{3}-\d{3}-\d{4}$`
@@ -47,7 +47,7 @@ In some of the valid numbers, the area code might be enclosed in parentheses. Le
 
 `\(?\d{3}\)?\d{3}\d{4}`
 
-What about the numbers with either a space or a dash between groups of digits? In RegEx, a space can be represented by “`\s`”. If we want to check for a space or a dash or nothing we can use the following syntax: “`(\s|-)?`”. Let’s place this syntax between the digit groups. If you test the code below against our valid numbers in Rubular, all valid numbers will match.
+What about the numbers with either a space or a dash between groups of digits? In regular expressions, a space can be represented by “`\s`”. If we want to check for a space or a dash or nothing we can use the following syntax: “`(\s|-)?`”. Let’s place this syntax between the digit groups. If you test the code below against our valid numbers in Rubular, all valid numbers will match.
 
 `\(?\d{3}\)?(\s|-)?\d{3}(\s|-)?\d{4}`
 
