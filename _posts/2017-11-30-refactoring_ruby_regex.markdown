@@ -18,7 +18,7 @@ def valid_phone_number?(phone)
 end
 ```
 
-**Clean clode:**
+**Clean code:**
 
 ```ruby
 def valid_phone_number?(phone)
@@ -37,11 +37,9 @@ I initially approached the problem by creating a separate RegEx method for each 
 *  `^\d{3}.\d{3}.\d{4}`
 *  `^[(]\d{3}[)]\d{7}` 
 
+### The refactoring process
 
-
-### The Refactoring Process
-
-To begin refactoring, I found commonalities in the valid phone numbers. All of the numbers include 10 digits. The first three digits are sometimes preceded by an open parentheses. The next three digits are also sometimes divided by a closed parentheses, a space, or a dash. I created a skeleton number with these separate digit groups. If you test the code below against the valid numbers in Rubular, only 1234567890 will match. 
+To begin refactoring, I found commonalities in the valid phone numbers. All of the numbers include 10 digits. The first 3 digits are sometimes preceded by an open parentheses. The next 3 digits are also sometimes divided by a closed parentheses, a space, or a dash. I created a skeleton number with these separate digit groups. If you test the code below against the valid numbers in Rubular, only 1234567890 will match. 
 
 `\d{3}\d{4}\d{5}`
 
@@ -54,15 +52,3 @@ What about the numbers with either a space or a dash between groups of digits? I
 `\(?\d{3}\)?(\s|-)?\d{3}(\s|-)?\d{4}`
 
 Ah, much better.
-
-
-
-
-
-
-
-
-
-
-
-
