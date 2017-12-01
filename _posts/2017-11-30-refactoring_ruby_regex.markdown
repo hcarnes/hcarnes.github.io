@@ -16,7 +16,7 @@ Both methods below accomplish the same task: accept an argument of a phone numbe
 
 **Clean clode:**
 
-![clean](https://i.imgur.com/MEJbA8U.png)
+![clean](https://i.imgur.com/MEJbA8U.png)<br>
 
 
 ### What was I thinking?
@@ -27,8 +27,7 @@ I initially approached the problem by creating a separate RegEx method for each 
 *  `^\d{3}-\d{3}-\d{4}$`
 *  `^[(]\d{3}+[)]\d{3}-\d{4}`
 *  `^\d{3}.\d{3}.\d{4}`
-*  `^[(]\d{3}[)]\d{7}` 
-*  
+*  `^[(]\d{3}[)]\d{7}` <br>
 
 ### The Refactoring Process
 
