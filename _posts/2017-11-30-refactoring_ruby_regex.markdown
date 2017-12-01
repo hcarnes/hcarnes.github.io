@@ -6,7 +6,7 @@ permalink:  refactoring_ruby_regex
 ---
 
 
-Code that is unnecessarily long is not fun to read. Refactoring involves reevaluating and rewriting code to increase efficiency and readability. To demonstrate refactoring, I'll show you how I started with a long method and refactored it to find a cleaner solution.
+Code that is unnecessarily long is not fun to read. Refactoring involvesrewriting code to increase efficiency and readability. To demonstrate refactoring, I'll show you how I started with a long method and refactored it to find a cleaner solution.
 
 Both methods below accomplish the same task: accept an argument of a phone number and return true for valid phone numbers, regardless of format, and return false for invalid phone numbers. Examples of valid numbers include: 1234567890, 123-456-7890, (123)456-7890, 123 456 7890, and (123)4567890. 
 
