@@ -3,6 +3,7 @@ layout: post
 title:      "Hannaoke"
 date:       2017-12-19 23:06:00 -0500
 permalink:  hannaoke
+published: false
 ---
 I don't always have time to karaoke as much as I would like, but I did carve out time to create a KaraokeBar class. It was a fun way to implement the concept of private methods and review more OO Ruby.  
 
