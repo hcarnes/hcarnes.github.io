@@ -1,0 +1,52 @@
+---
+layout: post
+title:      "Hannaoke"
+date:       2017-12-19 23:06:00 -0500
+permalink:  hannaoke
+---
+
+
+```ruby
+class KaraokeBar
+  #We will want to look at the queue.
+  attr_reader :queue
+
+  def initialize
+    @queue = []
+    @song_history = []
+  end
+
+  def add_singer(singer_name, song_name, artist)
+    if unavailable_songs.include?(song_name)
+      puts "That song is unavailable."
+    else
+      @queue << {singer_name: singer_name, song_name: song_name, artist: artist}
+      puts "Thanks, #{singer_name}. You are number #{queue.length} in line."
+    end
+  end
+
+  def on_deck
+    next_singer = @queue.first
+    puts "#{next_singer[:singer_name]}, you are up next!"
+  end
+
+  def call_singer
+    if @queue.any?
+      new_singer = @queue.shift
+      @song_history.unshift(new_singer)
+      query = "#{new_singer[:artist].gsub(/\s/, '+')} #{new_singer[:song_name].gsub(/\s/, '+')} karaoke"
+      `open "https://www.google.com/search?q=#{query}&oq=#{query}&btnI=1"`
+      puts "Step right up #{new_singer[:singer_name]}!!!!"
+    else
+      puts "Attract more customers, nobody is singing."
+    end
+  end
+
+  private
+  def unavailable_songs
+    (@song_history[0..9]+@queue).map do |singer|
+      singer[:song_name]
+    end
+  end
+end
+```
