@@ -2,7 +2,7 @@
 layout: post
 title:      "Hannahoke"
 date:       2017-12-19 23:06:00 -0500
-permalink:  hannaoke
+permalink:  hannahoke
 published:  true
 
 ---
@@ -54,7 +54,7 @@ The `call_singer`method checks if anyone is in the queue and removes the first p
     end
   end
   ```
-The method `unavailable songs` cannot be called outside of an instance of KaraokeBar because it is only used internally within the `add_singer` method and is marked private. This method checks to ensure that a song cannot be sung if it has been sang within the last 10 songs and that someone has not already signed up for that song.
+The method `unavailable_songs` cannot be called outside of an instance of KaraokeBar because it is only used internally within the `add_singer` method and is marked private. This method checks to ensure that a song cannot be sung if it has been sang within the last 10 songs and that someone has not already signed up for that song.
 
   ```ruby 
   private
