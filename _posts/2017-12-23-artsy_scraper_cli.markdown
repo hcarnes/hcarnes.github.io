@@ -5,9 +5,7 @@ date:       2017-12-24 00:38:33 +0000
 permalink:  artsy_scraper_cli
 ---
 
-# Artsy Scraper CLI
-
-For my CLI Data Gem project, I created the [ArtsyScraperCli](https://github.com/hcarnes/artsy_scraper_cli) gem. This gem is a virtual art gallery that lists artwork genes and prints 10 works of art based on the user's selection. Data for this gem is pulled from [Artsy.com](https://www.artsy.net/collect) using Selenium Webdriver. I chose [Selenium Webdriver](http://blog.morizyun.com/blog/selenium-webdriver-ruby-browser-test/index.html) to scrape data because Arty's website uses Javascript to render their HTML. I also used a the gem [iterm-imgcat](https://rubygems.org/gems/iterm-imgcat) to print each artwork image in iTerm.
+For my CLI Data Gem project, I created the [ArtsyScraperCli](https://github.com/hcarnes/artsy_scraper_cli) gem. This gem is a virtual art gallery that lists artwork genes and prints 10 works of art based on the user's selection. Data for this gem is pulled from [Artsy.com](https://www.artsy.net/collect) using Selenium Webdriver. I chose [Selenium Webdriver](http://blog.morizyun.com/blog/selenium-webdriver-ruby-browser-test/index.html) to scrape data because Arty's website uses Javascript to render their HTML. I also used the gem [iterm-imgcat](https://rubygems.org/gems/iterm-imgcat) to print each artwork image in iTerm.
 
 The greatest challenge was choosing an object oriented design. I started out with 3 classes: Controller, Gene, and Artwork. After stubbing out some code and researching OO design patterns, I decided to add a Scraper class that would handle scraping both the genes and artworks. Since I hit the OO portion of the Ruby curriculum, drawing things out has really helped me:
 
