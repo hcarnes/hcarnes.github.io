@@ -61,7 +61,7 @@ It turns out that when Selenium Webdriver clicked on the gene element in order t
 ```
 OO Ruby really slowed down my momentum as far as finishing lessons and labs, but it helped me learned a lot about slowing down in order to let my creativity and curiousity guide my coding journey. Printing artwork in iterm was cool.
 
-![iterm_image](https://i.imgur.com/Tx02Yrr.png "Screenshot")
+![iterm_image](https://imgur.com/898o2Te.gif "Screenshot")
 
 
 
