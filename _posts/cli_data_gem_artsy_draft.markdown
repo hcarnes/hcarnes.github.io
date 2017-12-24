@@ -1,8 +1,8 @@
 ---
 layout: post
-title:      "Artsy Scraper CLI"
+title:      "Artsy Scraper CLI Draft"
 date:       2017-12-22 20:06:00 -0500
-permalink:  artsy_scraper_cli
+permalink:  artsy_scraper_cli_draft
 published:  false
 ---
 
