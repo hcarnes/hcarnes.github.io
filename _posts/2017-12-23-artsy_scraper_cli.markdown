@@ -7,9 +7,9 @@ permalink:  artsy_scraper_cli
 
 # Artsy Scraper CLI
 
-For my CLI Data Gem project, I created the [ArtsyScraperCli](https://github.com/hcarnes/artsy_scraper_cli) gem. This gem is a virtual art gallery that lists artwork genes and prints 10 works of art based on the user's selection. Data for this gem is pulled from [Artsy.com](https://www.artsy.net/collect) using Selenium Webdriver. I chose [Selenium Webdriver](http://blog.morizyun.com/blog/selenium-webdriver-ruby-browser-test/index.html) to scrape data because Arty's website used Javascript to render html. I also used a the gem [iterm-imgcat](https://rubygems.org/gems/iterm-imgcat) to print each artwork image in iterm.
+For my CLI Data Gem project, I created the [ArtsyScraperCli](https://github.com/hcarnes/artsy_scraper_cli) gem. This gem is a virtual art gallery that lists artwork genes and prints 10 works of art based on the user's selection. Data for this gem is pulled from [Artsy.com](https://www.artsy.net/collect) using Selenium Webdriver. I chose [Selenium Webdriver](http://blog.morizyun.com/blog/selenium-webdriver-ruby-browser-test/index.html) to scrape data because Arty's website uses Javascript to render their HTML. I also used a the gem [iterm-imgcat](https://rubygems.org/gems/iterm-imgcat) to print each artwork image in iTerm.
 
-The greatest challenge was choosing an object oriented design. I started out with 3 classes: Controller, Gene, and Artwork. After stubbing out some code and researching OO design patterns, I decided to add a Scraper class that would handle scraping both the genes and artworks. It helps me to draw out my ideas, especially since I've hit OO Ruby.
+The greatest challenge was choosing an object oriented design. I started out with 3 classes: Controller, Gene, and Artwork. After stubbing out some code and researching OO design patterns, I decided to add a Scraper class that would handle scraping both the genes and artworks. Since I hit the OO portion of the Ruby curriculum, drawing things out has really helped me:
 
 ![oo_notes](https://i.imgur.com/DD7UhGi.jpg "oo_notes")
 
@@ -58,6 +58,6 @@ It turns out that when Selenium Webdriver clicked on the gene element in order t
     end
   end
 ```
-OO Ruby really slowed down my momentum as far as finishing lessons and labs, but it helped me learned a lot about slowing down in order to let my creativity and curiousity guide my coding journey. Printing artwork in iterm was cool.
+OO Ruby really reduced my velocity as far as finishing lessons and labs, but it helped me learn to slow down and let my creativity and curiousity guide my coding journey. Seeing artwork print out in iTerm after scraping it was very rewarding:
 
 ![iterm_image](https://imgur.com/898o2Te.gif "Screenshot")
