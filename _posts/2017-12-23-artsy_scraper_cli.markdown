@@ -5,6 +5,7 @@ date:       2017-12-24 00:38:33 +0000
 permalink:  artsy_scraper_cli
 ---
 
+# Artsy Scraper CLI
 
 For my CLI Data Gem project, I created the [ArtsyScraperCli](https://github.com/hcarnes/artsy_scraper_cli) gem. This gem is a virtual art gallery that lists artwork genes and prints 10 works of art based on the user's selection. Data for this gem is pulled from [Artsy.com](https://www.artsy.net/collect) using Selenium Webdriver. I chose [Selenium Webdriver](http://blog.morizyun.com/blog/selenium-webdriver-ruby-browser-test/index.html) to scrape data because Arty's website used Javascript to render html. I also used a the gem [iterm-imgcat](https://rubygems.org/gems/iterm-imgcat) to print each artwork image in iterm.
 
@@ -60,11 +61,3 @@ It turns out that when Selenium Webdriver clicked on the gene element in order t
 OO Ruby really slowed down my momentum as far as finishing lessons and labs, but it helped me learned a lot about slowing down in order to let my creativity and curiousity guide my coding journey. Printing artwork in iterm was cool.
 
 ![iterm_image](https://imgur.com/898o2Te.gif "Screenshot")
-
-
-
-
-
-
-
-
