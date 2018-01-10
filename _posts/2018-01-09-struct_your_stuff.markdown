@@ -1,10 +1,10 @@
 ---
-layout: post
+layout:     post
 title:      "Struct Your Stuff"
-date:       2018-01-10 00:17:26 +0000
+date:       2018-01-09 19:20:42 -0500
 permalink:  struct_your_stuff
+published: true
 ---
-
 <style>
  img {
    width: 256px;
@@ -102,4 +102,3 @@ cat_1.ageee = 25
 ```
 
 You don't have to use `Struct`, but it might make your life easier. I used `Struct` to create a data structure for my [basic Sinatra app](https://github.com/hcarnes/sinatra-basic-forms-lab-v-000/blob/master/models/puppy.rb). For understanding when to use a `Hash` instead of a `Struct`, I found [this](https://stackoverflow.com/a/3275624) StackOverflow answer very helpful.
-
