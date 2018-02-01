@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
 end
 ```
 However, you might need to validate data in ways that are not as common as something like validating the presence of a username. In that case, you would need to create a custom validation. For example, Bidify allows users to list auction items, as well as bid on other people’s items. To ensure users can’t bid on their own item, I created a custom validation. I added `validate :no_self_bidding` to the `Bid` class and created a `no_self_bidding` method in the same class. To make a custom validation, you write a simple logical test, such as `if self.user == self.listing.user`, which defines the case where you want there to be a validation failure. To add the error, you call `errors.add`, where the first parameter is the attribute associated with the error, and the second is the message you want presented to the user. In the case where your error is not related to a single attribute, you can use `:base` which you'll see below in `auction_isnt_over`:
+
 ```ruby
 class Bid < ActiveRecord::Base
  belongs_to :user
