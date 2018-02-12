@@ -73,4 +73,4 @@ end
 
 The form looks simple, but as you can see, there is a lot going on behind the scenes.
 
-![Imgur](https://i.imgur.com/xip4utG.png | width=100)
+![Imgur](https://i.imgur.com/xip4utG.png) <!-- .element height="50%" width="50%" -->
