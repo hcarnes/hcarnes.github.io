@@ -73,6 +73,6 @@ end
 
 The form looks simple, but as you can see, there is a lot going on behind the scenes.
 
-<a href="https://imgur.com/xip4utG"><img src="https://i.imgur.com/xip4utG.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/xip4utG"><img src="https://i.imgur.com/xip4utG.png" title="source: imgur.com" height="100" width="48" /></a>
 
 
