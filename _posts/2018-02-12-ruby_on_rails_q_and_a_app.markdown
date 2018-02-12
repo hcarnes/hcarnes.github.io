@@ -14,7 +14,7 @@ One of the biggest hurdles I faced during this project was implementing the foll
 
 A nested form handles more than one model object at a time. With nested forms, users can submit one form, as opposed to a creating new form for each model object. In my case, I used a nested form that allows users to submit a question and tags on the same form. 
 
-## Setting Up Object Relationshps
+## Setting Up Object Relationships
 
 Because questions can have multiple tags and tags can belong to multiple questions, I created the join table, QuestionTags. You can see how I mapped this `has_many :through`, along with all the other relationships[ here](https://docs.google.com/spreadsheets/d/1DLd3Y9fC0-vweIqquSyq3wj5PhdbTabyXca-roWh__4/edit#gid=2001163121). 
 
