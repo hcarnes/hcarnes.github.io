@@ -28,7 +28,7 @@ Next, I added the `tag_name` attribute in question form:
   <%= f.text_field :summary %>
 
   <%= f.label :tag_names, "Tags" %>
-  <%= f.text_field :tag_names, class: "form-control" %>
+  <%= f.text_field :tag_names %>
 
   <%= f.label :content, "Question" %>
   <%= f.text_area :content %>
@@ -73,7 +73,7 @@ class Question < ApplicationRecord
 end
 ```
 
-The form looks simple, but as you can see, there is a lot going on behind the scenes.
+The form looks simple, but there are a lot of things happening behind the scenes.
 
 <a href="https://imgur.com/xip4utG"><img src="https://i.imgur.com/xip4utG.png" title="source: imgur.com" height="500" width="350" /></a>
 
