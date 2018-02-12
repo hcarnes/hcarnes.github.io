@@ -73,4 +73,6 @@ end
 
 The form looks simple, but as you can see, there is a lot going on behind the scenes.
 
-![Imgur|512x397,20%]](https://i.imgur.com/xip4utG.png)
+<a href="url"><img src="https://i.imgur.com/xip4utG.pn" align="left" height="48" width="48" ></a>
+
+
