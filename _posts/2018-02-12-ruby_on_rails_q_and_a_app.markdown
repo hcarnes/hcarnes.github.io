@@ -8,13 +8,15 @@ permalink:  ruby_on_rails_q_and_a_app
 
 Keeping track of how things are supposed to work at work is hard. Nobody likes getting asked the same question over and over, especially ones that probably have answers buried in Slack or old emails. [Socratic](https://github.com/hcarnes/socratic) attempts to solve this problem. This app allows users to post questions, allows multiple users to answer one question, and allows users to mark the most helpful answer with a green check mark.
 
-One of the biggest hurdles I faced during this project was meeting the following requirement:  You must include a nested form that writes to an associated model through a custom attribute writer.
+One of the biggest hurdles I faced during this project was meeting the following requirement:  **You must include a nested form that writes to an associated model through a custom attribute writer.**
+
+<a href="https://imgur.com/2Sgaasn"><img src="https://i.imgur.com/2Sgaasn.gif" title="source: imgur.com" /></a>
 
 A nested form handles more than one model object at a time. With nested forms, users can submit one form, as opposed to a creating new form for each model object. In my case, I used a nested form that allows users to submit a question and tags on the same form. 
 
 ## Setting Up Object Relationshps
 
-Because questions can have multiple tags and tags can belong to multiple questions, I created the join table, QuestionTags. You can see how I mapped this `has_many :through`, along with all the other relationshpips[ here](https://docs.google.com/spreadsheets/d/1DLd3Y9fC0-vweIqquSyq3wj5PhdbTabyXca-roWh__4/edit#gid=2001163121). 
+Because questions can have multiple tags and tags can belong to multiple questions, I created the join table, QuestionTags. You can see how I mapped this `has_many :through`, along with all the other relationships[ here](https://docs.google.com/spreadsheets/d/1DLd3Y9fC0-vweIqquSyq3wj5PhdbTabyXca-roWh__4/edit#gid=2001163121). 
 
 ## Creating a Nest Form
 
