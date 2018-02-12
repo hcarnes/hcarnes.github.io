@@ -74,7 +74,7 @@ class Question < ApplicationRecord
 end
 ```
 
-The nested looks simple, but there is a lot happening behind the curtain.
+My final nested form looks pretty simple, but there a lot of trial and error along the way.
 
 <a href="https://imgur.com/xip4utG"><img src="https://i.imgur.com/xip4utG.png" title="source: imgur.com" height="500" width="350" /></a>
 
