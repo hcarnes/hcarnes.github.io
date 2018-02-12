@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Rails Q&A App: Nested Forms"
+title:      "Rails App: Nested Forms"
 date:       2018-02-12 19:44:19 +0000
 permalink:  ruby_on_rails_q_and_a_app
 ---
