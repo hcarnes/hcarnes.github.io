@@ -32,7 +32,7 @@ Next, I added the `tag_name` attribute in question form:
 
   <%= f.label :content, "Question" %>
   <%= f.text_area :content %>
-  <%= f.submit class:  %>
+  <%= f.submit %>
 <% end %>
 ```
 
