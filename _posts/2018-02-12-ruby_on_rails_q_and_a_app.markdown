@@ -10,7 +10,7 @@ Keeping track of how things are supposed to work at work is hard. Nobody likes g
 
 One of the biggest hurdles I faced during this project was meeting the following requirement:  **You must include a nested form that writes to an associated model through a custom attribute writer.**
 
-<a href="https://imgur.com/2Sgaasn"><img src="https://i.imgur.com/2Sgaasn.gif" title="source: imgur.com" height="400" width="350" /></a>
+<a href="https://imgur.com/2Sgaasn"><img src="https://i.imgur.com/2Sgaasn.gif" title="source: imgur.com" height="475" width="350" /></a>
 
 A nested form handles more than one model object at a time. With nested forms, users can submit one form, as opposed to a creating new form for each model object. In my case, I used a nested form that allows users to submit a question and tags on the same form. 
 
