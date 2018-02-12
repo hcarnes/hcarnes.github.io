@@ -35,6 +35,7 @@ Next, I added the `tag_name` attribute in question form:
   <%= f.submit class:  %>
 <% end %>
 ```
+
 ## Updating Strong Params
 
 I also added the new custom associated attribute to the permitted params in the `QuestionsController`. Now, our newly created attribute is on the model's whitelist of accepted attributes.
