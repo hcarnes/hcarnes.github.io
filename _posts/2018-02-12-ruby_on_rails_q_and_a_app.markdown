@@ -52,7 +52,7 @@ end
 ```
 ## Attribute Customization
 
-I also needed to create the associations in the parent model. In this case, I created readers and writers for `tag_names` in the Question model. Users can enter tags, such as `coffee, break` and the custom writer will check the database to ensure that duplicate tags are not created through the `find_or_initialize_by` method.
+I also needed to create the associations in the parent model. In this case, I created readers and writers for `tag_names` in the Question model. Users can enter tags (i.e., "coffee, break") and the custom writer will check the database to ensure that duplicate tags are not created through the `find_or_initialize_by` method.
 
 ```ruby
 class Question < ApplicationRecord
