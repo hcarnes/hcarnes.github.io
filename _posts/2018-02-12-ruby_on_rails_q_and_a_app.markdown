@@ -73,4 +73,4 @@ end
 
 The form looks simple, but as you can see, there is a lot going on behind the scenes.
 
-![Imgur](https://i.imgur.com/xip4utG.png)
+![Imgur|512x397,20%]](https://i.imgur.com/xip4utG.png)
