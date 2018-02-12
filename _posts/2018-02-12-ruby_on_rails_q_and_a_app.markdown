@@ -74,7 +74,7 @@ class Question < ApplicationRecord
 end
 ```
 
-The nested form looks simple, but there are a lot of things happening behind the scenes.
+The nested looks simple, but there is a lot happening behind the curtain.
 
 <a href="https://imgur.com/xip4utG"><img src="https://i.imgur.com/xip4utG.png" title="source: imgur.com" height="500" width="350" /></a>
 
