@@ -22,7 +22,7 @@ Because questions can have multiple tags and tags can belong to multiple questio
 
 Next, I added the `tag_name` attribute in question form:
 
-```ruby
+```erb
 <%= form_for @question do |f| %>
   <%= f.label :summary %>
   <%= f.text_field :summary %>
@@ -51,7 +51,7 @@ end
 ```
 ## Attribute Customization
 
-I also needed to create the associations in the parent model. In this case, I created readers and writers for `tag_names` in the Question model. Users can enter tags, such as `coffee, snacks` and the custom writer will check the database to ensure that duplicate tags are not created through the `find_or_initialize_by` method.
+I also needed to create the associations in the parent model. In this case, I created readers and writers for `tag_names` in the Question model. Users can enter tags, such as `coffee, break` and the custom writer will check the database to ensure that duplicate tags are not created through the `find_or_initialize_by` method.
 
 ```ruby
 class Question < ApplicationRecord
@@ -73,7 +73,7 @@ class Question < ApplicationRecord
 end
 ```
 
-The form looks simple, but there are a lot of things happening behind the scenes.
+The nested form looks simple, but there are a lot of things happening behind the scenes.
 
 <a href="https://imgur.com/xip4utG"><img src="https://i.imgur.com/xip4utG.png" title="source: imgur.com" height="500" width="350" /></a>
 
