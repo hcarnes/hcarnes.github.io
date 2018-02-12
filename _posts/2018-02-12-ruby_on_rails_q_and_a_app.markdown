@@ -6,7 +6,7 @@ permalink:  ruby_on_rails_q_and_a_app
 ---
 
 
-Keeping track of how things are supposed to work at work is hard. Nobody likes getting asked the same question over and over, especially ones that probably have answers buried in Slack or old emails. [Socratic](https://github.com/hcarnes/socratic) attempts to solve this problem. This app allows users to post questions, allows multiple users to answer one question, and allows users to mark the most helpful answer with a green check mark.
+Keeping track of how things are supposed to work at work is hard. Nobody likes getting asked the same question over and over, especially ones that probably have answers buried in Slack or old emails. [Socratic](https://github.com/hcarnes/socratic) attempts to solve this problem. This app allows users to post questions and allows multiple users to answer one question. If a particular answer turns out to be most useful, the person who asked the question can mark this answer with a green check mark.
 
 One of the biggest hurdles I faced during this project was meeting the following requirement:  **You must include a nested form that writes to an associated model through a custom attribute writer.**
 
