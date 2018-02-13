@@ -18,7 +18,7 @@ A nested form handles more than one model object at a time. With nested forms, u
 
 Because questions can have multiple tags and tags can belong to multiple questions, I created the join table, QuestionTags. You can see how I mapped this `has_many :through`, along with all the other relationships[ here](https://docs.google.com/spreadsheets/d/1DLd3Y9fC0-vweIqquSyq3wj5PhdbTabyXca-roWh__4/edit#gid=2001163121). 
 
-## Creating a Nest Form
+## Creating a Nested Form
 
 Next, I added the `tag_name` attribute in question form:
 
