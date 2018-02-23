@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JavaScript Array Methods"
-date:       2018-02-23 05:01:33 +0000
+date:       2018-02-23 00:01:34 -0500
 permalink:  javascript_array_methods
 ---
 
