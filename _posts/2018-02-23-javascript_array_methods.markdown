@@ -1,16 +1,16 @@
 ---
 layout: post
-title:      "JavaScript Array Methods"
+title:      "Javascript Array Methods"
 date:       2018-02-23 00:01:34 -0500
 permalink:  javascript_array_methods
 ---
 
 
-JavaScript has data structures called arrays and objects (like hashes in Ruby), and you can operate on these data structures with different methods. There are subtle differences between common methods that might make your head spin if you don't understand the nitty gritty details. 
+Javascript has data structures called arrays and objects (like hashes in Ruby), and you can operate on these data structures with different methods. There are subtle differences between common methods that might make your head spin if you don't understand the nitty gritty details. 
 
 <img src="https://i.imgur.com/8NwhIUG.gif" title="source: imgur.com" height="300" width="300" class="img-responsive">
 
-Okay, enough spinning. This post will provide basic explanations for the following JavaScript methods: `.forEach()`, `.map()`, `.filter()`, `.find()`, and `reduce()`. 
+Okay, enough spinning. This post will provide basic explanations for the following Javascript methods: `.forEach()`, `.map()`, `.filter()`, `.find()`, and `reduce()`. 
 
 ## forEach()
 This method executes a callback once for each element in the array. The return value is `undefined`, and this method changes original array. Let's say we had an array that contains ages for 5 people, and we want to add 10 years to each age in the array, but we aren 't concerned with getting the new array as a return value.  Let's use `forEach()`:
