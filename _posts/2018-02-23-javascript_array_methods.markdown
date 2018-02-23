@@ -13,7 +13,7 @@ JavaScript has data structures called arrays and objects (like hashes in Ruby), 
 Okay, enough spinning. This post will provide basic explanations for the following JavaScript methods: `.forEach()`, `.map()`, `.filter()`, `.find()`, and `reduce()`. 
 
 ## forEach()
-This method executes a callback once for each element in the array. The return value is `undefined`, and this method changes original array. Let's say we had an array that contains ages for 5 people, and we want to add 10 years to each age in the array, but we aren 't concerned with getting the new array as a return value.  Let's use `forEach()`:
+This method executes a callback once for each element in the array. The return value is `undefined`, and this method changes original array. Let’s say we had an array that contains ages for 5 people, and we want to add 10 years to each age in the array, then print the result. Since we're not going to be using the results of the callback function, we'll use `forEach()`.
 
 ```javascript
 let ages = [23, 26, 30, 33, 36];
@@ -30,8 +30,10 @@ ages.forEach(function(age) {
 
 > undefined
 ```
+`forEach()` is for performing side effects, such as printing to the screen, modifying existing arrays, objects, etc. In this case, side effects are the desired result, not the actual values.
+
 ## map()
-This method executes a callback function once for each element in an array and constructs a new array from the results. Because `map()` actually alters the data in the array and returns that value,  it tends to be more commonly used than `forEach()`.  Let's apply `map()` to the same problem above and notice how how this method returns a new array.
+This method executes a callback function once for each element in an array and constructs a new array from the results. `map()`  uses the data from the array to calculate new data, which is returned. Let's apply `map()` to the same problem above and notice how how this method returns a new array.
 
 ```javascript
 let ages = [23, 26, 30, 33, 36];
@@ -42,6 +44,7 @@ console.log(agesInTenYears)
 
 > [33, 36, 40, 43, 46]
 ```
+The only difference between `map()` and for`forEach()` is that `map()` returns a new array that is the return value for each invocation of the callback function.
 
 ## filter()
 This method creates a new array with all elements that pass the test implemented by the provided function. This is a great method for extracting elements based on a condition. Let's say we want to know which ages are greater or than or equal to 33. `filter()` will allow us to remove the ages that don't pass our test `(age >= 33)` and returns a new array with only the data we want.
