@@ -12,7 +12,7 @@ JavaScript has data structures (like arrays!) and you can operate on arrays with
 
 Okay, enough spinning. This post will provide basic explanations for the following JavaScript methods: `.forEach()`, `.map()`, `.filter()`, `.reduce()`, `.find()`, and `reduce()`. 
 
-## forEach
+## forEach()
 This method executes a callback once for each element in the array. The return value `undefined`, and this method changes original array.
 
 ```javascript
@@ -30,7 +30,7 @@ ages.forEach(function(age) {
 
 > undefined
 ```
-## map
+## map()
 This method executes a callback function once for each element in an array, in order, and constructs a new array from the results. This method might be preferable if you want to change data in your array. Because `map` actually alters the data in the array, it tends to be more commonly used than `forEach`. 
 
 ```javascript
@@ -55,7 +55,7 @@ console.log(overThirtyThree)
 
 > [33, 36]
 ```
-## find
+## find()
 This method eturns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
 
 ```javascript 
@@ -69,7 +69,7 @@ console.log(youngestAge)
 
 > 23
 ```
-## reduce
+## reduce()
 This method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. This is great a method for when you want to find a cumulative value based on elements across the array. You can also concatenate values with `reduce()`.
 
 ```javascript
