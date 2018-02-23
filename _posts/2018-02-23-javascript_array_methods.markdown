@@ -13,7 +13,7 @@ JavaScript has data structures called arrays and objects (like hashes in Ruby), 
 Okay, enough spinning. This post will provide basic explanations for the following JavaScript methods: `.forEach()`, `.map()`, `.filter()`, `.find()`, and `reduce()`. 
 
 ## forEach()
-This method executes a callback once for each element in the array. The return value is `undefined`.  `forEach()` is for performing side effects, such as printing to the screen, modifying existing arrays, objects, etc. Let’s say we had an array that contains ages for 5 people, and we want to add 10 years to each age in the array, then print the result. In this case we will use `forEach()` because side effects are the desired result, not the actual values.
+This method executes a callback once for each element in the array. The return value is `undefined`. This method is for performing side effects, such as printing to the screen, modifying existing arrays, objects, etc. Let’s say we had an array that contains ages for 5 people, and we want to add 10 years to each age in the array, then print the result. In this case we will use `forEach()` because side effects are the desired result, not the actual values.
 
 ```javascript
 let ages = [23, 26, 30, 33, 36];
