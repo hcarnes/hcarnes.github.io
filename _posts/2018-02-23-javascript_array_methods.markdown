@@ -11,7 +11,7 @@ JavaScript has data structures (like arrays!) and you can operate on arrays with
 <img src="https://i.imgur.com/8NwhIUG.gif" title="source: imgur.com" height="300" width="300" class="img-responsive">
 
 Okay, enough spinning. This post will provide basic explanations for the following JavaScript methods: `.forEach()`, `.map()`, `.filter()`, `.reduce()`, `.find()`, and `reduce`. 
-----
+
 ## forEach
 ---
 This method executes a callback once for each element in the array. The return value `undefined`, and this method changes original array.
