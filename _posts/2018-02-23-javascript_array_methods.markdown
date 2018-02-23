@@ -6,7 +6,7 @@ permalink:  javascript_array_methods
 ---
 
 
-JavaScript has data structures called array and objects (like hashes in Ruby) and you can operate on these data structures with different methods. There are subtle differences between common methods that might make your head spin if you don't understand the nitty gritty details. 
+JavaScript has data structures called arrays and objects (these are like hashes in Ruby) and you can operate on these data structures with different methods. There are subtle differences between common methods that might make your head spin if you don't understand the nitty gritty details. 
 
 <img src="https://i.imgur.com/8NwhIUG.gif" title="source: imgur.com" height="300" width="300" class="img-responsive">
 
