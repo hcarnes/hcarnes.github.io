@@ -31,7 +31,7 @@ ages.forEach(function(age) {
 > undefined
 ```
 ## map()
-This method executes a callback function once for each element in an array, in order, and constructs a new array from the results. This method might be preferable if you want to change data in your array. Because `map` actually alters the data in the array, it tends to be more commonly used than `forEach`. 
+This method executes a callback function once for each element in an array, in order, and constructs a new array from the results. This method might be preferable if you want to change data in your array. Because `map` actually alters the data in the array,  it tends to be more commonly used than `forEach`. 
 
 ```javascript
 let ages = [23, 26, 30, 33, 36];
@@ -56,7 +56,7 @@ console.log(overThirtyThree)
 > [33, 36]
 ```
 ## find()
-This method eturns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
+This method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
 
 ```javascript 
 let ages = [23, 26, 30, 33, 36];
