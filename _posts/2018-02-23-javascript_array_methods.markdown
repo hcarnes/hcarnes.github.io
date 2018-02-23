@@ -70,7 +70,7 @@ console.log(earlyTwentiesAge)
 > 23
 ```
 ## reduce()
-This method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. This is great a method for when you want to find a cumulative value based on elements across the array.  Let's switch gears and try to add all of the numbers in array of prices. `reduc()` works great for this scenario. 
+This method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. This is great a method for when you want to find a cumulative value based on elements across the array.  Let's switch gears and try to add all of the numbers in array of prices. `reduce()` works great for this scenario. 
 
 ```javascript
 const prices = [25, 50, 10, 25, 500]
