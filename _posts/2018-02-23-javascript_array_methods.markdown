@@ -84,4 +84,4 @@ console.log(prices.reduce(addPrices));
 
 Note: You can also concatenate values with `reduce()`, and set the accumulator to whatever fits your needs.
 
-When you want to manipulate data structures, these methods will help. **But remember**, `foreach` doesn't return a new array, so it can't chain with other methods. With a basic introduction to these methods, we have a solid foundation for which methods might help us solve different problems.
+When you want to manipulate data structures, these methods will help. **But remember**, `foreach()` doesn't return a new array, so it can't chain with other methods. With a basic introduction to these methods, we have a solid foundation for which methods might help us solve different problems.
