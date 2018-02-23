@@ -31,7 +31,7 @@ ages.forEach(function(age) {
 > undefined
 ```
 ## map()
-This method executes a callback function once for each element in an array and constructs a new array from the results. Because `map` actually alters the data in the array and returns that value,  it tends to be more commonly used than `forEach()`.  Let's apply `map()` to the same problem above and notice how how this method returns a new array.
+This method executes a callback function once for each element in an array and constructs a new array from the results. Because `map()` actually alters the data in the array and returns that value,  it tends to be more commonly used than `forEach()`.  Let's apply `map()` to the same problem above and notice how how this method returns a new array.
 
 ```javascript
 let ages = [23, 26, 30, 33, 36];
