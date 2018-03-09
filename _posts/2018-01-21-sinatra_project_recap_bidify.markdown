@@ -5,7 +5,7 @@ date:       2018-01-22 02:41:18 +0000
 permalink:  sinatra_project_recap_bidify
 ---
 
-I'm a minimalist, so I'm usually looking for creative ways to get rid of items rather than keep track of them. With that said, for my Sinatra Portfolio Project, I created a CRUD app that keeps track of auction items. I started out by reviewing the MVC framework and building [Google sheets](https://docs.google.com/spreadsheets/d/10BFNl0vXOAINvCTHzDdtOTy6o6FXCwNfQv0l7L_e3KU) to organize my ideas around routes and object relationships. 
+I'm a minimalist, so I'm usually looking for creative ways to get rid of items rather than keep track of them. With that said, for my Sinatra Portfolio Project, I created a CRUD app that keeps track of auction items. I called it [Bidify](https://github.com/hcarnes/sinatra-final-project-hcarnes). I started out by reviewing the MVC framework and building [Google sheets](https://docs.google.com/spreadsheets/d/10BFNl0vXOAINvCTHzDdtOTy6o6FXCwNfQv0l7L_e3KU) to organize my ideas around routes and object relationships. 
 ## Custom Validations
 Validations keep data you don’t want out of the database. So, if you don’t want people signing up for your app without a username, you could use an ActiveRecord validation and include it in the pertinent class: 
 ```ruby
