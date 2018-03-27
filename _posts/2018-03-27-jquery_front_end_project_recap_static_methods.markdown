@@ -38,7 +38,7 @@ class Tag {
 }
 ```
 
-If you drop into the console and type in `Tag.all()`, you will see the method returns a promise with all of the instances of Tag.
+If you drop into the console and type in `await Tag.all()`, you will see the method returns all of the instances of Tag.
 
 ![Imgur](https://i.imgur.com/EUnLhTx.png)
 
