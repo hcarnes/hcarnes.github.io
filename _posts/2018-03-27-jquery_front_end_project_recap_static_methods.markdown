@@ -42,14 +42,14 @@ If you drop into the console and type in `Tag.all()`, you will see the method re
 
 ![Imgur](https://i.imgur.com/9r6XVUm.png"console")
 
-Similarly, in Ruby, to acheive the same functionality, you could prefix the method with `self`. For example:
+Similarly, in Ruby, to acheive the same functionality, you could prefix the method with `self`. For example, the following code will return an array of instances:
 
 ```ruby
 
 class Tag
 
   def self.all
-    @tags = Tag.all
+    db.execute("SELECT * FROM tags;").map {|tag_attributes| Tag.new(tag_attributes)}
   end
 	
 end
@@ -59,6 +59,15 @@ end
 ## Using static methods
 
 In the `questions.js` file, we can see how we are able to utilize the static method `all()` to update the full list of tags for the user. 
+
+```javascript
+  async function updateTagList() {
+    const tags = await Tag.all()
+    const optionsHtml = tags.map(tag => tag.asOptionHtml()).join("")
+
+    $('#tag-list').html(optionsHtml)
+  }
+```
 
 ![demo]("https://imgur.com/QIUDK3K")
 
