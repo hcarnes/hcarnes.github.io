@@ -72,7 +72,7 @@ In the `questions.js` file, we can see how we are able to utilize the static met
 Check out this demo of the static method at work:
 
 <a href="https://www.youtube.com/watch?v=zxUt6a8NFxQ">
-<img border="0" alt="example" src="https://i.imgur.com/QIUDK3K.gif" width="500" height="500">
+<img border="0" alt="example" src="https://i.imgur.com/sir8kmP.gif" width="600" height="600">
 
 	
 	
