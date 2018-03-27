@@ -60,7 +60,7 @@ end
 
 In the `questions.js` file, we can see how we are able to utilize the static method `all()` to update the full list of tags for the user. 
 
-<img src="https://www.youtube.com/watch?v=zxUt6a8NFxQ" width="40" height="40" />
+<blockquote class="imgur-embed-pub" lang="en" data-id="QIUDK3K"><a href="//imgur.com/QIUDK3K"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 	
 	
