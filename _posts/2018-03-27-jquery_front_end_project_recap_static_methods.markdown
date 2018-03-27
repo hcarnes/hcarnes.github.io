@@ -5,7 +5,6 @@ date:       2018-03-27 13:13:29 -0400
 permalink:  jquery_front_end_project_recap_static_methods
 ---
 
-## The Challenge
 
 >The full list of project requirements are listed [here](https://github.com/learn-co-students/rails-js-assessment-v-000/blob/master/README.md). 
 
