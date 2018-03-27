@@ -62,6 +62,7 @@ end
 In the `questions.js` file, we can see how we are able to utilize the static method `all()` to update the full list of tags for the user. 
 
 ```javascript
+
   async function updateTagList() {
     const tags = await Tag.all()
     const optionsHtml = tags.map(tag => tag.asOptionHtml()).join("")
@@ -72,6 +73,7 @@ In the `questions.js` file, we can see how we are able to utilize the static met
   if ($('#tag-list').length > 0) {
     await updateTagList()
   }
+	
 	```
 	
 	![image alt text](https://www.youtube.com/watch?v=zxUt6a8NFxQ)
