@@ -40,7 +40,7 @@ class Tag {
 
 If you drop into the console and type in `Tag.all()`, you will see the method returns a promise with all of the instances of Tag.
 
-![Imgur](https://i.imgur.com/9r6XVUm.png"console")
+![Imgur](https://i.imgur.com/EUnLhTx.png)
 
 Similarly, in Ruby, to acheive the same functionality, you could prefix the method with `self`. For example, the following code will return an array of instances:
 
