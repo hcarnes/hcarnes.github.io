@@ -69,8 +69,10 @@ In the `questions.js` file, we can see how we are able to utilize the static met
   }
 ```
 
+Check out this demo of the static method at work:
+
 <a href="https://www.youtube.com/watch?v=zxUt6a8NFxQ">
-<img border="0" alt="example" src="https://i.imgur.com/QIUDK3K.gif" width="600" height="00">
+<img border="0" alt="example" src="https://i.imgur.com/QIUDK3K.gif" width="400" height="400">
 
 	
 	
