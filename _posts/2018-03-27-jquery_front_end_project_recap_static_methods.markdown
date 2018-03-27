@@ -63,6 +63,8 @@ In the `questions.js` file, we can see how we are able to utilize the static met
 
 ```javascript
 
+document.addEventListener("DOMContentLoaded", async function () {
+
   async function updateTagList() {
     const tags = await Tag.all()
     const optionsHtml = tags.map(tag => tag.asOptionHtml()).join("")
@@ -73,6 +75,8 @@ In the `questions.js` file, we can see how we are able to utilize the static met
   if ($('#tag-list').length > 0) {
     await updateTagList()
   }
+	
+	};
 	
 	```
 	
