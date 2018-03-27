@@ -69,7 +69,7 @@ In the `questions.js` file, we can see how we are able to utilize the static met
   }
 ```
 
-Click the demo below to see the static method at work:
+Click the demo below to see the static method at work throughout the app:
 
 <a href="https://www.youtube.com/watch?v=zxUt6a8NFxQ">
 <img border="0" alt="example" src="https://i.imgur.com/sir8kmP.gif" width="600" height="600">
