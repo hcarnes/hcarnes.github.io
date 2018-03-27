@@ -69,7 +69,7 @@ In the `questions.js` file, we can see how we are able to utilize the static met
   }
 ```
 
-![demo]("https://imgur.com/QIUDK3K")
+![Imgur](https://i.imgur.com/QIUDK3K.gifv)
 
 	
 	
