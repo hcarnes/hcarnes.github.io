@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "jQuery Front End Project Recap: Static Methods"
-date:       2018-03-27 17:13:28 +0000
+date:       2018-03-27 13:13:29 -0400
 permalink:  jquery_front_end_project_recap_static_methods
 ---
 
@@ -41,7 +41,7 @@ class Tag {
 
 If you drop into the console and type in `Tag.all()`, you will see the method returns a promise with all of the instances of Tag.
 
-[Imgur](https://i.imgur.com/9r6XVUm.png)
+![Imgur](https://i.imgur.com/9r6XVUm.png"console")
 
 Similarly, in Ruby, to acheive the same functionality, you could prefix the method with `self`. For example:
 
