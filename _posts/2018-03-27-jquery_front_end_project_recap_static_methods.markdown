@@ -8,7 +8,7 @@ permalink:  jquery_front_end_project_recap_static_methods
 
 >The full list of project requirements are listed [here](https://github.com/learn-co-students/rails-js-assessment-v-000/blob/master/README.md). 
 
-For this project, I was required to add dynamic features that are possible only through jQuery and a JSON API to my previous Rails app, [Socratic](https://github.com/hcarnes/socratic/tree/jquery_project). After working the requirements, I had some class-specific logic that was cluttering my JS files AKA [spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code). To clean things up, I moved this logic into the class files by using static methods.
+For this project, I was required to add dynamic features that are possible only through jQuery and a JSON API to my previous Rails app, [Socratic](https://github.com/hcarnes/socratic/tree/jquery_project). After working through the requirements, I had some class-specific logic that was cluttering my JS files AKA [spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code). To clean things up, I moved this logic into the class files by using static methods.
 
 ----
 ## What is a static method?
