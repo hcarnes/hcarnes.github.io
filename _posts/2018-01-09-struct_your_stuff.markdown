@@ -44,6 +44,7 @@ cats => [
 ]
 ```
 
+----
 ## Struct to the Rescue
 
 To avoid these errors, we'll create a `Cat` class to define and encapsulate the cat attributes.
@@ -61,6 +62,8 @@ end
 ```
 Doing this once is simple and easy, but after the 5th class like this, you may be looking for a better way. Luckily, Ruby has a tool built in for exactly this situation. Because we need a simple class, and we are confident the attributes won't change a lot, we'll use the handy dandy `Struct` class. This is a quick way to organize attributes together into a class
 
+----
+
 ### Creating a class object with Struct
 
 ```ruby
@@ -77,6 +80,7 @@ Cat = Struct.new(:name, :owner_name, :age) do
 end
 ```
 
+----
 ### Using your Cat class
 
 As you can see, `Struct` is much more concise. We can now model each cat and easily access attributes.
