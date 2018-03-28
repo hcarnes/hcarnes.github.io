@@ -1,12 +1,19 @@
 ---
-layout:     post
+layout: post
 title:      "Struct Your Stuff"
-date:       2018-01-09 19:20:42 -0500
+date:       2018-01-09 19:17:27 -0500
 permalink:  struct_your_stuff
-published: true
 ---
 
-The `Struct` class is a quick way to create a class without having to write out the initialize method or attribute accessors. Struct should be used when you have a simple object model with a known set of attributes. While arrays and hashes also provide simple ways to structure data, the `Struct` class offers an opportunity to create cleaner code by encapsulating attributes into a class.
+<style>
+ img {
+   width: 256px;
+   margin: -25px 0 -25px 0
+ }
+</style>
+
+The `Struct` class is a quick way to create a class object without having to write out the initialize method or attribute accessors. Struct should be used when you have a simple object model with a known set of attributes. While arrays and hashes also provide simple ways to structure data, the `Struct` class offers an opportunity to create cleaner code by encapsulating attributes into a class.
+
 ![chill_kitty](https://i.imgur.com/nqTnKNU.png)
 
 ## What about Arrays and Hashes?
@@ -97,9 +104,3 @@ cat_1.ageee = 25
 
 You don't have to use `Struct`, but it might make your life easier. I used `Struct` to create a data structure for my [basic Sinatra app](https://github.com/hcarnes/sinatra-basic-forms-lab-v-000/blob/master/models/puppy.rb). For understanding when to use a `Hash` instead of a `Struct`, I found [this](https://stackoverflow.com/a/3275624) StackOverflow answer very helpful.
 
-<style>
- img {
-   width: 256px;
-   margin: -25px 0 -25px 0
- }
-</style>
