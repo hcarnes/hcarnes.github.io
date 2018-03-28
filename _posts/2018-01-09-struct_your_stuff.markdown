@@ -7,7 +7,6 @@ permalink:  struct_your_stuff
 
 
 The `Struct` class is a quick way to create a class object without having to write out the initialize method or attribute accessors. Struct should be used when you have a simple object model with a known set of attributes. While arrays and hashes also provide simple ways to structure data, the `Struct` class offers an opportunity to create cleaner code by encapsulating attributes into a class.
-
 <img src="https://i.imgur.com/nqTnKNU.png" title="source: imgur.com" height="300" width="300" class="img-responsive">
 
 ## What about Arrays and Hashes?
