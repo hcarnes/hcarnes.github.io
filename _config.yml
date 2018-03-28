@@ -4,13 +4,12 @@ header-img: img/home-bg.png
 email: hecarnes@gmail.com
 copyright_name: hcarnes
 description: > # this means to ignore newlines until "baseurl:"
-  Adventures in learning full-stack development
+  Learning through Flatiron School's Online Web Developer Program
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: KetoAustin
 github_username:  hcarnes
 learn_profile: hcarnes
 email_username: hecarnes@gmail.com
-logo: /img/cc.png
 
 # Build settings
 markdown: kramdown
@@ -19,12 +18,4 @@ permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-seo-tag
-
-theme: jekyll-theme-minimal
-plugins:
-  - jekyll-redirect-from
+gems: [jekyll-paginate, jekyll-feed]
