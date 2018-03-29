@@ -4,7 +4,7 @@ header-img: img/home-bg.png
 email: hecarnes@gmail.com
 copyright_name: hcarnes
 description: > # this means to ignore newlines until "baseurl:"
-  Learning through Flatiron School's Online Web Developer Program
+  Adventures in Learning Full Stack Web Development
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: KetoAustin
 github_username:  hcarnes
