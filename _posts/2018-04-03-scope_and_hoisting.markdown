@@ -135,17 +135,17 @@ Variables defined by `const` are also hoisted but they are not initialized, like
 While it may appear that `const` and `let` declarations are not hoisted to the top of the scope like `var` is, that is not the case. The only difference is that `const` and `let` do not assign `undefined` to the freshly-hoisted variable declaration, which gives them the favorable property of generating `ReferenceError`s when accessed unexpectedly. So what does it mean to be hoisted but unititialized?
 
 ```javascript
-const myLogger = function() {
-  const myLoggerImplementation = function() {
-    console.log(logName)
+const snowballStand = function() {
+  const snowballMaker = function() {
+    console.log(snowballType)
   }
-  const logName = "My Log Name"
-  myLoggerImplementation()
-  // log output: "My Log Name"
+  const snowballType = "Raspberry Raspa"
+  snowballMaker()
+  // log output: "Raspberry Raspa"
 }
 ```
 
-You might expect this code to generate a `ReferenceError` since `logName` hasn't been set when it appears in the `myLoggerImplementation` function. However, that's not how JavaScript works. Because `const` and `let` are both hoisted to the top of their scope (block scope), when the `logName` logging code is evaluated, no error is generated. Also, an error is not generated when calling the `myLoggerImplementation` function, because in the line above we actually assign a value to this variable. If we tried to execute the function before we assigned a value to `logName`, we would receive a `ReferenceError` as expected. The time between the hoisted definition and the assignment to that definition is known as the `temporal dead zone`. You can learn more about why it exists [here](http://2ality.com/2015/10/why-tdz.html)
+You might expect this code to generate a `ReferenceError` since `snowballType` hasn't been set when it appears in the `snowballMaker` function. However, that's not how JavaScript works. Because `const` and `let` are both hoisted to the top of their scope (block scope), when the `snowballType` logging code is evaluated, no error is generated. Also, an error is not generated when calling the `snowballMaker` function, because in the line above we actually assign a value to this variable. If we tried to execute the function before we assigned a value to `snowballType`, we would receive a `ReferenceError` as expected. The time between the hoisted definition and the assignment to that definition is known as the `temporal dead zone`. You can learn more about why it exists [here](http://2ality.com/2015/10/why-tdz.html)
 
 >If you are interested in an even deeper dive on this topic, these articles might be useful: [Dev.to](https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e),
 [codeburst](https://codeburst.io/part-2-var-vs-const-vs-let-69ea73fe76c1)
