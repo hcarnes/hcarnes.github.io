@@ -1,10 +1,10 @@
 ---
 layout: post
-title:      "Scope and Hoisting"
+title:      "Scope and Hoisting: var, let, and const"
 date:       2018-04-03 09:09:29 -0400
 permalink:  scope_and_hoisting
 ---
-## Scope: var, let, const
+
 This post will discuss the difference between `var`, `let`, and `const` in terms of scope and hoisting in JavaScript. Once you understand the pros and cons of each, it makes it easier to interpret errors and avoid bugs. 
 
 >Scope is the current context of execution. The context in which values and expressions are "visible," or can be referenced. If a variable or other expression is not "in the current scope," then it is unavailable for use. 
