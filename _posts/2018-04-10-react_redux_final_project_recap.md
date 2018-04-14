@@ -52,6 +52,7 @@ So you can see, `GardenList` renders each `garden` found in the array of `garden
 * pass data and callback methods down to their children as props
 * provide data and behavior to other components
 
+
 ```jsx
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
