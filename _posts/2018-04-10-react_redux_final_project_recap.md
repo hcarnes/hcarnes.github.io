@@ -32,7 +32,9 @@ class GardenList extends Component {
       <div>
         <List component="nav">
           {this.props.gardens.map((garden, index) => (
-            <Link to={`/gardens/${index}`}><GardenListItem garden={garden} /></Link>
+            <Link to={`/gardens/${index}`}>
+              <GardenListItem garden={garden} />
+            </Link>
             ))}
         </List>
       </div>
