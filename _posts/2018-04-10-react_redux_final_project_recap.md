@@ -94,7 +94,7 @@ Container components are the integration point for Redux and the stateless funct
 
 While container components and stateless components serve different purposes, there is a gray area in regards to where to draw the distinction. This [blog post](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) written by none other than Mr. Dan Abramov himself, was extremely helpful in terms of figuring out "What the heck is the difference between "stateless" and "container" components.
 
-That's a wrap for my Flatiron project recaps becasue this is the last project for the program. And my love affair with programming has only begun!
+That's a wrap for my Flatiron project recaps because this is the last project for the program. And my love affair with programming has only begun!
 
 <img src="https://i.imgur.com/yxWLcMz.gif" title="source: imgur.com" height="300" width="300" class="img-responsive">
 
