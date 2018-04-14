@@ -17,7 +17,7 @@ The project required the app to have 2 container components and 5 stateless comp
 * sometimes are called presentational components because they are concerned with how things look
 * they pretty much just take props and return the markup of the component
 
-Here is an example of a stateless component found Greenthumb Gardens:
+Here is an example of a stateless component found in Greenthumb Gardens:
 
 ```javascript
 import List from 'material-ui/List';
@@ -33,7 +33,7 @@ class GardenList extends Component {
         <List component="nav">
           {this.props.gardens.map((garden, index) => (
             <Link to={`/gardens/${index}`}><GardenListItem garden={garden} /></Link>
-          ))}
+            ))}
         </List>
       </div>
     )
