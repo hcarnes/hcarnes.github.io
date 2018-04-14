@@ -19,7 +19,7 @@ The project required the app to have 2 container components and 5 stateless comp
 
 Here is an example of a stateless component found in Greenthumb Gardens:
 
-```javascript
+```jsx
 import List from 'material-ui/List';
 import React, { Component } from 'react';
 import GardenListItem from './GardenListItem'
@@ -52,7 +52,7 @@ So you can see, `GardenList` renders each `garden` found in the array of `garden
 * pass data and callback methods down to their children as props
 * provide data and behavior to other components
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import { connect } from 'react-redux';
