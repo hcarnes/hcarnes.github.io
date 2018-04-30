@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Angular Basics: Handling Async Data"
-date:       2018-04-29 15:12:15 -0500
+date:       2018-05-29 15:12:15 -0500
 permalink:  observables_in_angular
 ---
 
