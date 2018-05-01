@@ -19,9 +19,7 @@ In Tour of Cats, the user clicked a button that would return a list of cat names
 
 <img src="https://i.imgur.com/vwLiiVa.jpg?1" title="observables" height="400" width="400" class="img-responsive">
 
-## How Does it *Really* Work?
-
-Well, I don't know how it **really** works, but let's start with the basics.
+## What about the code?
 
 **Add `Observable` to CatService**
 
