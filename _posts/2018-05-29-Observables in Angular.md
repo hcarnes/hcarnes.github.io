@@ -21,6 +21,8 @@ In Tour of Cats, the user clicked a button that would return a list of cat names
 
 ## How Does it *Really* Work?
 
+Well, I don't know how it **really** works, but let's start with the basics.
+
 **Add `Observable` to CatService**
 
 Start with the `service`. You have to import the HTTP symbols and inject `HttpClient` to the constructor in a private property called `http`. A `service` will typically handle a specific purpose separate from the views, such as handling async data requests or logging. Here is an example of the `CatsService`:
