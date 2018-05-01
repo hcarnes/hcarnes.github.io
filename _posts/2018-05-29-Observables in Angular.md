@@ -1,8 +1,8 @@
 ---
 layout: post
-title:      "Observations on Observables"
+title:      "Angular 5: Observable Basics"
 date:       2018-04-29 15:12:15 -0500
-permalink:  observables_in_observables
+permalink:  observable_basics
 ---
 
 After working through the [Tour of Heroes](https://angular.io/guide/quickstart) tutorial in the Angular 5 docs, I wanted to better understand a concept that was new to me: `Observable`. With that in mind, I started working on my own [Tour of Cats](https://github.com/hcarnes/tour-of-cats) 🐱, which I will reference below. For this post, I'm going to focus on how `Observable` handles async data requests. To get the most out of the post, it would be great if you knew the basic fundamentals of Angular 5. 
