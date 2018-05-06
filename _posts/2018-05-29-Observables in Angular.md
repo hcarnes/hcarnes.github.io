@@ -7,7 +7,7 @@ permalink:  observable_basics
 
 After working through the [Tour of Heroes](https://angular.io/guide/quickstart) tutorial in the Angular 5 docs, I wanted to better understand a concept that was new to me: `Observable`. With that in mind, I started working on my own Tour of Cats 🐱, which I will reference below. For this post, I'm going to focus on how `Observable` handles async data requests. To get the most out of the post, it would be great if you knew the basic fundamentals of Angular 5. 
 
-## RsJx & Observables
+## RxJS & Observables
 
 To understand `Observable`, you need to learn about RxJS (Reactive Extension for JavaScript). RxJS is an external JavaScript library for handling async data, and this library allows you to work with `Observable` to create programs that work with async data streams AKA reactive programs. There are also reactive extentions for other languages, such as Rx.rb for Ruby. In short, `Observable` is a major key 🔑 of the RxJS library.
 
