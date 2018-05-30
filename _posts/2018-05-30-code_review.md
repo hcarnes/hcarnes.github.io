@@ -33,7 +33,7 @@ Github pull requests are not the panacea of optimizing your code base. Each team
 
 ## Oh, the humanity!
 
-Yes, code review is about the code. BUT there is a person behind each pull request. In the increment article, Slack was the only company that mentioned having empathy while reviewing code. For example, if you find yourself asking lots of questions or adding a lot of public comments, it might be better to talk to someone in person. Time won’t always permit this luxury, but it may be a necessary approach in some situations. 
+Yes, code review is about the code. BUT there is a person behind each pull request. In the Increment article, Slack was the only company that mentioned having empathy while reviewing code. For example, if you find yourself asking lots of questions or adding a lot of public comments, it might be better to talk to someone in person. Time won’t always permit this luxury, but it may be a necessary approach in some situations. 
 
 **Slack knows good code review:**
 >Code review is required at Slack, even in emergency situations. Some of their earliest posts to their Engineering Blog are about good code review!) They also have dedicated channels where engineers can post their pull requests for review.
@@ -47,4 +47,4 @@ Here is a quick summary of how to successfully review a pull request:
 * Consider adherence to the patterns followed at the company
 * Look for test coverage
 
-If you are working on a team and you aren’t reviewing code, you are not only missing out on a huge opportunity to save time by preventing errors down the road, but you are also missing an opportunity to build value to your team members by encouraging a culture of collaboration, teaching, and self-improvement. 🎯
+If a team is skipping code review, they are spending a lot of time putting out fires 🔥. Not to mention, they are missing out on valuable opportunities to collaborate, teach, and improve. 🎯
