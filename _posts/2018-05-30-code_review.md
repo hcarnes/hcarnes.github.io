@@ -17,7 +17,7 @@ Increment magazine has a [cool article](https://increment.com/development/what-i
 
 The common thread at each company was using the [GitHub pull request model](https://help.github.com/articles/about-pull-requests/). Through this model, you can not only review the changes before they are merged, but you can also use features like labels, milestones, and assignees, and @mention individual contributors or teams to better organize your work. For example, you can use labels to tag pull requests to help you standardize your workflow. Github even provides some default labels to help you get started.
 
-<img src="https://i.imgur.com/8zQSM0U.png" title="labels" height="400" width="100" class="img-responsive">
+<img src="https://i.imgur.com/8zQSM0U.png" title="labels" height="250" width="250" class="img-responsive">
 
 Another way to help your team stay on track is by setting milestones that include a due date. By associating pull requests and issues to milestones, you can track progress and prioritize the work that will help you reach your goal. 
 
