@@ -9,7 +9,7 @@ When I first started considering learning how to program, I asked a developer fr
 
 There are a lot of ways to implement code review and there are more benefits to the practice apart from keeping things from breaking. Code review provides a consistent opportunity for people to provide feedback and learn new ways to solve problems. This post will summarize some key code review practices, as well as highlight some underpinning reasons for implementing code reviews for any collaborative programming project.
 
-<img src="https://i.imgur.com/mh8Nxeg.png" title="cat" height="350" width="350" class="img-responsive"> 
+<img src="https://i.imgur.com/zI6PjtT.png" title="cat" height="350" width="350" class="img-responsive"> 
 
 ## GitHub Pull Request Model
 
@@ -47,4 +47,4 @@ Here is a quick summary of how to successfully review a pull request:
 * Consider adherence to the patterns followed at the company
 * Look for test coverage
 
-If a team is skipping code review, they are spending a lot of time putting out fires 🔥. Not to mention, they are missing out on valuable opportunities to collaborate, teach, and improve. 🎯 
+The practice will look different from team to team, but if you follow the points above, you are on the right track. If a team is skipping code review, they are spending a lot of time putting out fires 🔥. Not to mention, they are missing out on valuable opportunities to collaborate, teach, and improve. 🎯 
