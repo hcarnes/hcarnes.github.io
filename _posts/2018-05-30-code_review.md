@@ -11,7 +11,7 @@ There are a lot of ways to implement code review and there are more benefits to 
 
 <img src="https://i.imgur.com/zI6PjtT.png" title="cat" height="350" width="350" class="img-responsive"> 
 
-## GitHub Pull Request Model
+## GitHub pull request model
 
 Increment magazine has a [cool article](https://increment.com/development/what-its-like-to-be-a-developer-at/) on what it’s like to work at various tech companies, including Digital Ocean, Fastly, Gitlab, Lyft, Rainforest, Sauce Labs, and Slack. The writer interviews senior engineers at each company and asks them about range of topics including how their company practices code review. 
 
@@ -21,7 +21,7 @@ The common thread at each company was using the [GitHub pull request model](http
 
 Another way to help your team stay on track is by setting milestones that include a due date. By associating pull requests and issues to milestones, you can track progress and prioritize the work that will help you reach your goal. 
 
-## Beyond the Pull Request
+## Beyond the pull request
 
 Github pull requests are not the panacea of optimizing your code base. Each team should have a process around how code is reviewed. Gitlab and Lyft have interesting approaches to this process.
 
@@ -47,4 +47,4 @@ Here is a quick summary of how to successfully review a pull request:
 * Consider adherence to the patterns followed at the company
 * Look for test coverage
 
-The practice will look different from team to team, but if you follow the points above, you are on the right track. If a team is skipping code review, they are spending a lot of time putting out fires 🔥. Not to mention, they are missing out on valuable opportunities to collaborate, teach, and improve. 🎯 
+The practice will look different from team to team, but if you follow the points above, you are on the right track. If a team is skipping code review, they are spending a lot of time putting out fires 🔥. Not to mention, they are missing out on valuable opportunities to collaborate, teach, and improve. 🎯
