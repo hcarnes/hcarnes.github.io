@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Code Review: Where the Code Meets the People"
+title:      "Code Review: Where Code Meets People"
 date:       2018-05-29 15:12:15 -0500
 permalink:  code_review
 ---
