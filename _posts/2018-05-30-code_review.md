@@ -7,7 +7,9 @@ permalink:  code_review
 
 I remember when I first started considering learning how to program, and I asked a developer friend “what if I contribute some code and unwittingly break something?”. The response was “there should be a process in place to prevent that type of thing from happening.” Makes sense. Most fields have some form of this practice: QA, copy editing, fact-checking, and the list goes on. For development, that process is called code review. 
 
-There are a lot of ways to implement code review and there are a lot more benefits to the practice apart from just keeping things from breaking. Code review provides a consistent opportunity for people to provide feedback and learn new ways to solve problems. 
+There are a lot of ways to implement code review and there are a lot more benefits to the practice apart from just keeping things from breaking. Code review provides a consistent opportunity for people to provide feedback and learn new ways to solve problems.
+
+<img src="https://i.imgur.com/UplPyHY.png" title="cat" height="400" width="400" class="img-responsive"> 
 
 Increment magazine has a [cool article](https://increment.com/development/what-its-like-to-be-a-developer-at/) on what it’s like to work at various tech companies, including Digital Ocean, Fastly, Gitlab, Lyft, Rainforest, Sauce Labs, and Slack. The writer interviews senior engineers at each company and asks them about range of topics including how their company approached the practice of code review. This post will summarize some highlights from this article and highlight some underpinning reasons for implementing consistend code review for any collaborative programming project.
 
