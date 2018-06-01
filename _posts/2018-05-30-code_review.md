@@ -36,7 +36,7 @@ Github pull requests are not the panacea of optimizing your code base. Each team
 Yes, code review is about the code. BUT there is a person behind each pull request. In the Increment article, Slack was the only company that mentioned having empathy while reviewing code. For example, if you find yourself asking lots of questions or adding a lot of public comments, it might be better to talk to someone in person. Time won’t always permit this luxury, but it may be a necessary approach in some situations. 
 
 **Slack knows good code review:**
->Code review is required at Slack, even in emergency situations. Some of our [earliest posts to their Engineering Blog](https://slack.engineering/how-about-code-reviews-2695fb10d034) are about good code review!) We also have dedicated channels where engineers can post their pull requests for review.
+>Code review is required at Slack, even in emergency situations. Some of our [earliest posts to our Engineering Blog](https://slack.engineering/how-about-code-reviews-2695fb10d034) are about good code review!) We also have dedicated channels where engineers can post their pull requests for review.
 
 Here is a quick summary of how to successfully review a pull request:
 
