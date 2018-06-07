@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "HTTP"
-date:       2018-05-29 15:12:15 -0500
+date:       2018-06-06 15:12:15 -0500
 permalink:  http_protocol
 ---
 
