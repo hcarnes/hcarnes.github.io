@@ -53,7 +53,7 @@ This is information that a user's browser sends to a web server containing detai
 
 ## Response Header 
 
-This is info that the web server sends back to the browser in response to receiving an HTTP request. Data, size, type of file, and data about the server are includes in this header. Here is what it looks like in the console under the network tab:
+This is info that the web server sends back to the browser in response to receiving an HTTP request. Data, size, type of file, and data about the server are included in this header. Here is what it looks like in the console under the network tab:
 
 <img src="https://i.imgur.com/RX4n4Sr.png" title="response_header" class="img-responsive">
 
