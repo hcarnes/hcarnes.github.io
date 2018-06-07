@@ -12,7 +12,7 @@ So...
 
 A protocol is a set of rules, and HTTP is a set of rules for formatting data when making requests. HTTP takes place through a TCP/IP connection.
 
-> <img src="https://i.imgur.com/ATv1MVL.png" title="tcp_blob" height="250" width="250" class="img-responsive"> TCP/IP stands for Transmission Control Protocol/Internet Protocol. TCP/IP is used as a standard for transmitting data over networks. When you make a request, that information is broken up into packets. Each packet is tagged with a TCP header, which include the source and destination port numbers, and an IP header which includes the source and destination IP addresses to give it its identity. Once the packets reach the destination, they are reassembled again and delivered as one piece. (source: [How the Web Works](https://www.linkedin.com/pulse/how-web-works-primer-newcomers-development-anyone-really-kasireddy/)
+> <img src="https://i.imgur.com/ATv1MVL.png" title="tcp_blob" height="250" width="250" class="img-responsive"> TCP/IP stands for Transmission Control Protocol/Internet Protocol. TCP/IP is used as a standard for transmitting data over networks. When you make a request, that information is broken up into packets. Each packet is tagged with a TCP header, which include the source and destination port numbers, and an IP header which includes the source and destination IP addresses to give it its identity. Once the packets reach the destination, they are reassembled again and delivered as one piece. (source: [How the Web Works](https://www.linkedin.com/pulse/how-web-works-primer-newcomers-development-anyone-really-kasireddy/))
 
 
 HTTP enforces rules about: 
