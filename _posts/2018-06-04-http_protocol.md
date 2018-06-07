@@ -41,7 +41,7 @@ The general header shows the request url, request method, status code, the IP ad
 
 The status codes are key in understanding what happens if you get an error and they are organized into general categories. You can always google them but here is a quick cheatsheet.
 
-<img src="https://i.imgur.com/3tvIkNI.jpg" title="status_codes" class="img-responsive">
+<img src="https://i.imgur.com/3tvIkNI.jpg" title="status_codes" height="450" width="450" class="img-responsive">
 
 
 ## Request Header Fields
