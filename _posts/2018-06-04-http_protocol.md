@@ -47,7 +47,7 @@ The status codes are key in understanding what happens if you get an error and t
 
 ## Request Header Fields
 
-This is information that a user's browser sends to a web server containing details of what the browser wants and will accept from a server. This includes type, version, and capabilities of the browser making the request so that the server return compatible data. Here is what it looks like in the console under the network tab once you type a url in the browser and hit enter:
+This is information that a user's browser sends to a web server containing details of what the browser wants and will accept from a server. This includes type, version, and capabilities of the browser making the request so that the server returns compatible data. Here is what it looks like in the console under the network tab once you type a url in the browser and hit enter:
 
 <img src="https://i.imgur.com/2JjOg1a.png" title="request_header" class="img-responsive">
 
