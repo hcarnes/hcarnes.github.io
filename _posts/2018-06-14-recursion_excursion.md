@@ -5,7 +5,7 @@ date:       2018-06-14 15:12:15 -0500
 permalink:  recursion_excursion
 ---
 
-Recursion is the computer science concept of solving a problem where the solution depends on solutions to other instances of the same problem. With recursion, you can take a complex problem with multiple repeating steps, break it down into one small problem, and then feed the solutions of the small problems back into the original function. In order to avoid an infinite loop, you include a base case that signals your function to exit the loop and begin taking all of the solutions to the smaller chunks and unwinding them to reach your final solution.
+Recursion is the computer science concept of solving a problem where the solution depends on solutions to other instances of the same problem. With recursion, you can take a complex problem with multiple repeating steps, break it down into one small problem, and then feed the solutions of the small problems back into the original function. In order to avoid an infinite loop, you include a base case that signals your function to exit the loop and begin taking all of the solutions to the smaller problems and unwinding them to reach your final solution.
 
 <img src="https://i.imgur.com/eRq68d0.png" title="blue_cat" height="250" width="250" class="img-responsive">
 
