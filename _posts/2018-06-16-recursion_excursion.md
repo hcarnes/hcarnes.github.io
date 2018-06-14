@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Recursion Excursion"
-date:       2018-06-014 15:12:15 -0500
+date:       2018-06-14 15:12:15 -0500
 permalink:  recursion_excursion
 ---
 
