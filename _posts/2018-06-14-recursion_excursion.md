@@ -90,7 +90,7 @@ Let's start by defining the base case(s).
 * If there are no coin denominations available, there are 0 possible solutions.
 * If the amount of money is equal to 0, then there is only 1 solution, which would be choosing coin change of 0.
 
-Using Ruby's splat operator (`*`), we can separate the first coin in the `deonominations` array from the remaining coins. Once we have that, we can executive our recursive function until a base case is reached:
+Using Ruby's splat operator (`*`), we can separate the first coin in the `deonominations` array from the remaining coins. Once we have that, we can execute our recursive function until a base case is reached:
 
 For every coin we have 2 options:
 
