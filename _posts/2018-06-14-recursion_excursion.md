@@ -34,7 +34,7 @@ The examples below show you how the algorithm should work:
   * 0 + 1 = 1
 * `fib(4) => 3` 
   * The 4th value in the array is 2. 
-    1 + 2 = 3
+  * 1 + 2 = 3
 * `fib(5) => 3` 
   * The 5th value in the array is 3. 
   * 2 + 3 = 5
