@@ -23,17 +23,20 @@ Let's explore the Fibonnaci algorithm. The Fibonacci sequence is a mathematical 
 <img src="https://i.imgur.com/bv3uWAQ.jpg" title="fibo_sequence" height="450" width="450" class="img-responsive">
 *Image Source: [TopJavaTutorial](http://www.topjavatutorial.com/java/java-programs/java-fibonacci-series-algorithm/)*
 
-Here is the beginning of a Fibonnaci sequence in an array: `[0, 1, 1, 2, 3]`. The examples below show you how the algorithm should work:
+Here is the beginning of a Fibonnaci sequence in an array: `[0, 1, 1, 2, 3, 5, 8, 13]`. The examples below show you how the algorithm should work:
 
 * `fib(3) => 1`
   * The 3rd value in the array is 1. 
   * 0 + 1 = 1
 * `fib(4) => 3` 
   * The 4th value in the array is 2. 
-  * 0 + 1 + 1 = 3
+    1 + 2 = 3
 * `fib(5) => 3` 
   * The 5th value in the array is 3. 
-  * 0 + 1 + 1 + 3 = 5
+  * 2 + 3 = 5
+* `fib(6) => 8` 
+  * The 6th value in the array is 8. 
+  * 3 + 5 = 8
 
 To get the solution, you need keep obtaining the sum of the previous two values until you reach a base case.
 
