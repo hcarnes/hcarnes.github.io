@@ -15,6 +15,14 @@ Apartment lets you create tenants, which are the subdomains you want. You grab `
 
 In development, you can't use `localhost` to reference subdomains and you can't use IP address either. So somewhere registered the `lvh.me` points to `127001`, so it will work like `locahost` but because it is a real domain it will allow you to test locally with subdomains.
 
+Apartment knows what tenant you are are in and scopes things for you. Migrations can run across tenants. Apartments uses middleware to query databases separately. So, you can build things independently for each subdomain. The main domain 
+
+In production use www as the main subdomain
+
+So you and exclude users from user the `www` subdomain.
+
+Every Saas (software as a service) app needs multitenancy and user management.
+
 
 
 
