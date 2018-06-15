@@ -63,7 +63,7 @@ In the image below, the black writing shows that when `fib(4)` is called, the fu
 <img src="https://i.imgur.com/5UFLrTD.jpg" title="fibo_chart" height="450" width="450" class="img-responsive">
 
 ## The case for the base case
-The block `if n < 2` is the base case of this function. `[0, 1, 1,]` is the beginning of the Fibonacci sequence and is the part of the sequence that no longer depends on the function calls before it to return a solution. Recursive functions need the base case to terminate the loop. If you get the error "stack level too deep", you probably forgot to include the base case. This error is your computer telling you that you have reached your limit on the call-stack, which means you are running an infinite loop.
+The block `if n < 2` is the base case of this function. Recursive functions need the base case to terminate the loop. If you get the error "stack level too deep", you probably forgot to include the base case. This error is your computer telling you that you have reached your limit on the call-stack, which means you are running an infinite loop.
 
 ```ruby
 def fib(n)
