@@ -7,6 +7,17 @@ permalink:  theodora
 
 I'm building an open source rails app aimed at empowering nonprofits to efficiently manage government grants. It's called [Theodora](https://github.com/hcarnes/theodora) 👑. Large nonprofits often have a structure where one adminstrative organization distributes grant funds across multiple smaller nonprofits. This structure is (sort of) similar to how fast food 🍔 chain businesses are affiliates of a central corporate office. This post will share the steps I took toward creating Theodora as an open source project.
 
+## Overview
+
+The post will share how I went through the following steps to get started with Theodora:
+
+* Determine the Goal
+* Determine the Stack
+* Determine the Architecture
+* Sketch the Idea
+* Create a Wireframe
+* Use Zenhub
+
 ## Determine the Goal
 Theodora will allow an adminstrative office to manage documents for each local nonprofit through a single app. Without this app, documents would have to be sent through email, resulting in multiple attachments. Sending and receiving information through email attachments creates room for human error (forgetting an attachment 😱, receiving attachments over multiple emails, etc.). 
 
@@ -50,17 +61,6 @@ After user submits documents, show a confirmation message, as well a link to ask
 With a plan for the MVP, I could easily begin developing with a clear goal in mind. I created a repository for Theodora in Github and created a [ZenHub Board](https://www.zenhub.com/guides/setup-my-zenhub-boards) to visualize the workflow and allow others folks to contribute to issues. I've already had one person submit a pull request!
 
 <img src="https://i.imgur.com/2BKUHUV.png" alt="workflow" width="400px"/>
-
-## In Summary
-
-Here is a quick guide for setting up an open source project: 
-
-* Determine the Goal
-* Determine the Stack
-* Determine the Architecture
-* Sketch the Idea
-* Create a Wireframe
-* Use Zenhub
 
 ## Next Steps
 
