@@ -19,7 +19,7 @@ This post will share the steps I took toward creating Theodora as an open source
 ## Determine the Goal
 Theodora will allow an adminstrative office to manage documents for each local nonprofit through a single app. Without this app, documents would have to be sent through email, resulting in multiple attachments. Sending and receiving information through email attachments creates room for human error (forgetting an attachment 😱, receiving attachments over multiple emails, etc.). 
 
-Theodora aims to solve this problem by providing one place to upload and submit all documents. In the future, I would like to add the ability to create document templates, so that user's fill out forms instead of uploading Word or Excel documents. 
+Theodora aims to solve this problem by providing one place to upload and submit all documents. In the future, I would like to add the ability to create document templates, so that users fill out forms instead of uploading Word or Excel documents. 
 <img src="https://i.imgur.com/15lULox.png?1" alt="Log in" width="500px"/>
 
 ## Determine the Stack
