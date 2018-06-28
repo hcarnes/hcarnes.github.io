@@ -5,7 +5,9 @@ date:       2018-6-28 11:00:00 -0500
 permalink:  theodora
 ---
 
-I'm building an open source rails app aimed at empowering nonprofits to efficiently manage government grants. It's called [Theodora](https://github.com/hcarnes/theodora) 👑. Large nonprofits often have a structure where one adminstrative organization distributes grant funds across multiple smaller nonprofits. This structure is (sort of) similar to how fast food 🍔 chain businesses are affiliates of a central corporate office. This post will share the steps I took toward creating Theodora as an open source project. Here is an overview of each step I will discuss:
+I'm building an open source rails app aimed at empowering nonprofits to efficiently manage government grants. It's called [Theodora](https://github.com/hcarnes/theodora) 👑. Large nonprofits often have a structure where one adminstrative organization distributes grant funds across multiple smaller nonprofits. This structure is (sort of) similar to how fast food 🍔 chain businesses are affiliates of a central corporate office. 
+
+This post will share the steps I took toward creating Theodora as an open source project. Here is an overview of each step I will discuss:
 
 * Determine the Goal
 * Determine the Stack
