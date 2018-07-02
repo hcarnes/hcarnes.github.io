@@ -52,7 +52,7 @@ Once user is logged in, show them a custom organization page where they can uplo
 
 After user submits documents, show a confirmation message, as well a link to ask the administrator questions.
 
-<img src="https://i.imgur.com/I06vl1K.png?1" alt="Confirmation" width="400px"/>
+<img src="https://i.imgur.com/zCBwMKc.png" alt="Confirmation" width="400px"/>
 
 ## Use Zenhub
 
