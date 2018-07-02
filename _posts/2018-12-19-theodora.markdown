@@ -36,7 +36,7 @@ To get started, I sketched out the Minimum Viable Product (MVP). My goal was to 
 <img src="https://i.imgur.com/iLqCV14h.jpg" alt="sketch" width="300px"/>
 
 ## Create a Wireframe
-Next, I created a wireframe using [Balsamiq](https://balsamiq.com/). I chose Balsamiq because it is free and easy to use. 
+Next, I created a wireframe using [Balsamiq](https://balsamiq.com/). I chose Balsamiq because I could use the free trial, and it was easy to use.
 
 >Note: If you want to export your wireframe to PDF and PNG, Balsamiq creates a low quality document. There are other tools, like [Sketch](https://www.sketchapp.com/),that allow you to quickly build web and mobile wireframes and also export high quality documents. 
 
