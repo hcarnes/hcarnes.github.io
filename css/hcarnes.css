@@ -4,3 +4,7 @@
   height: 220px;
   margin-left: 48px;
 }
+
+.custom-subheading {
+  font-family: 'Lora', 'Times New Roman', serif;
+}
