@@ -8,3 +8,7 @@
 .custom-subheading {
   font-family: 'Lora', 'Times New Roman', serif;
 }
+
+.ulContainer{
+  list-style: none;
+}
