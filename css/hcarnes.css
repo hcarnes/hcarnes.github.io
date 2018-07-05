@@ -8,3 +8,23 @@
 .custom-subheading {
   font-family: 'Lora', 'Times New Roman', serif;
 }
+
+
+.flexColumn {
+  height: 100%;                     /* take height of nav parent */
+  list-style-type: none;
+  padding-left: 0;                  /* remove default UL padding */
+  display: flex;
+  justify-content: flex-start; 
+  flex-direction: column;   /* horizontal alignment (applies to child elements) */
+  align-items: left;   /* horizontal alignment (applies to child elements) */
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexRow div {
+  margin: 10px;
+}
