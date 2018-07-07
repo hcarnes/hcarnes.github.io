@@ -28,3 +28,9 @@
 .flexRow div {
   margin: 10px;
 }
+
+.bookme {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 75%;
+  font-style: italic;
+}
