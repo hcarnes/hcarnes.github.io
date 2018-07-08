@@ -1,12 +1,14 @@
 ---
 layout: post
 title:      "Multi-Tenancy in Rails with Apartment"
-date:       2018-7-1 11:00:00 -0500
+date:       2018-7-7 20:00:00 -0500
 permalink:  multi-tenancy-with-apartment
-published: false
+published: true
 ---
 
 I'm working on a [Rails app for nonprofit management](https://codehannah.nyc/theodora) that features multi-tenancy. This means that a single instance of application will support multiple isolated users. Today, we'll discuss how to configure multi-tenancy using the Apartment library with sessions.
+
+<img src="https://i.imgur.com/rfUkqo9.png" alt="workflow" width="300px"/>
 
 ## What is Multi-tenancy?
 
@@ -19,10 +21,13 @@ Multi-tenancy is a type of design architecture that allows an application to run
 
 > Note: Multi-tenancy can be great, but sometimes you don’t need it. For example, if you are building social networking platform where the main idea is sharing data, you don’t need to separate data using multi-tenancy.
 
+<img src="https://i.imgur.com/HPBBuhI.jpg" alt="workflow" width="400px"/>
+
 
 ## Getting Started with Apartment
 
 Apartment helps you add multi-tenancy by making it easy for you to sequester data based on a tenant. To use Apartment, you need to add it to your Gemfile, then run the install task with `bundle exec rails generate apartment:install`. Now, you're ready to get started using Apartment.
+
 
 ## Creating a Tenant
 
@@ -75,6 +80,8 @@ end
 ```
 
 ### Configuring Middleware
+
+<img src="https://i.imgur.com/R0DfSEO.jpg" alt="workflow" width="600px"/>
 
 When using Apartment, you'll typically use an Elevator. In Apartment, Elevators assist in configuring the selected tenant on
 a per-request basis. Elevators are Rack middlewares that run before the HTTP request hits your Rails application. It is very common
