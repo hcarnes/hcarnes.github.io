@@ -6,7 +6,7 @@ permalink:  multi-tenancy-with-apartment
 published: true
 ---
 
-I'm working on a [Rails app for nonprofit management](https://codehannah.nyc/theodora) that features multi-tenancy. This means that a single instance of the application will support multiple isolated users. Today, we'll discuss how to configure multi-tenancy using the Apartment library with sessions.
+I'm working on a [Rails app for nonprofit management](https://codehannah.nyc/theodora) that features multi-tenancy. This means that a single instance of the application will support multiple isolated users. Today, we'll discuss how to configure multi-tenancy using the [Apartment](https://github.com/influitive/apartment) library with sessions.
 
 <img src="https://i.imgur.com/rfUkqo9.png" alt="workflow" width="300px"/>
 
