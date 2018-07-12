@@ -33,8 +33,21 @@ div .cursor img {
   cursor: auto;
 }
 
-div .description {
+div .date {
   font-style: italic;
+  font-weight: 50;
+  margin: 0px;
+  font-size: 75%
+}
+
+div .description {
+  font-weight: 50;
+  margin: 0px;
+  font-size: 75%
+}
+
+div .tech {
+  font-weight: bold;
   margin: 0px;
   font-size: 75%
 }
