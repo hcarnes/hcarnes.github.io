@@ -33,6 +33,11 @@ div .cursor img {
   cursor: auto;
 }
 
+div .cursor:hover img {
+  cursor: auto;
+  opacity: .5;
+}
+
 div .date {
   font-style: italic;
   font-weight: 50;
