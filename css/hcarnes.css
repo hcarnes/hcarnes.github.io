@@ -33,6 +33,12 @@ div .cursor img {
   cursor: auto;
 }
 
+div .description {
+  font-style: italic;
+  margin: 0px;
+  font-size: 75%
+}
+
 .bookme {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 75%;
