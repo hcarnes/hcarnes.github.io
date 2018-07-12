@@ -29,6 +29,10 @@
   margin: 10px;
 }
 
+div .cursor img {
+  cursor: auto;
+}
+
 .bookme {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 75%;
