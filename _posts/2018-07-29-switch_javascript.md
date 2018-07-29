@@ -54,7 +54,7 @@ const getNumberRange = () => {
 It has more conditions, and now it's harder to tell what's going on. If you have a variable that you are testing against multiple conditions and find yourself repeating `else if` over and over, it is probably a good time to explore using a `switch` statement because it's more readable.
 
 ## Switch to the rescue!
-If you understand how the `switch` statement works, you can easily refactor this code. Every `switch` statement has an expression to be evaluated. In the example below, `true` is being evaluated. Each case is tested against this expression. If there is a match, the code will execute and the `break` keyword will signal the code to stop. If you don't include the `break` keyword, the code will keep testing all cases.
+If you understand how the `switch` statement works, you can easily refactor this code. Every `switch` statement has an expression to be evaluated. In the example below, `true` is being evaluated. Each case is tested against this expression. If there is a match, the code will execute and the `break` keyword will signal the code to stop. If you don't include the `break` keyword, the code will continue testing all cases.
 
 <img src="https://i.imgur.com/WFtRmyf.png" alt="rescue_cat" width="400px"/>
 
