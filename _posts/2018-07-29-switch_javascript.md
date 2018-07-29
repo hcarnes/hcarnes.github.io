@@ -7,7 +7,7 @@ permalink:  javascript-switch
 
 Conditional statements (`if...else`) execute code if a condition is true. If the condition is false, another statement is executed. In JavaScript, you can also use a `switch` statement to evaluate multiple conditions against the same expression. This post will explain when you should use a `switch` and how it works.
 
-The code below generates a random number and executes a statement based on 2 conditions: either the number is greater than 500 or it's not. It's easy to read the code and figure out what's going on, and it's an efficient way to get the desired output.
+The code below generates a random number and executes a statement based on 2 conditions: either the number is greater than 500 or it's not. It's easy to read the code and figure out what's going on.
 
 ```javascript
 const getNumberRange = () => {
@@ -51,13 +51,12 @@ const getNumberRange = () => {
 // getNumberRange()
 // 31 is more than 18.75 and less than 37.
 ```
-It has more conditions, so it takes longer to run. If you have a variable that you are testing against multiple conditions and find yourself repeating `else if` over and over, it is probably a good time to explore using a `switch` statement because it's more readable and you will get better performance.
+It has more conditions, and now it's harder to tell what's going on. If you have a variable that you are testing against multiple conditions and find yourself repeating `else if` over and over, it is probably a good time to explore using a `switch` statement because it's more readable.
 
 ## Switch to the rescue!
-If you understand how the `switch` statement is different than regular conditional statements, you can understand why it performs better. Every `switch` statement has an expression to be evaluated. In the example below, `true` is being evaluated. Each case is tested against the expression, and if there is a match, the code will execute and the `break` keyword will signal the code to stop. In most cases, this is faster than the lengthy process of running through all possible conditions (ahem, `if...else`).
+If you understand how the `switch` statement works, you can easily refactor this code. Every `switch` statement has an expression to be evaluated. In the example below, `true` is being evaluated. Each case is tested against the expression, and the code will execute and the `break` keyword will signal the code to stop if there is a match.
 
 <img src="https://i.imgur.com/WFtRmyf.png" alt="rescue_cat" width="400px"/>
-
 
 You can also add a default case that will run if there aren't any case matches. To that end, it's important to put the most probable condition first, so that the code will exit as soon as possible. In the code below, the widest range (`number > 500`) is is checked first all the way down the most specific range (`number > 18.75`), which is right before the default option.
 
