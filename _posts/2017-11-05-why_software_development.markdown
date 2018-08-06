@@ -9,4 +9,4 @@ I am motivated by work that improves the lives of real people. I am happiest whe
 
 I have a lot of ideas about how technology could help nonprofits increase their impact, and I want to connect my ideas with coding skills. As much as I love a challenge, the decision to learn software development feels like a no-brainer.
 
-Example Webhook push.
+Remove. Does Zen quote change.
