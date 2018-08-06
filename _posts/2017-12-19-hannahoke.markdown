@@ -6,7 +6,7 @@ permalink:  hannahoke
 published:  true
 redirect_from: "/coming_soon"
 ---
-I don't always have time to karaoke as much as I would like, but I did carve out time to create a KaraokeBar class. It was a fun way to implement the concept of private methods and review more OO Ruby.  
+I don't always have time to karaoke as much as I would like, but I did carve out time to create a KaraokeBar class. It was a fun way to implement the concept of private methods and review more OO Ruby!
 
 Each instance of KaraokeBar is initialized with an instance variable of `@queue = []` to store singers as they sign up and `@song_history` to store each song that has already been performed. There is also an `attr_reader` for `:queue`, so that we can add singers to the queue and get access to the array of singers.
 
