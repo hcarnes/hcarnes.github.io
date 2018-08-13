@@ -35,23 +35,23 @@ In the `cat` class below, notice that the size of the image is declared (`width:
 
 ```css
 .cat {
-	animation: float 4s ease-in-out infinite;
-	width: 200px;
+  animation: float 4s ease-in-out infinite;
+  width: 200px;
 }
 
 @keyframes float {
-	0% {
-		filter: drop-shadow(5px 15px 5px black);
-		transform: translateY(0px);
-	}
-	50% {
-		filter: drop-shadow(25px 30px 15px black);
-		transform: translateY(-10px);
-	}
-	100% {
-		filter: drop-shadow(5px 15px 5px black);
-		transform: translateY(0px);
-	}
+  0% {
+    filter: drop-shadow(5px 15px 5px black);
+    transform: translateY(0px);
+  }
+  50% {
+    filter: drop-shadow(25px 30px 15px black);
+    transform: translateY(-10px);
+  }
+  100% {
+    filter: drop-shadow(5px 15px 5px black);
+    transform: translateY(0px);
+  }
 ```
 
 # The animation declaration
