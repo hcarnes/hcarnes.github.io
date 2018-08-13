@@ -65,7 +65,7 @@ According to MDN, the animation CSS property is a shorthand property for the fol
 
 <img class="cat" src="/img/css_animation_property.jpg" />
 
-There are other options for each of these animations properties that you can experiment with when creating your own animations. If you have question around the `ease-in-out` property, I recommend reading about it [here](https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing).
+There are other options for each of these animations properties that you can experiment with when creating your own animations. If you have questions around the `ease-in-out` property, I recommend reading about it [here](https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing).
 
 # The keyframes
 
