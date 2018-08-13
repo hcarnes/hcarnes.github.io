@@ -5,7 +5,7 @@ date:       2018-08-13 15:12:15 -0500
 permalink:  floating_cat
 ---
 
-I recently took the plunge into learning CSS animations, and I'm so glad I did. I had so much fun learning how to add an animation to one of my cat illustrations, and I'm excited to share it. This post will explain the basics of css animations, as well as how to add a floating animation to an image. Here is the final product:
+I recently took the plunge into learning CSS animations, and I'm so glad I did. I had so much fun learning how to add an animation to one of my cat illustrations, and I'm excited to share it. This post will explain the basics of CSS animations, as well as how to add a floating animation to an image. Here is the final product:
 
 <img src="./img/ezgif.com-video-to-gif.gif" height="70px">
 
@@ -92,7 +92,7 @@ According to MDN, the `transform` property lets you rotate, scale, skew, or tran
 
 # That's a wrap
 
-In summary, all css animations much have the animation property declared and keyframes that define the when, what, and how of your animation properties. There are many more properties beyond the ones discussed in this post and there are also many css functions that allow you to have quite a bit of control over how your animation works.
+In summary, all CSS animations much have the animation property declared and keyframes that define the when, what, and how of your animation properties. There are many more properties beyond the ones discussed in this post and there are also many CSS functions that allow you to have quite a bit of control over how your animation works.
 
 
 
