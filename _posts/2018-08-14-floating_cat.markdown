@@ -5,15 +5,36 @@ date:       2018-08-12 15:12:15 -0500
 permalink:  floating_cat
 ---
 
-I've been curious about CSS animations for awhile, and I recently took the plunge and learned how to add an animation to one of my cat illustrations. This post will explain how to add a floating animation to an image using css. Here is the final product:
+I recently took the plunge into learning CSS animations, and I'm so glad I did. I had so much fun learning how to add an animation to one of my cat illustrations, and I'm excited to share it. This post will explain the basics of css animations, as well as how to add a floating animation to an image. Here is the final product:
 
 <img src="./img/ezgif.com-video-to-gif.gif" height="70px">
 
+# Let's get started
+
+For context, I added this animation to the body of a blog application built in Rails using ERB to display content to the client. You can view the app [here](http://blog-world-2018.herokuapp.com/articles). I wanted the cat to float on top of each page so I added the image to inside the body tag. The Rails `image_tag` method returns an HTML image tag for the source. In the example below, the source is a file located in my assets folder.
+
+```ERB
+<body>
+  <%= image_tag "rescuecat-transparent-large.png", class: "cat" %></a>
+</body>
+```
+The code above generates the following HTML:
+
+```html
+<body>
+  <img class="cat" src="/assets/rescuecat-transparent-large.png" />
+<body/>
+```
+
+You can see that I added the `cat` class to my HTML. All CSS animations needs two things: 
+
+* 1) the animation declaration
+* 2) the keyframes that define which properties get animated, when they get animated, and how they get animated 
+
+In the `cat` class below, notice that the size of the cat is declared (`width: 200px;`. This only changes the size and doesn't impact the animation. You can also see that the animation is declared with 4 properties: `animation: float 4s ease-in-out infinite;`. Below that you can see the `@keyframes` block.
+
 ```css
 .cat {
-	box-sizing: border-box;
-	overflow: hidden;
-	transform: translatey(0px);
 	animation: float 4s ease-in-out infinite;
 	width: 200px;
 }
@@ -21,18 +42,59 @@ I've been curious about CSS animations for awhile, and I recently took the plung
 @keyframes float {
 	0% {
 		filter: drop-shadow(5px 15px 5px black);
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 	50% {
 		filter: drop-shadow(25px 30px 15px black);
-		transform: translatey(-10px);
+		transform: translateY(-10px);
 	}
 	100% {
 		filter: drop-shadow(5px 15px 5px black);
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
-}
 ```
+
+# The CSS declaration
+
+According to MDN, the animation CSS property is a shorthand property for the following properties: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state. For the case of the floating cat, I'm only using the following animation properties:
+
+* **animation-name:** float (this refers to @keyframe defined below)
+* **duration:** 4s (this refers to the numbers of seconds your animation will take from start to finish)
+* **animation-timing-function:** ease-in-out; (this refers to the timing as your animations begins and ends)
+* **animation-iteration-count:** infinite; (this refers to the number of loops your animation will run before stopping)
+
+<img class="cat" src="/img/css_animation_property.jpg" />
+
+There are other options for each of these animations properties that you can experiment with when creating your own animations. If you have question around the `ease-in-out` property, I recommend reading about it [here](https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing).
+
+# Anatomy of CSS keyframes
+
+The keyframes are where you really get to control things in your animation. You first startwith the `@keyframes` keyword followed by a declaration of the name of the animatio (in this case, `float`). Inside the `@keyframes` rule, you can see that 3 percentages have been declared followed by a block of code containing properties and their declared values. These percentages represent the waypoints alongs the animation sequence. Let's break this down. The `0%` selector contains a block of values that are set at the start of the animation. The `50%` selector contains a block of values that are set at the halfway point. The `100%` selector contains a block values that are set once animaition is complete.
+
+At each of the points, we have two properties: `filter` and `transform`. 
+
+According to MDN, the `filter` CSS property lets you apply graphical effects like blurring or color shifting to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders. I used the `drop-shadow()` CSS function to apply a drop shadow effect to the cat image. I applied the following parameters to the `drop-shadow()` function.
+
+* <offset-y> specifies the vertical distance (required)
+* <offset-x> specifies the horizontal distance (required)
+* <blur-radius> The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. If not specified, it * will be 0 (the shadow's edge is sharp). (optional)
+* <color> (optional) Depending on the broswer, there will be a default color.
+
+<img class="cat" src="/img/css_filter_property.jpg" />
+
+> Note, there is also an optional fourth value that would come before color called the spread-radius.
+
+According to MDN, the `transform` property lets you rotate, scale, skew, or translate a given element. This is achieved by modifying the coordinate space of the CSS visual formatting model. In this case, I used the `translateY()` CSS function to declare the position of the cat image vertically on a 2D plane. I did this because I wanted the cat to float up at the halfway point and float back down. If I wanted the cat to float horizontally, I would've used the `translateX()` CSS function.
+
+# That's a wrap
+
+In summary, all css animations much have the animation property declared and keyframes that define the when, what, and how of your animation properties. There are many more properties beyond the ones discussed in this post and there are also many css functions that allow you to have quite a bit of control over how your animation works.
+
+
+
+
+
+
 
 
 
