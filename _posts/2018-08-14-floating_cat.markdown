@@ -5,7 +5,7 @@ date:       2018-08-13 15:12:15 -0500
 permalink:  floating_cat
 ---
 
-I recently took the plunge into learning CSS animations, and I'm so glad I did. I had so much fun learning how to add an animation to one of my cat illustrations, and I'm excited to share it. This post will explain the basics of CSS animations, as well as how to add a floating animation to an image. Here is the final product:
+I recently took the plunge into learning CSS animations, and I'm so glad I did. I had so much fun learning how to add an animation to one of my cat illustrations, and I'm excited to share it. This post will explain the basics of CSS animations, as well as how to add a floating animation to an image.
 
 <img src="./img/ezgif.com-video-to-gif.gif" height="70px">
 
