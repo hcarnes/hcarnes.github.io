@@ -69,9 +69,11 @@ There are other options for each of these animations properties that you can exp
 
 # The keyframes
 
-The keyframes are where you really get to control things in your animation. You first start with the `@keyframes` keyword followed by a declaration of the name of the animation (in this case, `float`). Inside the `@keyframes` rule, you can see that 3 percentages have been declared followed by a block of code containing properties and their declared values. These percentages represent the waypoints along the animation sequence. Let's break this down. The `0%` selector contains a block of values that execute at the begniing of the animation. The `50%` selector contains a block of values that execute at the halfway point. The `100%` selector contains a block values that execute once animaition is complete. At each of these waypoints, we have two properties: `filter` and `transform`. Notice the first two blocks execute the same values, while the midway block executes a change.
+The keyframes are where you really get to control things in your animation. You first start with the `@keyframes` rule followed by a declaration of the name of the animation (in this case, `float`). Inside the `@keyframes` rule, you can see that 3 percentages have been declared followed by a block of code containing properties and their declared values. These percentages represent the waypoints along the animation sequence. Let's break this down. The `0%` selector contains a block of values that execute at the begniing of the animation. The `50%` selector contains a block of values that execute at the halfway point. The `100%` selector contains a block values that execute once animaition is complete. At each of these waypoints, we have two properties: `filter` and `transform`. Notice the first two blocks execute the same values, while the midway block executes a change.
 
-According to MDN, the `filter` CSS property lets you apply graphical effects like blurring or color shifting to an element. Filters are commonly used to adjust the rendering of images. I used the `drop-shadow()` CSS function to apply a drop shadow effect to the cat image. I applied the following parameters to the `drop-shadow()` function.
+> You can experiement by setting diffferent waypoint percentages. They are executed in which they appear.
+
+According to MDN, the `filter` CSS property lets you apply graphical effects like blurring to an element. Filters are commonly used to adjust the rendering of images. I used the `drop-shadow()` CSS function to apply a drop shadow effect to the cat image. I applied the following parameters to the `drop-shadow()` function.
 
 * <offset-y> specifies the vertical distance (required)
 * <offset-x> specifies the horizontal distance (required)
@@ -84,7 +86,7 @@ I changed the values at the halfway waypoint, so that shadow would look fuzzier 
 
 > Note, there is also an optional fourth value that would come before color called the spread-radius.
 
-According to MDN, the `transform` property lets you rotate, scale, skew, or translate a given element. This is achieved by modifying the coordinate space of the CSS visual formatting model. In this case, I used the `translateY()` CSS function to declare the position of the cat image vertically on a 2D plane. I did this because I wanted the cat to float up at the halfway point and float back down. If I wanted the cat to float horizontally, I would've used the `translateX()` CSS function.
+According to MDN, the `transform` property lets you rotate, scale, skew, or translate a given element. In this case, I used the `translateY()` CSS function to declare the position of the cat image vertically on a 2D plane. I did this because I wanted the cat to float up at the halfway point and float back down. If I wanted the cat to float horizontally, I would've used the `translateX()` CSS function.
 
 # That's a wrap
 
