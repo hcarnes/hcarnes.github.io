@@ -69,7 +69,9 @@ There are other options for each of these animations properties that you can exp
 
 # The keyframes
 
-The keyframes are where you really get to control things in your animation. You first start with the `@keyframes` rule followed by a declaration of the name of the animation (in this case, `float`). Inside the `@keyframes` rule, you can see that 3 percentages have been declared followed by a block of code containing properties and their declared values. These percentages represent the waypoints along the animation sequence. Let's break this down. The `0%` selector contains a block of values that execute at the begniing of the animation. The `50%` selector contains a block of values that execute at the halfway point. The `100%` selector contains a block values that execute once animaition is complete. At each of these waypoints, we have two properties: `filter` and `transform`. Notice the first two blocks execute the same values, while the midway block executes a change.
+The keyframes are where you really get to control things in your animation. You first start with the `@keyframes` rule followed by a declaration of the name of the animation (in this case, `float`). Inside the `@keyframes` rule, you can see that 3 percentages have been declared followed by a block of code containing properties and their declared values. These percentages represent the waypoints along the animation sequence. 
+
+Let's break this down. The `0%` selector contains a block of values that execute at the begniing of the animation. The `50%` selector contains a block of values that execute at the halfway point. The `100%` selector contains a block values that execute once animaition is complete. At each of these waypoints, we have two properties: `filter` and `transform`. Notice the first two blocks execute the same values, while the midway block executes a change.
 
 > You can experiement by setting diffferent waypoint percentages. They are executed in which they appear.
 
