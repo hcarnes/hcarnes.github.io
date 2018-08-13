@@ -1,13 +1,13 @@
 ---
 layout: post
-title:      "How to Create a Floating Cat in CSS"
-date:       2018-08-14 12:00:00 -0500
+title:      "Creating a Floating Cat in CSS"
+date:       2018-08-12 15:12:15 -0500
 permalink:  floating_cat
 ---
 
 I've been curious about CSS animations for awhile, and I recently took the plunge and learned how to add an animation to one of my cat illustrations. This post will explain how to add a floating animation to an image using css. Here is the final product:
 
-<img src="https://i.imgur.com/H9XhL0e.gif">
+<img src="./img/ezgif.com-video-to-gif.gif" height="70px">
 
 ```css
 .cat {
