@@ -11,7 +11,7 @@ I recently took the plunge into learning CSS animations, and I'm so glad I did. 
 
 # Let's get started
 
-For context, I added this animation to the body of a blog application built in Rails using ERB to display content to the client. You can view the app [here](http://blog-world-2018.herokuapp.com/articles). I wanted the cat to float on top of each page so I added the image to inside the body tag. The Rails `image_tag` method returns an HTML image tag for the source. In the example below, the source is a file located in my assets folder.
+For context, I added this animation a blog application built in Rails using ERB to display content to the client. You can view the app [here](http://blog-world-2018.herokuapp.com/articles). I wanted the cat to float on top of each page so I added the image inside of the body tag. The Rails `image_tag` method returns an HTML image tag for the source.
 
 ```ERB
 <body>
@@ -26,12 +26,12 @@ The code above generates the following HTML:
 <body/>
 ```
 
-You can see that I added the `cat` class to my HTML. All CSS animations needs two things: 
+Let's dig into how I created an animation using the `cat` class I included in the `image_tag` above. CSS animations need two things: 
 
 * 1) the animation declaration
 * 2) the keyframes that define which properties get animated, when they get animated, and how they get animated 
 
-In the `cat` class below, notice that the size of the cat is declared (`width: 200px;`. This only changes the size and doesn't impact the animation. You can also see that the animation is declared with 4 properties: `animation: float 4s ease-in-out infinite;`. Below that you can see the `@keyframes` block.
+In the `cat` class below, notice that the size of the image is declared (`width: 200px;`). This only changes the size and doesn't impact the animation. You can also see that the animation is declared with 4 properties: `animation: float 4s ease-in-out infinite;`. Below that you can see the `@keyframes` block.
 
 ```css
 .cat {
@@ -54,7 +54,7 @@ In the `cat` class below, notice that the size of the cat is declared (`width: 2
 	}
 ```
 
-# The CSS declaration
+# The animation declaration
 
 According to MDN, the animation CSS property is a shorthand property for the following properties: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state. For the case of the floating cat, I'm only using the following animation properties:
 
@@ -67,18 +67,18 @@ According to MDN, the animation CSS property is a shorthand property for the fol
 
 There are other options for each of these animations properties that you can experiment with when creating your own animations. If you have question around the `ease-in-out` property, I recommend reading about it [here](https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing).
 
-# Anatomy of CSS keyframes
+# The keyframes
 
-The keyframes are where you really get to control things in your animation. You first startwith the `@keyframes` keyword followed by a declaration of the name of the animatio (in this case, `float`). Inside the `@keyframes` rule, you can see that 3 percentages have been declared followed by a block of code containing properties and their declared values. These percentages represent the waypoints alongs the animation sequence. Let's break this down. The `0%` selector contains a block of values that are set at the start of the animation. The `50%` selector contains a block of values that are set at the halfway point. The `100%` selector contains a block values that are set once animaition is complete.
+The keyframes are where you really get to control things in your animation. You first startwith the `@keyframes` keyword followed by a declaration of the name of the animation (in this case, `float`). Inside the `@keyframes` rule, you can see that 3 percentages have been declared followed by a block of code containing properties and their declared values. These percentages represent the waypoints along the animation sequence. Let's break this down. The `0%` selector contains a block of values that execute at the begniing of the animation. The `50%` selector contains a block of values that execute at the halfway point. The `100%` selector contains a block values that execute once animaition is complete. At each of these waypoints, we have two properties: `filter` and `transform`. Notice the first two blocks execute the same values, while the midway block executes a change.
 
-At each of the points, we have two properties: `filter` and `transform`. 
-
-According to MDN, the `filter` CSS property lets you apply graphical effects like blurring or color shifting to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders. I used the `drop-shadow()` CSS function to apply a drop shadow effect to the cat image. I applied the following parameters to the `drop-shadow()` function.
+According to MDN, the `filter` CSS property lets you apply graphical effects like blurring or color shifting to an element. Filters are commonly used to adjust the rendering of images. I used the `drop-shadow()` CSS function to apply a drop shadow effect to the cat image. I applied the following parameters to the `drop-shadow()` function.
 
 * <offset-y> specifies the vertical distance (required)
 * <offset-x> specifies the horizontal distance (required)
-* <blur-radius> The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. If not specified, it * will be 0 (the shadow's edge is sharp). (optional)
+* <blur-radius> (optional) If not specified, it will be 0 creating a sharp shadow.
 * <color> (optional) Depending on the broswer, there will be a default color.
+
+I changed the values at the halfway waypoint, so that shadow would look fuzzier and more distant as it the image floated up.
 
 <img class="cat" src="/img/css_filter_property.jpg" />
 
