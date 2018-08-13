@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "How to Create a Floating Cat in CSS"
-date:       2018-08-28 15:12:15 -0500
+date:       2018-08-14 12:00:00 -0500
 permalink:  floating_cat
 ---
 
