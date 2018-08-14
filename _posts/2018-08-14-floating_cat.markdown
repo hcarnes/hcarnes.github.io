@@ -58,10 +58,10 @@ In the `cat` class below, notice that the size of the image is declared (`width:
 
 According to MDN, the animation CSS property is a shorthand property for the following properties: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state. Whew, that's a lot of properties. For the case of the floating cat, I'm only using the following animation properties:
 
-* **animation-name:** float (this refers to @keyframe defined below)
+* **animation-name:** float (this refers to `@keyframe` defined below)
 * **duration:** 4s (this refers to the numbers of seconds your animation will take from start to finish)
-* **animation-timing-function:** ease-in-out; (this refers to the timing as your animations begins and ends)
-* **animation-iteration-count:** infinite; (this refers to the number of loops your animation will run before stopping)
+* **animation-timing-function:** ease-in-out (this refers to the timing as your animations begins and ends)
+* **animation-iteration-count:** infinite (this refers to the number of loops your animation will run before stopping)
 
 <img class="cat" src="/img/css_animation_property.jpg" />
 
