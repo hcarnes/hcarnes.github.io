@@ -28,8 +28,8 @@ The code above generates the following HTML:
 
 Let's dig into how I created an animation using the `cat` class I included in the `image_tag` above. CSS animations need two things: 
 
-* 1) the animation declaration
-* 2) the keyframes that define which properties get animated, when they get animated, and how they get animated 
+  1) the animation declaration
+  2) the keyframes that define which properties get animated, when they get animated, and how they get animated 
 
 In the `cat` class below, notice that the size of the image is declared (`width: 200px;`). This only changes the size and doesn't impact the animation. You can also see that the animation is declared with 4 properties: `animation: float 4s ease-in-out infinite;`. Below that you can see the `@keyframes` block.
 
