@@ -57,7 +57,7 @@ export function addPlant(plantToAdd) {
 ```
 
 # Next time
-Next time I am creating a relatively simple full stack applicaiton, I would start out by creating different repositories for the frontend and backennd and I would deploy them to Heroku at the beginning of the development process instead of waiting until the end.
+Next time I am creating a relatively simple full stack applicaiton, I would start out by creating different repositories for the frontend and backend and I would deploy them to Heroku at the beginning of the development process instead of waiting until the end.
 
 
 
