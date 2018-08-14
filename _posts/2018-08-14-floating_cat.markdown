@@ -82,9 +82,9 @@ According to MDN, the `filter` CSS property lets you apply graphical effects lik
 * **blur-radius** - (optional) If not specified, it will be 0 creating a sharp shadow.
 * **color** - (optional) Depending on the broswer, there will be a default color.
 
-I changed the values at the halfway waypoint, so that shadow would look fuzzier and more distant as it the image floated up.
-
 <img class="cat" src="/img/css_filter_property.jpg" width="600px"/>
+
+I changed the values at the halfway waypoint, so that shadow would look fuzzier and more distant as it the image floated up.
 
 > Note, there is also an optional fourth value that would come before color called the spread-radius.
 
