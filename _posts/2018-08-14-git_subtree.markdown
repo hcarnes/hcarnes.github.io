@@ -14,7 +14,7 @@ Feel free to check out [Greenthumb Gardens](https://greenthumb-gardens.herokuapp
 > Here is quick tip on changing from Sqlite3 to Postgres. In order to deploy the backend to Heroku, I had to change my database from Sqlite3 to Postgres. In the gemfile, I changed `gem sqlite3` to `gem pg`. Next, I updated the`config/database.yml` file. Instead of manually changing anything that referenced Sqlite3 to Postgres, I set up a new Rails app and installed Postgres as its database, so that I could simply copy the fresh `config/database.yml` over to my current project. I ran `rake db:migrate` to make sure my changes were updated.
 
 # Using git subtree
-Because my client app was in a folder nested inside of the backend app, I had to figure out a way to create a new repo within my main repo. That’s where `git subtree` comes in. `git subtree` allowed me to nest one repository inside another as a sub-directory.
+As I mentioned before, my client app was in a folder nested inside of the backend app, so I had to figure out a way to create a new repo within my main repo. That’s where `git subtree` comes in. `git subtree` allowed me to nest one repository inside another as a sub-directory.
 
 First, I created a new Heroku repo for the client and pushed it the remote.
 
@@ -37,7 +37,7 @@ Now that the backend app is running using a separate repo, I set the new environ
 
 `REACT_APP_BACKEND_HOST="https://greenthumb-gardens-backend.herokuapp.com"`
 
-I also updated the Redux `action` file fetched made an async request to the backend application.
+I also updated the Redux `action` file that made an async request to the backend application.
 
 ```javascript
 export function addPlant(plantToAdd) {
