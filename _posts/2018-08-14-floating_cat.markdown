@@ -92,7 +92,7 @@ According to MDN, the `transform` property lets you rotate, scale, skew, or tran
 
 # That's a wrap
 
-In summary, all CSS animations much have the animation property declared and keyframes that define the when, what, and how of your animation properties. There are many more properties beyond the ones discussed in this post and there are also many CSS functions that allow you to have quite a bit of control over how your animation works.
+In summary, all CSS animations must have the animation property declared and keyframes that define the when, what, and how of your animation properties. There are many more properties beyond the ones discussed in this post and there are also many CSS functions that allow you to have quite a bit of control over how your animation works.
 
 
 
