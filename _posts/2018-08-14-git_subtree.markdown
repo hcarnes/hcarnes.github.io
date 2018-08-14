@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "How git subtree helped me"
+title:      "How Git Subtree Helped Me Deploy to Heroku"
 date:       2018-08-14 15:12:15 -0500
 permalink:  git_subtree
 ---
