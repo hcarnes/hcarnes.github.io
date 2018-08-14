@@ -31,7 +31,7 @@ Let's dig into how I created an animation using the `cat` class I included in th
   * the animation declaration
   * the keyframes that define which properties get animated, when they get animated, and how they get animated 
 
-In the `cat` class below, notice that the size of the image is declared (`width: 200px;`). This only changes the size and doesn't impact the animation. You can also see that the animation is declared with 4 properties: `animation: float 4s ease-in-out infinite;`. Below that you can see the `@keyframes` block.
+In the `cat` class below, notice that the size of the image is declared (`width: 200px;`). This only changes the size and doesn't impact the animation. You can also see that the animation is declared with 4 properties: `animation: float 4s ease-in-out infinite;`. Below that, you can see the `@keyframes` block.
 
 ```css
 .cat {
@@ -78,13 +78,13 @@ Let's break this down. The `0%` selector contains a block of values that execute
 According to MDN, the `filter` CSS property lets you apply graphical effects like blurring to an element. Filters are commonly used to adjust the rendering of images. I used the `drop-shadow()` CSS function to apply a drop shadow effect to the cat image. I applied the following parameters to the `drop-shadow()` function.
 
 * **offset-y** - (required) specifies the vertical distance 
-* **offset-x** - specifies the horizontal distance (required)
+* **offset-x** - (required) specifies the horizontal distance
 * **blur-radius** - (optional) If not specified, it will be 0 creating a sharp shadow.
 * **color** - (optional) Depending on the broswer, there will be a default color.
 
 <img class="cat" src="/img/css_filter_property.jpg" width="600px"/>
 
-I changed the values at the halfway waypoint, so that the shadow would look fuzzier and more distant as it the image floated up.
+I changed the values at the halfway waypoint, so that the shadow would look fuzzier and more distant as the image floated up.
 
 > Note, there is also an optional fourth value that would come before color called the spread-radius.
 
