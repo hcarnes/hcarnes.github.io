@@ -11,7 +11,7 @@ If you've ever deployed to Heroku, you know that you need a repo for your applic
 
 Feel free to check out [Greenthumb Gardens](https://greenthumb-gardens.herokuapp.com/). Unfortunately, due to changes in the Google Maps API, the map now has some restrictions. Womp womp. On the bright side, the garden search and plant adding feature still works.
 
-> Here is quick tip on changing from Sqlite3 to Postgres. In order to deploy the backend to Heroku, I had to change my database from Sqlite3 to Postgres. In the gemfile, I change ‘gem sqlite3’ to ‘gem pg’. Next, I updated the`config/database.yml` file. Instead of manually changing anything that referenced Sqlite3 to Postgres, I set up a new Rails app and installed Postgres as its database, so that I could simply copy the fresh `config/database.yml` over to my current project. I ran `rake db:migrate` to make sure my changes were updated.
+> Here is quick tip on changing from Sqlite3 to Postgres. In order to deploy the backend to Heroku, I had to change my database from Sqlite3 to Postgres. In the gemfile, I changed `gem sqlite3` to `gem pg`. Next, I updated the`config/database.yml` file. Instead of manually changing anything that referenced Sqlite3 to Postgres, I set up a new Rails app and installed Postgres as its database, so that I could simply copy the fresh `config/database.yml` over to my current project. I ran `rake db:migrate` to make sure my changes were updated.
 
 # Using git subtree
 Because my client app was in a folder nested inside of the backend app, I had to figure out a way to create a new repo within my main repo. That’s where `git subtree` comes in. `git subtree` allowed me to nest one repository inside another as a sub-directory.
@@ -24,11 +24,11 @@ Next, I used `git subtree push` to push that repo to the remote instance of the 
 
 `git subtree push --prefix greenthumb-client/ heroku-frontend master`
 
-Next, I created a new Heroku repo for the client and pushed it the remote.
+Next, I created a new Heroku repo for the backend and pushed it the remote.
 
 `heroku create greenthumb-gardens-backend --remote heroku-backend`
 
-Next, I pushed the repo.
+Next, I pushed the repo to the instance of the Heroku application.
 `git push heroku-backend heroku:master`
 
 # Getting ready for production
@@ -58,7 +58,7 @@ export function addPlant(plantToAdd) {
 ```
 
 # Next time
-Next time I am creating a relatively simple full stack applicaiton, I would start out by creating different repositories for the frontend and backend and I would deploy them to Heroku at the beginning of the development process instead of waiting until the end.
+Next time I am creating a relatively simple full stack applicaiton, I would start out by creating different repositories for the frontend and backend. Also, I would deploy them to Heroku at the beginning of the development process instead of waiting until the end.
 
 
 
