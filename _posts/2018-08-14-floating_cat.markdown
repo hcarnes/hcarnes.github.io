@@ -56,7 +56,7 @@ In the `cat` class below, notice that the size of the image is declared (`width:
 
 # The animation declaration
 
-According to MDN, the animation CSS property is a shorthand property for the following properties: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state. For the case of the floating cat, I'm only using the following animation properties:
+According to MDN, the animation CSS property is a shorthand property for the following properties: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state. Whew, that's a lot of properties. For the case of the floating cat, I'm only using the following animation properties:
 
 * **animation-name:** float (this refers to @keyframe defined below)
 * **duration:** 4s (this refers to the numbers of seconds your animation will take from start to finish)
