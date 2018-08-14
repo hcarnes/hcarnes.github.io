@@ -84,7 +84,7 @@ According to MDN, the `filter` CSS property lets you apply graphical effects lik
 
 <img class="cat" src="/img/css_filter_property.jpg" width="600px"/>
 
-I changed the values at the halfway waypoint, so that shadow would look fuzzier and more distant as it the image floated up.
+I changed the values at the halfway waypoint, so that the shadow would look fuzzier and more distant as it the image floated up.
 
 > Note, there is also an optional fourth value that would come before color called the spread-radius.
 
