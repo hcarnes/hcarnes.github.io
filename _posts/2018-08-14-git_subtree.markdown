@@ -9,7 +9,7 @@ One thing to consider when you start developing an application is the organizati
 
 If you've ever deployed to Heroku, you know that you need a repo for your application. Well, I had 2 applications that I needed to deploy (frontend and backend), but I only had 1 git repo. This was a problem. With that said, this post will explain how I used `git subtree` to deploy my app to Heroku, despite the fact that the client and server were in the same repo.
 
-Feel free to check out (Greenthumb Gardens)[https://greenthumb-gardens.herokuapp.com/]. Unfortunately, due to changes in the Google Maps API, the map now has some restrictions. Womp womp. On the bright side, the garden search and plant adding feature still works.
+Feel free to check out [Greenthumb Gardens](https://greenthumb-gardens.herokuapp.com/). Unfortunately, due to changes in the Google Maps API, the map now has some restrictions. Womp womp. On the bright side, the garden search and plant adding feature still works.
 
 > Here is quick tip on changing from Sqlite3 to Postgres. In order to deploy the backend to Heroku, I had to change my database from Sqlite3 to Postgres. In the gemfile, I change ‘gem sqlite3’ to ‘gem pg’. Next, I updated the`config/database.yml` file. Instead of manually changing anything that referenced Sqlite3 to Postgres, I set up a new Rails app and installed Postgres as its database, so that I could simply copy the fresh `config/database.yml` over to my current project. I ran `rake db:migrate` to make sure my changes were updated.
 
