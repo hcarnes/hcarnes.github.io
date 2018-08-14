@@ -73,7 +73,7 @@ The keyframes are where you really get to control things in your animation. You 
 
 Let's break this down. The `0%` selector contains a block of values that execute at the beginning of the animation. The `50%` selector contains a block of values that execute at the halfway point. The `100%` selector contains a block values that execute once animation is complete. At each of these waypoints, we have two properties: `filter` and `transform`. Notice the first two blocks execute the same values, while the midway block executes a change.
 
-> You can experiement by setting diffferent waypoint percentages. They are executed in which they appear.
+> You can experiement by setting different waypoint percentages. They are executed in the order that they appear.
 
 According to MDN, the `filter` CSS property lets you apply graphical effects like blurring to an element. Filters are commonly used to adjust the rendering of images. I used the `drop-shadow()` CSS function to apply a drop shadow effect to the cat image. I applied the following parameters to the `drop-shadow()` function.
 
