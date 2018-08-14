@@ -29,6 +29,7 @@ Next, I created a new Heroku repo for the backend and pushed it the remote.
 `heroku create greenthumb-gardens-backend --remote heroku-backend`
 
 Next, I pushed the repo to the instance of the Heroku application.
+
 `git push heroku-backend heroku:master`
 
 # Getting ready for production
