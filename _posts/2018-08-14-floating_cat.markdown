@@ -11,7 +11,7 @@ I recently took the plunge into learning CSS animations, and I'm so glad I did. 
 
 # Let's get started
 
-For context, I added this animation a blog application built in Rails using ERB to display content to the client. You can view the app [here](http://blog-world-2018.herokuapp.com/articles). I wanted the cat to float on top of each page so I added the image inside of the body tag. The Rails `image_tag` method returns an HTML image tag for the source.
+For context, I added this animation to a blog application built in Rails using ERB to display content to the client. You can view the app [here](http://blog-world-2018.herokuapp.com/articles). I wanted the cat to float on top of each page so I added the image inside of the body tag. The Rails `image_tag` method returns an HTML image tag for the source.
 
 ```ERB
 <body>
