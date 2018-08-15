@@ -5,7 +5,7 @@ date:       2018-08-14 15:12:15 -0500
 permalink:  git_subtree
 ---
 
-One thing to consider when you start developing an application is the organization of your git repos. Mono-repo is an organization structure where all of your code is one repo, and multi-repo involves organizing code across multiple repos. When I built Greenthumb Gardens, I used something similar to the mono-repo structure because I nested the client in a folder inside of the Rails API. Typically monorepos are a bunch of different high level folders in the same repo.
+One thing to consider when you start developing an application is the organization of your git repos. Mono-repo is an organization structure where all of your code is one repo, and multi-repo involves organizing code across multiple repos. When I built Greenthumb Gardens, I used something similar to the mono-repo structure because I nested the client in a folder inside of the Rails API. Typically, monorepos are a bunch of different high level folders in the same repo.
 
 If you've ever deployed to Heroku, you know that you need a repo for your application. Well, I had 2 applications that I needed to deploy (frontend and backend), but I only had 1 git repo. This was a problem. With that said, this post will explain how I used `git subtree` to deploy my app to Heroku, despite the fact that the client and server were in the same repo.
 
