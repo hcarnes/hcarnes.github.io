@@ -9,6 +9,10 @@
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
+ul.archive-list {
+  list-style-type: none
+}
+
 
 .flexColumn {
   height: 100%;                     /* take height of nav parent */
@@ -62,3 +66,4 @@ div .tech {
   font-size: 75%;
   font-style: italic;
 }
+
