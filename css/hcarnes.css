@@ -13,6 +13,9 @@ ul.archive-list {
   list-style-type: none
 }
 
+span.archive-date {
+  font-family: 'Lora', 'Times New Roman', serif;
+}
 
 .flexColumn {
   height: 100%;                     /* take height of nav parent */
