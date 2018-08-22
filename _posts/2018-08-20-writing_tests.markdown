@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "TDD: Is it worth it? Let me work it."
-date:       2018-08-20 00:12:15 -0500
+date:       2018-08-22 00:12:15 -0500
 permalink:  writing_tests
 ---
 
