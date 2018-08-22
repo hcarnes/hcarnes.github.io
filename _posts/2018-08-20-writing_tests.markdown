@@ -13,7 +13,7 @@ This post discusses getting started in Test Driven Development using Minitest, t
 Using software to run tests that generates errors if your code doesn’t give the results you want.
 
 ## What is the alternative? 
-Manual testing, which involves running the code in the browser and seeing what happens. As a result, there will be clicking around and possibly not getting errors because maybe something isn't working how you hoped but does generate an error.  
+Manual testing, which involves running the code in the browser and seeing what happens. As a result, there will be clicking around and possibly not getting errors because maybe something isn't working how you hoped but doesn't generate an error.  
 
 ## Starting with the end goal in mind
 My goal was to create a pizza shop API that will render pizza topping options (cheese, pepperoni, olives) in JSON, so that the frontend can use the data down the road.
@@ -41,7 +41,7 @@ end
 
 Next, I updated my `config/routes.rb` file.
 
-```Ruby
+```ruby
 Rails.application.routes.draw do
   get '/toppings', to: 'toppings#index'
 end
@@ -51,9 +51,9 @@ Next, I created the database.
 
 `rake db:create`
 
-Next, I migrated the test environment.
+Next, I migrated the database.
 
-`rake RAILS_ENV=test`
+`rake db:migrate`
 
 ## The test skeleton
 `rails new…--api` creates a `test` directory by default. If you generate a controller, Rails will add a corresponding test folder. When running `rails new…--api`, the controller test will inherit from ActionDispatch::IntegrationTest by default. If you followed the steps up to this point, the default test stub for the Topping controller will look similar to this:
