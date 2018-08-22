@@ -106,6 +106,7 @@ class ToppingControllerTest < ActionDispatch::IntegrationTest
  setup do
    @toppings = Topping.all
  end
+end
 ```
 
 ## Write the test
