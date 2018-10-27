@@ -11,11 +11,15 @@ I want to share some tricks that help me solve coding problems. If you are just 
 
 ##  Trick #1 - Use Git to invesitage problems by sifting through old commits 🔍 
 
-`git log` - lists the commits made in that repository in reverse chronological order
+If you are working with an unfamiliar codebase, it's helpful to be able to look bad at old commits and see what changed and how it changed.
 
-`git log --pretty=oneline` - makes everything look nice, one line stacked on the other
+`git log` lists the commits made in that repository in reverse chronological order.
+`git log --pretty=oneline` limits each commit message to one line and is more readable. This formate is helpful if you need to look through a lot of information.
+`git show <commit hash>` will give you the commit hashes along with their messages. So, if you wanted to dig deeper in a certain commit, you could use this.
 
-`git log -p` - shows a 'patch' of what was actually changed in the code
+If you can't get any clues from listing the commit messages, you could try `git log -p` - shows a 'patch' of what was actually changed in the code along with each commit message.
+
+
 
 `git log --follow <path>` shows all the commits in the give path. For example, `git log --follow _posts` shows the commit history for all the files in the `_posts` directory of this blog.
 
