@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Git or Treat"
-date:       2019-10-27 00:02:15 -0500
+date:       2018-10-27 00:02:15 -0500
 permalink:  git_or_treat
 ---
 
