@@ -5,8 +5,11 @@ date:       2018-10-26 00:12:15 -0500
 permalink:  git_or_treat
 ---
 
+Git gets a lot easier the more you just dig in and use it. I feel like there's an inflection point on learning anything, where you can move on from just the basics fundamentals of understanding something to understanding something so well that you can start to think more creatively while using the new skill. This post is called "Git or Treat" because it's almost Halloween and sometimes git can be scary! 🎃 
 
-## Looking through old commits
+I want to share some tricks that help me solve coding problems. If you are just learning Git or if you already have they basics down, I think it would be helpful to be familiar with these Git "tricks".
+
+##  Trick #1 - Use Git to invesitage problems by sifting through old commits 🔍 
 
 `git log` - lists the commits made in that repository in reverse chronological order
 
@@ -21,7 +24,7 @@ permalink:  git_or_treat
 `git reflog` - Reflog is short for 'reference log'. They record when the tips of branches and other references were updated in the local repository. 
 
 
-## Searching for specific things
+## Trick #2) Searching for specific things
 
 Did you know grep stands for 'Global regular expression print'? It's a great acronym because it lets your search for stuff in your code base.
 
