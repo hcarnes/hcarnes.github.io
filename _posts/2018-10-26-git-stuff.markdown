@@ -1,0 +1,50 @@
+---
+layout: post
+title:      "Git or Treat"
+date:       2018-10-26 00:12:15 -0500
+permalink:  git_or_treat
+---
+
+
+## Looking through old commits
+
+`git log` - lists the commits made in that repository in reverse chronological order
+
+`git log --pretty=oneline` - makes everything look nice, one line stacked on the other
+
+`git log -p` - shows a 'patch' of what was actually changed in the code
+
+`git log --follow <path>` shows all the commits in the give path. For example, `git log --follow _posts` shows the commit history for all the files in the `_posts` directory of this blog.
+
+`git log -p --follow <path>` works the same as the previous command, but it also shows the 'patch' of code that was changed for each commit.
+
+`git reflog` - Reflog is short for 'reference log'. They record when the tips of branches and other references were updated in the local repository. 
+
+
+## Searching for specific things
+
+Did you know grep stands for 'Global regular expression print'? It's a great acronym because it lets your search for stuff in your code base.
+
+`git grep <search phrase>` will print lines that match the pattern you search for.
+
+`git blame` shows what was changed and who changed it.
+
+`git log --pretty=oneline -S'question'` shows everything in one line and let's your search for a phrase, in this case 'question
+
+## How to Patch something onto the last commit`
+
+`git add -p`
+`git commit --amend`
+
+
+## Don't be afraid of rebase
+
+
+
+## BONUS - Cherry pick
+
+`git cherry pick`
+
+## BONUS OVERTIME
+
+`git rebase`
