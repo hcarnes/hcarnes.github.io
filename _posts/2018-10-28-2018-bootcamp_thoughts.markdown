@@ -1,7 +1,11 @@
 ---
 layout: post
 title:      "Flatiron Online Coding Bootcamp Experience"
+<<<<<<< HEAD
 date:       2018-10-28 00:00:15 -0500
+=======
+date:       2018-10-27 00:02:15 -0500
+>>>>>>> 982e78401da6cc18e1564a785d077e6f00d7a91d
 permalink:  bootcamp_experience
 ---
 
