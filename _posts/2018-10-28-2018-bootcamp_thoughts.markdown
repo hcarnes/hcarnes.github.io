@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Flatiron Online Coding Bootcamp Experience"
-date:       2018-10-28 00:08:15 -0500
+date:       2018-10-28 00:00:15 -0500
 permalink:  bootcamp_experience
 ---
 
