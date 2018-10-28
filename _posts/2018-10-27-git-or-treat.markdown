@@ -9,7 +9,7 @@ Git gets a lot easier the more you just dig in and use it. There's an inflection
 
 For this post, I'll share a couple of tricks (or treats, depending on how your look at it) 🎃 I've learned on how to investigate commit histories. If you are just learning git or if you already have they basics down, I think it would be helpful to be familiar with these git "tricks".
 
-##  Trick 1 - Sifting through old commits, like bones
+##  Trick 1 - Sifting through old commits
 
 If you are working with an unfamiliar codebase, it's helpful to be able to look back at commits and see what changed and how it changed.
 
@@ -24,7 +24,7 @@ What if there is there is a particular file that you want to learn more about?
 * `git log -p --follow <file path>` same, but also shows code changed.
 
 
-## Trick 2 - Searching for more specific things, like clues to the past
+## Trick 2 - Searching for more specific things
 
 If you are getting error related to a specific phrase, you can search the codebase for that phrase.
 
