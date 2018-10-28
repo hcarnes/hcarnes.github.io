@@ -39,7 +39,7 @@ If you live in NYC area, you can attend one career event hosted by Flatiron. The
 ## Qualifying job offer
 My career coach had a background in general career development/HR and had 1 month of experience in the role at Flatiron. They didn't have experience in tech recruiting. It became evident throughout our interactions that their job was to ensure I was complying with the contract I signed at the beginning of the program. The contract ensures graduates meet a certain number of action items each week to be considered for the money back job guarantee. From my experience, the career coach’s job was also to build a relationship with me so that I would notify them if I got any type of job offer. Once I got an offer, they advised me to accept it without ever asking questions about the role or the company or advising me to negotiate my salary. Once Flatiron has evidence that you’ve received an offer, the company no longer has to expend resources toward you as the contract ensures any "qualifying" job offer received makes the student no longer eligible for the money back job guarantee.
 
-## Pricing Structure
+## Pricing structure
 When I started the program, they only offered a self-paced option costing $750 per month up to $12,000. Finishing in under 6 months left my final price tag at about $4,000. It was stressful knowing that if I got behind, I would end up paying more. Based on their jobs report, most people take 8-12 months to finish the program. I noticed the website now offers a structured full-time 5 month program that costs $15,000. Considering the weaknesses of the curriculum, staff inexperience, and lack of code review, I think it's healthy to be wary of this new price tag.
 
 ## Advice to others considering a coding program
