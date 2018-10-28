@@ -5,9 +5,9 @@ date:       2018-10-27 00:02:15 -0500
 permalink:  git_or_treat
 ---
 
-Git gets a lot easier the more you just dig in and use it. There's an inflection point on learning anything, where you can move on from just the basic fundamentals of understanding something to understanding something so well that you can start to think more creatively while using the new skill. Think of each Git commit as a a friendly ghost that you can conjure up to learn about the code's past. Stay with me here.
+Git gets a lot easier the more you just dig in and use it. There's an inflection point on learning anything, where you can move on from just the basic fundamentals of understanding something to understanding something so well that you can start to think more creatively while using the new skill. Think of each commit as a a friendly ghost that you can conjure up to learn about the code's past. Stay with me here.
 
-For this post, I'll share a couple of tricks (or treats, depending on how your look at it) 🎃 I've learned on how to investigate commit histories. If you are just learning Git or if you already have they basics down, I think it would be helpful to be familiar with these Git "tricks".
+For this post, I'll share a couple of tricks (or treats, depending on how your look at it) 🎃 I've learned on how to investigate commit histories. If you are just learning git or if you already have they basics down, I think it would be helpful to be familiar with these git "tricks".
 
 ##  Trick 1 - Sifting through old commits, like bones
 
