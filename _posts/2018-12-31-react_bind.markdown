@@ -12,7 +12,7 @@ I was working on an assignment from a React class that I started on Udemy a coup
 
 As the demonstrated, as the user types a character into the input, each letter shows up below in a separate inline box. When a user clicks one of these characters, the same character (including the same order!) should be deleted in the input box above. 
 
-Each character is a separate "dumb" `Character` component. `char` is passed as prop through the `App` component (shown below).
+Each character is a separate, "presentational" `Character` component.
 
 ```jsx
 import React, { Component } from "react";
@@ -31,9 +31,8 @@ class Character extends Component {
 
 export default Character;
 ```
-Notice, each `Character` component is isolated in an `<li>` with a `onClick` handler pass down as a prop. 
 
-The challenge was figuring out how to ensure that when a user clicks the dumb `Character` component, it updates the state of it's smart, wiser parent, `App` component. 
+The challenge was figuring out how to ensure that when a user clicks the presentational `Character` component, it updates the stateful `App` component. 
 
 ```jsx
 import React, { Component } from "react";
@@ -98,8 +97,19 @@ class App extends Component {
 
 export default App;
 ```
+I added the `handleClick` to the `App` component because it was the stateful component (the state is the input text) that needed to updated in case a user clicked a `Character`. This method filtered through all the characters in the input box, and removed the character with an index that matched the index of the clicked element. In order for this to work, I had to `bind` the index to the `handleClick` function called inside of the `Character` component: `<Character key={index} char={char} onClick={this.handleClick.bind(null, index)}/>`. `bind` applies the index that is set when the `charItems` array is mapped is the same index that is applied in the `handleClick` method. This is how we are sure that regardless of repeat characters, the same character the user clicks below the input box will be removed from the input box itself. 
 
-I added the `handleClick` to the `App` component because it was the parent component that held the state (the input text) that needed to updated in case a user clicked a `Character`. This method filtered through all the characters in the input box, and removed the character with an index that matched the index of the clicked element. In order for this to work, I had to bind the index to the handleClick function called inside of the `Character` component: `<Character key={index} char={char} onClick={this.handleClick.bind(null, index)}/>`. `bind` ensures that the index is explicity set to the index that is set within the `Character` component. This is how we are sure that regardless of repeat characters, the same character the user clicks below the input box will be removed from the input box itself. 
+```jsx
+    const chars = this.state.value.split("");
+
+    const charItems = chars.map((char, index) => (
+      <Character
+        key={index}
+        char={char}
+        onClick={this.handleClick.bind(null, index)}
+      />
+    ));
+```
 
 Notice, that the second argument in `null`: `onClick={this.handleClick.bind(null, index)}`. I provide the function with fewer arguments than it expects, which is known as partial application of function
 
