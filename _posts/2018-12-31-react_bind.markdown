@@ -1,8 +1,8 @@
 ---
 layout: post
 title:      "Binding the index in React"
-date:       2018-12-27 00:02:15 -0500
-permalink:  react_bind_stuff
+date:       2019-1-01 00:08:15 -0500
+permalink:  react_bind
 ---
 I haven't been blogging lately because I've been solving programming problems for work now, and I'm not yet sure how to translate those to blog posts. With some time off for the holidays, I was fortunate enough to dive back into React. While I don't use this particular library for work, I find building anything with JavaScript improves my overall frontend toolbox.
 
