@@ -12,7 +12,7 @@ I was working on an assignment from a React class that I started on Udemy a coup
 
 As the demonstrated, as the user types a character into the input, each letter shows up below in a separate inline box. When a user clicks one of these characters, the same character (including the same order!) should be deleted in the input box above. 
 
-Each character is a separate, "presentational" `Character` component.
+Each character is a separate, presentational `Character` component. This is what the user must click in order to remove the corresponding character from the input.
 
 ```jsx
 import React, { Component } from "react";
@@ -45,14 +45,14 @@ class App extends Component {
     this.state = { value: "", textLength: 0 };
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
       value: event.target.value,
       textLength: this.state.value.length
     });
   };
 
-  handleClick = index => {
+  handleClick = (index) => {
     const arrayOfChars = this.state.value.split("");
     const result = arrayOfChars.filter((char, i) => i !== index).join("");
 
@@ -97,7 +97,9 @@ class App extends Component {
 
 export default App;
 ```
-I added the `handleClick` to the `App` component because it was the stateful component (the state is the input text) that needed to updated in case a user clicked a `Character`. This method filtered through all the characters in the input box, and removed the character with an index that matched the index of the clicked element. In order for this to work, I had to `bind` the index to the `handleClick` function called inside of the `Character` component: `<Character key={index} char={char} onClick={this.handleClick.bind(null, index)}/>`. `bind` applies the index that is set when the `charItems` array is mapped is the same index that is applied in the `handleClick` method. This is how we are sure that regardless of repeat characters, the same character the user clicks below the input box will be removed from the input box itself. 
+I added the `handleClick` to the `App` component because it was the stateful component (the state is the input text) that needed to updated in case a user clicked a `Character`. This method filtered through all the characters in the input box, and removed the character with an index that matched the index of the clicked element. 
+
+In order for this to work, I had to bind the index to the `handleClick` function called inside of the `Character` component: `<Character key={index} char={char} onClick={this.handleClick.bind(null, index)}/>`. `bind()` applies the index that is set when the `charItems` array is mapped to the same index that is applied in the `handleClick` method. This is how we are sure that the when a user clicks a `Character` component, the corresponding character will be deleted in the input box.
 
 ```jsx
     const chars = this.state.value.split("");
@@ -111,11 +113,15 @@ I added the `handleClick` to the `App` component because it was the stateful com
     ));
 ```
 
-Notice, that the second argument in `null`: `onClick={this.handleClick.bind(null, index)}`. I provide the function with fewer arguments than it expects, which is known as partial application of function
+Notice, that the second argument is `null`: 
 
-`bind()` does 2 things: 1) it can bind the function's context to an object, 2) it can fill arguments with given values from left to right. In the example, we fill it with the value of `index.
+`onClick={this.handleClick.bind(null, index)}`.
 
-If I did not utilize the fat arrow syntax in the click handler, I would've had to address the first functionality above by binding the context to `this`. However, because I used the fat arrow syntax in my click handler, I was able to pass in `null` instead of `this`. In other words, I already took care of the function's context by using the fat arrow syntax. 
+ I provide the function with fewer arguments than it expects, which is known as partial application of function
+
+`bind()` does 2 things: 1) it can bind the function's context to an object, 2) it can fill arguments with given values from left to right. In this blog's example, it was filled with the value of `index`.
+
+If I did not utilize the fat arrow syntax in the click handler, I would've had to address the first functionality above by binding the context to `this`. However, because I used the fat arrow syntax in my click handler, I was able to pass in `null` instead of `this`.
 
 ```jsx
   handleClick = (index) => {
@@ -128,4 +134,4 @@ If I did not utilize the fat arrow syntax in the click handler, I would've had t
   };
   ```
 
-I removed some of the code (used for styling and validating the input), that I could focus just on the issue around deleting characters. If you are interested in the input character count or conditional output works, you can view all the code on Github [here](https://github.com/hcarnes/assignment_2/tree/master/src).
+There are probably other ways to accomplish this challenge, but I enjoyed learning more about `bind()` through this process. Also in case you are interested, I removed some of the code (used for styling and validating the input), so that I could focus just on the issue around deleting characters. If you are interested in the input character count or conditional output works shown in the demo, you can view all the code on Github [here](https://github.com/hcarnes/assignment_2/tree/master/src).
