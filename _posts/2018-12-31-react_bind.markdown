@@ -8,7 +8,7 @@ I haven't been blogging lately because I've been solving programming problems fo
 
 I was working on an assignment from a React class that I started on Udemy a couple of months ago. I'll start by showing the end product, and then showing the part that I found to be the trickiest. 
 
-![react](https://im3.ezgif.com/tmp/ezgif-3-6503f3c75ada.gif)
+<iframe src="https://giphy.com/embed/7JgtecaHxnpGsLhxe5" width="480" height="242" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/7JgtecaHxnpGsLhxe5"></a></p>
 
 As the demonstrated, as the user types a character into the input, each letter shows up below in a separate inline box. When a user clicks one of these characters, the same character (including the same order!) should be deleted in the input box above. 
 
