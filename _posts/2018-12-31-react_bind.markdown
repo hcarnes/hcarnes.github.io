@@ -97,7 +97,7 @@ class App extends Component {
 
 export default App;
 ```
-I added the `handleClick` method to the `App` component because it was the stateful component (the state is the input text) that needed to updated in case a user clicked a `Character`. This method filtered through all the characters in the input box, and removed the character with an index that matched the index of the clicked element. 
+I added the `handleClick` method to the `App` component because it was the stateful component (the state is the input text) that needed to be updated in case a user clicked a `Character`. This method filtered through all the characters in the input box, and removed the character with an index that matched the index of the clicked `Character`. 
 
 In order for this to work, I had to bind the index to the `handleClick` function called inside of the `Character` component: 
 
