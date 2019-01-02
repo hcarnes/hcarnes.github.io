@@ -97,13 +97,11 @@ class App extends Component {
 
 export default App;
 ```
-I added the `handleClick` method to the `App` component because it was the stateful component (the state is the input text) that needed to updated in case a user clicked a `Character`. This method filtered through all the characters in the input box, and removed the character with an index that matched the index of the clicked element. 
-
-In order for this to work, I had to bind the index to the `handleClick` function called inside of the `Character` component: 
+I added the `handleClick` method to the `App` component because it was the stateful component (the state is the input text) that needed to updated when a user clicked a character. This method filtered through all the characters in the input box, and removed the character with an index that matched the index of the clicked character. In order for this to work, I had to bind the index to the `handleClick` function called inside of the `Character` component: 
 
 `<Character key={index} char={char} onClick={this.handleClick.bind(null, index)}/>`.
 
-`bind()` applies the index that is set when the `charItems` array is mapped to the same index that is applied in the `handleClick` method. This is how we are sure that the when a user clicks a `Character` component, the corresponding character will be deleted in the input box.
+`bind()` applies the index that is set when the `charItems` array is mapped to the same index that is applied in the `handleClick` method. This is how we are sure that when a user clicks a `Character` component, the corresponding character will be deleted in the input box.
 
 ```jsx
     const chars = this.state.value.split("");
