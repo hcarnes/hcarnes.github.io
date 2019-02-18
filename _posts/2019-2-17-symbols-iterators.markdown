@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JavaScript for loop: a closer look"
-date:       2019-1-01 00:08:15 -0500
+date:       2019-2-17 00:08:15 -0500
 permalink:  react_bind
 ---
 
