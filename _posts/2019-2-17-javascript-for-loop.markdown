@@ -76,5 +76,5 @@ for (const [index, color] of colors.entries()) {
 // [3: green]
 ```
 
-As previously mentioned, the `entries()` method returns an iterator. The means that, well, we can iterate on the results of `entries()`. It also means that `entries()` implements the [Symbol.iterator](). More on this in the next post.
+As previously mentioned, the `entries()` method returns an iterator. The means that, well, we can iterate on the results of `entries()`. It also means that `entries()` implements the `[Symbol.iterator]()`. More on this in the next post.
 
