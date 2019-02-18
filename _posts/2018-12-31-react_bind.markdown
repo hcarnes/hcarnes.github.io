@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Binding the index in React"
+title:      "Binding the Index in React"
 date:       2019-1-01 00:08:15 -0500
 permalink:  react_bind
 ---
