@@ -2,7 +2,7 @@
 layout: post
 title:      "JavaScript for loop: a closer look"
 date:       2019-2-17 00:08:15 -0500
-permalink:  react_bind
+permalink:  javascript_for_loop
 ---
 
 When I started learning JavaScript, ES8 was already released, and I was initially pretty confused about the difference between the older style versus the ES6+ style. Once I started picking up the language, it became easier to recognize and appreciate how ES6 made many aspects of JavaScript not only more readable, but also easier to maintain. For this post, let's take a closer look at the traditional versus the modern `for loop`.
