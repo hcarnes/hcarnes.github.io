@@ -10,7 +10,7 @@ When I started learning JavaScript, ES8 was already released, and I was initiall
 <img src="https://i.imgur.com/PkqpWMk.png" title="source: imgur.com" width="200" class="img-responsive">
 
 ## the old for loop
-The old `for loop` was not exactly easy on the eyes. We want the code to take each element in the array and log it out into the console. But, there is a lot of setup: we have to initialize the index variable, ensure the loop will exit once it reaches the upper bound limit (the lenght of the array), and then make sure that the index variable increases on each iteration. Not only that, but we must access the variable using the index. The index with the traditional `for loop` is mutable, which means the value could be changed, which increases the likelihood of errors.
+The old `for loop` was not exactly easy on the eyes. We want the code to take each element in the array and log it out into the console. But, there is a lot of setup: we have to initialize the index variable, ensure the loop will exit once it reaches the upper bound limit (the length of the array), and then make sure that the index variable increases on each iteration. Not only that, but we must access the variable using the index. The index with the traditional `for loop` is mutable, which means the value could be changed, which increases the likelihood of errors.
 
 ```javascript
 const colors = ['red', 'blue', 'pink', 'green']
@@ -25,7 +25,7 @@ for (let index = 0; index < colors.length; index++) {
 // pink
 // green
 ```
-After considering all the steps involved in the traditional `for loop`, it's easy to understand why the more modern `for loop` is a breath of fresh air. The code below is more readable and doesn't require the programmer to use the index variable to set an upper bound nor does it use the index variable to access the desired element. The modern `for...loop` is block scoped and the variable color is a constant.
+After considering all the steps involved in the traditional `for loop`, it's easy to understand why the more modern `for loop` is a breath of fresh air. The code below is more readable and doesn't require the programmer to use the index variable to set an upper bound nor does it use the index variable to access the desired element. The modern `for...loop` is block scoped and the variable `color` is a constant.
 
 ## the modern for loop
 ```javascript
@@ -76,5 +76,5 @@ for (const [index, color] of colors.entries()) {
 // [3: green]
 ```
 
-As previously mentioned, the `entries()` method returns an iterator. The means that, well, we can iterate on the results of `entries()`. It also means that `entries()` implements the `[Symbol.iterator]()`. More on this in the next post.
+As previously mentioned, the `entries()` method returns an iterator. This means that, well, we can iterate on the results of `entries()`. It also means that `entries()` implements the `[Symbol.iterator]()`. More on this in the next post.
 
