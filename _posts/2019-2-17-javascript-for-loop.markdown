@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "JavaScript ES6+ for loop: A Closer Look"
+title:      "JavaScript ES6+ for loop"
 date:       2019-2-17 00:08:15 -0500
 permalink:  javascript_for_loop
 ---
