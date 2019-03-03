@@ -133,7 +133,7 @@ The ecma has all the well-known Symbols listed on their [website](http://www.ecm
 
 String's `search()` method depends on a special well-known Symbol. If the argument given to search is not an intance of `RegExp`, it the creates a `RegExp` using the given argument as the constructor argument.
 
-Below we have an instance of motorcyles with 2 attributes: make and color. The `Symbol.search()` method takes a value as a parameter and searches for the content in the `make` field. The method also prints an informational message about the value of `this` and the value of the `value` argument that is passed into the `Symbol.search()` method. 
+Below we have an instance of motorcyles with 2 attributes: `make` and `color`. The `Symbol.search()` method takes a value as a parameter and searches for the content in the `make` field. The method also prints an informational message about the value of `this` and the value of the `value` argument that is passed into the `Symbol.search()` method. 
 
 ```javascript
 class Motorcycle {
