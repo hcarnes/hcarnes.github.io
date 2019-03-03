@@ -5,7 +5,7 @@ date:       2019-2-24 012:08:15 -0500
 permalink:  javascript_symbol
 ---
 
-In the last post, we learned that we can access the index of an array in the modern `for...of` loop by using the `entries()` iterator which implements a method of the new primitive type `Symbol`. You are probably familiar with the older primitive types: undefined, null, boolean, Number, String, and Object. `Symbol` is a **new** primitive type! What can `Symbols` be used for?
+In the last post, we learned that we can access the index of an array in the modern `for...of` loop by using the `entries()` iterator which implements a method of the new primitive type Symbol. You are probably familiar with the older primitive types: undefined, null, boolean, Number, String, and Object. Symbol is a **new** primitive type! What can Symbols be used for?
 
 1. to define properties for objects for iteration
 2. to define a global registry of objects
@@ -14,7 +14,7 @@ In the last post, we learned that we can access the index of an array in the mod
 This post will provide of 3 three use cases, so let's start at the top.
 
 ## defining properties for objects in iteration
-`Symbols` are defined using the `Symbol()` function. The argument passed to this function serves as a description of the `Symbol`. Each `Symbol` defined with `Symbol()` is distinct, even if they have the same argument value.
+Symbols are defined using the `Symbol()` function. The argument passed to this function serves as a description of the Symbol. Each Symbol defined with `Symbol()` is distinct, even if they have the same argument value.
 
 ```javascript
 Symbol('bicycle') === Symbol('bicycle');
@@ -23,7 +23,7 @@ Symbol('bicycle') === Symbol('bicycle');
 // false
 ```
 
-Here is another example that shows how each `Symbol` defined with `Symbol()` is unique:
+Here is another example that shows how each Symbol defined with `Symbol()` is unique:
 
 ```javascript
 const subway = Symbol('transit');
@@ -63,16 +63,16 @@ for (const property in car) {
 // undefined
 ```
 
-Hmm, the properies defined as `Symbols` seem to be hidden. Now, let's query for the `car` property names and their values:
+Hmm, the properies defined as Symbols seem to be hidden. Now, let's query for the `car` property names and their values:
 
 ```javascript
 console.log(Object.getOwnPropertyNames(car));
 
 ["id", "colorValue"]
 ```
-Hmm, the properies defined with `Symbol()` also seem to be hidden here too. This is actually a big part of what make `Symbol` useful: all `Symbol` properties are hidden from normal iteration. Keep in mind, they are not private, meaning that any code with access to the object can access and change the value for the `Symbol` property. Because the properties are hidden, it's nice to have a method that will expose an object's hidden `Symbol` properties. The code below shows how to view, access, and change a `Symbol` propety.
+Hmm, the properies defined with `Symbol()` also seem to be hidden here too. This is actually a big part of what make Symbol useful: all Symbol properties are hidden from normal iteration. Keep in mind, they are not private, meaning that any code with access to the object can access and change the value for the Symbol property. Because the properties are hidden, it's nice to have a method that will expose an object's hidden Symbol properties. The code below shows how to view, access, and change a Symbol propety.
 
-We can view all the `Symbols` of an object.
+We can view all the Symbols of an object.
 
 ```javascript
 console.log(Object.getOwnPropertySymbols(car));
@@ -81,7 +81,7 @@ console.log(Object.getOwnPropertySymbols(car));
 // [Symbol(makeValue), Symbol(modelValue)]
 ```
 
-We can access the `Symbols` of an object.
+We can access the Symbols of an object.
 
 ```javascript
 console.log(car[make]);
@@ -102,7 +102,7 @@ console.log(car[make]);
 
 ## Symbol can be used to define a global registry of objects
 
-Remember when I said earlier that each `Symbol` is distinct, even if they have the same argument value? Well, there's an expection to that if you define `Symbol` using the `for()` method. In the code below, each property is defined using `Symbol.for()` with the same description passed in. The first call to `for()` creates a unique `Symbol` and the second call to `for()` fetches the `Symbol` created in the last call through the global registry. The call to `keyFor()` returns the key associated with the `Symbol` in the global registry.
+Remember when I said earlier that each Symbol is distinct, even if they have the same argument value? Well, there's an expection to that if you define Symbol using the `for()` method. In the code below, each property is defined using `Symbol.for()` with the same description passed in. The first call to `for()` creates a unique Symbol and the second call to `for()` fetches the Symbol created in the last call through the global registry. The call to `keyFor()` returns the key associated with the Symbol in the global registry.
 
 ```javascript
 const hoverBoard = Symbol.for('transit');
@@ -123,14 +123,14 @@ console.log('transit' === Symbol.keyFor(electricScooter));
 // true
 ```
 ## Symbol can be used to define some special well-known methods in objects
-The ecma has all the well-known `Symbols` listed on their [website](http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols), but here are few common ones:
+The ecma has all the well-known Symbols listed on their [website](http://www.ecma-international.org/ecma-262/6.0/#sec-well-known-symbols), but here are few common ones:
 
 * Symbol.iterator
 * Symbol.match
 * Symbol.replace
 * Symbol.search
 
-String's `search()` method depends on a special well-known `Symbol`. If the argument given to search is not an intance of `RegExp`, it the creates a `RegExp` using the givent argument as the constructor argument.
+String's `search()` method depends on a special well-known Symbol. If the argument given to search is not an intance of `RegExp`, it the creates a `RegExp` using the givent argument as the constructor argument.
 
 Below we have an instance of motorcyles with 2 attributes: make and color. The `Symbol.search()` method takes a value as a parameter and searches for the content in the `make` field. The method also prints an informational message about the value of `this` and the value of the `value` arguments sthat is passed into the `Symbol.search()` method. 
 
@@ -178,6 +178,6 @@ Below the class `Motorcycle`, the code creates an array set to the variable `mot
 Because the special well-known method `Symbol.search()` is defined in the class, when call `String's search()` method, it uses the special well-known method defined in the class to execute the search.
 
 ## closing thoughts
-I've never actually seen or used `Symbols` in my professional work or "just for fun" work. This Mozilla blog [post](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) helped me to get a better idea of how `Symbols` can help with reducing errors and debugging.
+I've never actually seen or used Symbols in my professional work or "just for fun" work. This Mozilla blog [post](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) helped me to get a better idea of how Symbols can help with reducing errors and debugging.
 
 
