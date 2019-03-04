@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Filth Finder: Rewriting to Use React Hooks"
+title:      "Filth Finder: React Hooks Rewrite"
 date:       2019-3-03 00:08:15 -0500
 permalink:  filth_finder_react_hooks
 ---
