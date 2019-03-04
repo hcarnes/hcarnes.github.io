@@ -17,7 +17,7 @@ Filth Finder has 3 components:
 * `EstablishmentList` - lists all establishments and provides a link to the EstablishmentDetail component
 * `EstablishmentDetail` - lists the date, grade, and violations for each time the establishment/restaurant received a health inspection
 
-I also used [Grommet](https://github.com/grommet/grommet), a react-based framework for styling.
+I also used [Grommet](https://github.com/grommet/grommet), a react-based framework for styling. This is the primary info you need to know for the purpose of this post, but if you are interested, you can view all the code on [Github](https://github.com/hcarnes/filth_finder).
 
 ## Getting the data through the Establishment model
 
