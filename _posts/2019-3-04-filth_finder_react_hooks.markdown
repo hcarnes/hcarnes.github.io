@@ -241,11 +241,11 @@ const EstablishmentDetail = (props) => {
 
 export default EstablishmentDetail;
 ```
-## In Summary
+## Final Notes
 
-Hooks are JavaScript functions that allow you access state and lifecycle features. This means that function components can now handle state all on their own. That's pretty interesting to me because many bloggers often refer to function components as stateless components, and now that's no longer an accurate way to categorize type of components.
+Hooks are JavaScript functions that allow you access state and lifecycle features. This means that function components can now handle state all on their own. That's pretty interesting to me because many bloggers often refer to function components as stateless components, and now that's no longer an accurate way to categorize components.
 
-`useState` lets you add state to function components
-`useEffect` lets you handle other changes that may affect the state, such as data fetching
+* `useState` lets you add state to function components
+* `useEffect` lets you handle other changes that may affect the state, such as data fetching
 
 
