@@ -5,6 +5,10 @@ date:       2019-3-19 00:09:15 -0500
 permalink:  ltv_conf
 ---
 
+If you are going to LTV Conf and want to chat about tech, [please say hi](https://www.linkedin.com/in/hannahcarnes/).
+
+<img src="https://i.imgur.com/8yhcXFF.png" title="cat waving" alt="image of cat cartoon waving to say hi" height="350" width="350" class="img-responsive">
+
 I received a scholarship to attend [LTV Conf](https://ltvconf.com/), and I'm looking forward to attending next month. The conference brings together leaders from the SaaS industry to share ideas about marketing, scaling, tech and entrepreneurship. I found out about the scholarship through [Diversify Tech's newsletter](https://www.diversifytech.co/), and I applied knowing that it would be a cool opportunity to learn more about the SaaS industry.
 
 As a freelance software developer, I enjoy solving technical problems in my daily work. At LTV Conf, I'd like to learn more about solving business problems.
@@ -19,10 +23,6 @@ I'm also looking foward to the panel with Greg Smith, CIO at TIMIA Capital and E
 
 ### How can companies navigate social debt?
 Finally, I'm looking forward Natalya Sverjensky talk about something I've never heard of: social debt. I enjoy trying to understand people and team dynamics, and I'm interested in learning about how startups can ensure their teams scale alongside the product.
-
-If you are going to LTV Conf and want to chat about tech, [please say hi](https://www.linkedin.com/in/hannahcarnes/).
-
-<img src="https://i.imgur.com/8yhcXFF.png" title="cat waving" alt="image of cat cartoon waving to say hi" height="350" width="350" class="img-responsive">
 
 
 
