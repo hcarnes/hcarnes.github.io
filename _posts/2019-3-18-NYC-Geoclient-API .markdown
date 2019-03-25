@@ -25,7 +25,7 @@ Here is what the Filth Finder Rails API achieves:
 * **[Activerecord PostGIS Adapter](https://github.com/rgeo/activerecord-postgis-adapter)** allows for accessing features of the PostGIS geospatial database from ActiveRecord.
 * **[NYC Geoclient API](https://developer.cityofnewyork.us/api/geoclient-api)** provides coordinate and geographic attributes for supported input locations (establishment addresses).
 * **[Faraday](https://github.com/lostisland/faraday)** is an HTTP client for fetching the data that will be parsed into JSON and geocoded.
-* **[Rack-cors](https://github.com/cyu/rack-cors)** allows the API to make cross domain AJAX calls. You can configure to allow for anything.
+* **[Rack-cors](https://github.com/cyu/rack-cors)** allows the API to make cross domain AJAX calls. The API is configured to allow for anything.
 
 ## What is a rake task?
 
