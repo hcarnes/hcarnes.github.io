@@ -17,7 +17,7 @@ Did you know NYC has a [geoclient API](https://developer.cityofnewyork.us/api/ge
 Here is what the Filth Finder Rails API achieves:
 
 1. Runs a one-time rake task that seeds the database with all of the NYC establishments and their geocoded locations. 
-2. Provides a resource for fetching the top 50 restaurants closest to the user.
+2. Provides an endpoint for fetching the top 50 restaurants closest to the user.
 
 ## What libraries were used?
 
