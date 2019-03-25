@@ -6,7 +6,7 @@ permalink:  nyc_geo_client_api
 published: true
 ---
 
-Did you know NYC has a [geoclient API](https://developer.cityofnewyork.us/api/geoclient-api)? Filth Finder uses the NYC Geoclient API to load establishments from the NYC Open Data API, geocode the data, and store the data to the database. This post will cover the backend of Filth Finder, including how the API is setup, geocoding the establishment addresses, and creating a resource so that users can view nearby restaurants. Wow, that's a lot!
+Did you know NYC has a [geoclient API](https://developer.cityofnewyork.us/api/geoclient-api)? Filth Finder uses the NYC Geoclient API to load establishments from the NYC Open Data API, geocode the data, and store the data to the database. This post will cover the backend of Filth Finder, including how the API is setup, geocoding the establishment addresses, and creating an endpoint so that users can view nearby restaurants. Wow, that's a lot!
 
 **You can view Filth Finder's code, including the backend, [here](https://github.com/hcarnes/filth_finder).**
 
