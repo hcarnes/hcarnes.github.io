@@ -1,12 +1,12 @@
 ---
 layout: post
-title:      "NYC's Geoclient API: Filth Finder Edition"
+title:      "NYC's GeoClient API: Filth Finder Edition"
 date:       2019-3-24 00:010:15 -0500
 permalink:  nyc_geo_client_api
 published: true
 ---
 
-Did you know NYC has a [geoclient API](https://developer.cityofnewyork.us/api/geoclient-api)? Filth Finder uses the NYC Geoclient API to load establishments from the NYC Open Data API, geocode the data, and store the data to the database. This post will cover the backend of Filth Finder, including how the API is setup, geocoding the establishment addresses, and creating an endpoint so that users can view nearby restaurants. Wow, that's a lot!
+Did you know NYC has a [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api)? Filth Finder uses the NYC GeoClient API to load establishments from the NYC Open Data API, geocode the data, and store the data to the database. This post will cover the backend of Filth Finder, including how the API is setup, geocoding the establishment addresses, and creating an endpoint so that users can view nearby restaurants. Wow, that's a lot!
 
 **You can view Filth Finder's code, including the backend, [here](https://github.com/hcarnes/filth_finder).**
 
@@ -23,7 +23,7 @@ Here is what the Filth Finder Rails API achieves:
 
 * **[PostGIS](https://postgis.net/)** is a library for Postgres, and it's used in this case to add database support for geocoding locations. 
 * **[Activerecord PostGIS Adapter](https://github.com/rgeo/activerecord-postgis-adapter)** allows for accessing features of the PostGIS geospatial database from ActiveRecord.
-* **[NYC Geoclient API](https://developer.cityofnewyork.us/api/geoclient-api)** provides coordinate and geographic attributes for supported input locations (establishment addresses).
+* **[NYC GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api)** provides coordinate and geographic attributes for supported input locations (establishment addresses).
 * **[Faraday](https://github.com/lostisland/faraday)** is an HTTP client for fetching the data that will be parsed into JSON and geocoded.
 * **[Rack-cors](https://github.com/cyu/rack-cors)** allows the API to make cross domain AJAX calls. The API is configured to allow for anything.
 
