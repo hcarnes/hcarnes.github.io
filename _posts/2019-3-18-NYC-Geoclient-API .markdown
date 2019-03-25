@@ -48,7 +48,7 @@ end
 
 A new client is created using the NYC GeoClient API and set it equal to the `client` variable. Then, establishment data is fetched from the NYC Open Data API and parsed into JSON. The JSON is stored in a variable called `establishments`. Next, the code iterates through `establishments` and checks to make sure that only establishment with existing Camis ids will be geocoded. 
 
-Next, the code builds establishment objects with the following attributes: `camis`, `dba`, and `address`. Notice that the NYC Geoclient calls the adress method (`client.address()`) and sets the `house_number`, `street`,`borough`, and `zipcode` using the method. This line of code is where PostGIS geocoding happens: 
+Next, the code builds establishment objects with the following attributes: `camis`, `dba`, and `address`. Notice that the NYC Geoclient calls the adress method (`client.address()`) and sets the `house_number`, `street`,`borough`, and `zipcode`. This line of code is where PostGIS geocoding happens: 
 
 ```ruby
 e.location = "POINT(#{location["address"]["longitude"]} #{location["address"]["latitude"]})"
