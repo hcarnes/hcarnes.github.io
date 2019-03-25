@@ -116,5 +116,5 @@ ORDER BY establishments.location <-> 'SRID=4326;POINT(#{params[:lng].to_f} #{par
 LIMIT 50
 ```
 
-Hopefully, this post gave you a better understanding not only about the Filth Finder's backend, but also geocoding using PostGIS.
+Hopefully, this post gave you a better understanding not only about the Filth Finder's backend, but also about geocoding using PostGIS.
 
