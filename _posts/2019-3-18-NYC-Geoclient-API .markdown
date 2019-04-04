@@ -1,16 +1,16 @@
 ---
 layout: post
-title:      "NYC's GeoClient API: Filth Finder Edition"
+title:      "How NYC's GeoClient API Helped Geocode Restaurant Locations"
 date:       2019-3-24 00:010:15 -0500
 permalink:  nyc_geo_client_api
 published: true
 ---
 
-Did you know NYC has a [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api)? Filth Finder uses the NYC GeoClient API to load establishments from the NYC Open Data API, geocode the data, and store the data to the database. This post will unpack how the backend of Filth Finder works.
+Filth Finder is an application that loads NYC restaurants near you and allows you to view health inspection violations at each restaurant. One problem that had to be solved when developing Filth Finder was how to calculate the distance between the user and all of the amazing restaurants NYC has to offer. The NYC Open Data API provided the addresses for each restaurant, but Filth Finder needed the geolocation of those restaurants. Fortunately, NYC has a nifty[GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) that allowed Filth Finder to geocode the restaurant locations.
 
-> The term "establishment" refers to a restaurant.
+This post will unpack how Filth Finder's API works with a focus on geocoding. For future reference, the term "establishment" refers to a restaurant in this post.
 
-**Filth Finder is an application that loads NYC restaurants near you and allows you to view health inspection violations at each restaurant. You can view Filth Finder's code, including the backend, [here](https://github.com/hcarnes/filth_finder).**
+**. You can view Filth Finder's code, including the backend, [here](https://github.com/hcarnes/filth_finder).**
 
 ## What does the Filth Finder Rails API do?
 
@@ -40,7 +40,7 @@ namespace :establishments do
 end
 ```
 
-## How does the rake task geocode?
+## Geocoding locations and saving to the DB
 
 > Camis is a uniqe id number assigned to each establishment in the NYC Open Data API.
 
