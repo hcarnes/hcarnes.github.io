@@ -10,7 +10,7 @@ Filth Finder is an application that loads NYC restaurants near you and allows yo
 
 This post will unpack how Filth Finder's API works with a focus on geocoding. For future reference, the term "establishment" refers to a restaurant in this post.
 
-**. You can view Filth Finder's code, including the backend, [here](https://github.com/hcarnes/filth_finder).**
+**You can view Filth Finder's code, including the backend, [here](https://github.com/hcarnes/filth_finder).**
 
 ## What does the Filth Finder Rails API do?
 
