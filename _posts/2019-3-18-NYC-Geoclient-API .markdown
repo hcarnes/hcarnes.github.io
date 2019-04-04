@@ -6,7 +6,7 @@ permalink:  nyc_geo_client_api
 published: true
 ---
 
-Filth Finder is an application that loads NYC restaurants near you and allows you to view health inspection violations at each restaurant. One problem that had to be solved when developing Filth Finder was how to calculate the distance between the user and all of the amazing restaurants NYC has to offer. The NYC Open Data API provided the addresses for each restaurant, but Filth Finder needed the geolocation of those restaurants. Fortunately, NYC has a nifty[GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) that allowed Filth Finder to geocode the restaurant locations.
+Filth Finder is an application that loads NYC restaurants near you and allows you to view health inspection violations at each restaurant. One problem that had to be solved when developing Filth Finder was how to calculate the distance between the user and all of the amazing restaurants NYC has to offer. The NYC Open Data API provided the addresses for each restaurant, but Filth Finder needed the geolocation of those restaurants. Fortunately, NYC has a nifty [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api) that allowed for geocoding the restaurant locations.
 
 This post will unpack how Filth Finder's API works with a focus on geocoding. For future reference, the term "establishment" refers to a restaurant in this post.
 
