@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "How NYC's GeoClient API Helped Geocode Restaurant Locations"
+title:      "Geocoding with NYC's GeoClient API"
 date:       2019-3-24 00:010:15 -0500
 permalink:  nyc_geo_client_api
 published: true
