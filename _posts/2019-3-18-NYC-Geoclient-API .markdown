@@ -86,7 +86,7 @@ In Postico, you can see how the `location` column stores the geocoded location o
 
 ## How does the API provide the 50 closest locations?
 
-The API has a route where users can find the locations near them.
+Now that we have all the establisment geolocations, we can query the database and return the restaurants closest to the user. With that said, the API has a route where users can find the locations near them.
 
 ```ruby
 Rails.application.routes.draw do
@@ -112,3 +112,4 @@ ORDER BY establishments.location <-> 'SRID=4326;POINT(#{params[:lng].to_f} #{par
 LIMIT 50
 ```
 
+This API solved my problem: I was now able to compare the user's geolocation to each restaurant's location Filth Finder now had all the establishments and their geocoded locations waiting to be compared to the user location, which was determined on the client. 
