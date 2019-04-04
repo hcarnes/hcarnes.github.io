@@ -112,4 +112,4 @@ ORDER BY establishments.location <-> 'SRID=4326;POINT(#{params[:lng].to_f} #{par
 LIMIT 50
 ```
 
-This API solved my problem: I was now able to compare the user's geolocation to each restaurant's location Filth Finder now had all the establishments and their geocoded locations waiting to be compared to the user location, which was determined on the client. 
+This API made is possible to compare the user's geolocation to each establishment geolocation and render the closests 50 establishments on the client. Thank you NYC GeoClient!
