@@ -6,15 +6,13 @@ permalink:  nyc_geo_client_api
 published: true
 ---
 
-Did you know NYC has a [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api)? Filth Finder uses the NYC GeoClient API to load establishments from the NYC Open Data API, geocode the data, and store the data to the database. This post will cover the backend of Filth Finder, including how the API is setup, geocoding the establishment addresses, and creating an endpoint so that users can view nearby restaurants. Wow, that's a lot!
+Did you know NYC has a [GeoClient API](https://developer.cityofnewyork.us/api/geoclient-api)? Filth Finder uses the NYC GeoClient API to load establishments from the NYC Open Data API, geocode the data, and store the data to the database. This post will unpack how the backend of Filth Finder works.
 
-**You can view Filth Finder's code, including the backend, [here](https://github.com/hcarnes/filth_finder).**
+> The term "establishment" refers to a restaurant.
 
-> Geocoding is the computational process of transforming a physical address description to latitude and longitute coordinates.
+**Filth Finder is an application that loads NYC restaurants near you and allows you to view health inspection violations at each restaurant. You can view Filth Finder's code, including the backend, [here](https://github.com/hcarnes/filth_finder).**
 
-## What does the API do?
-
-Here is what the Filth Finder Rails API achieves:
+## What does the Filth Finder Rails API do?
 
 1. Runs a one-time rake task that seeds the database with all of the NYC establishments and their geocoded locations. 
 2. Provides an endpoint for fetching the top 50 restaurants closest to the user.
@@ -29,7 +27,7 @@ Here is what the Filth Finder Rails API achieves:
 
 ## What is a rake task?
 
-Rake tasks allow you to automate processes. In this case, we're automating the process of geocoding establishments and saving them to the database. Once they are saved to the database, we can use them on the frontend to determine which restaurants are closest to the user. The rake task was generated with `rails g establishments`. This file generated is called `establishments.rake`. The task includes a description and name. Below shows the "bare bones" of a rake task:
+Rake tasks allow you to automate processes. In this case, we're automating the process of geocoding establishments and saving them to the database. Once they are saved to the database, we can use them on the frontend to determine which restaurants are closest to the user. The rake task was generated with `rails g task establishments`. This generates a file called `establishments.rake`. Below, you can see the "bare bones" of a rake task:
 
 ```ruby
 require "nyc_geo_client"
@@ -46,7 +44,7 @@ end
 
 > Camis is a uniqe id number assigned to each establishment in the NYC Open Data API.
 
-A new client is created using the NYC GeoClient API and set it equal to the `client` variable. Then, establishment data is fetched from the NYC Open Data API and parsed into JSON. The JSON is stored in a variable called `establishments`. Next, the code iterates through `establishments` and checks to make sure that only establishment with existing Camis ids will be geocoded. 
+A new client is created using the NYC GeoClient API and set it equal to the `client` variable. Then, establishment data is fetched from the NYC Open Data API and parsed into JSON. The JSON is stored in a variable called `establishments`. Next, the code iterates through `establishments` and checks to make sure that only establishments with existing Camis ids will be geocoded. 
 
 Next, the code builds establishment objects with the following attributes: `camis`, `dba`, and `address`. Notice that the NYC Geoclient calls the adress method (`client.address()`) and sets the `house_number`, `street`,`borough`, and `zipcode`. This line of code is where PostGIS geocoding happens: 
 
@@ -90,14 +88,14 @@ In Postico, you can see how the `location` column stores the geocoded location o
 
 ## How does the API provide the 50 closest locations?
 
-We have a route where users can find the locations near them.
+The API has a route where users can find the locations near them.
 
 ```ruby
 Rails.application.routes.draw do
   get "/near_me", to: "establishments#near_me"
 end
 ```
-The `EstablishmentsController` uses ActiveRecord to retrieve the top 50 establishments closest to the user. The establishment location is subtracted from the user's location to determine that distance. Note, the user's location is passed in through params and converted to the datatype of geography. `SRID` stands for "spatial reference id" and tells Postgis know which spatial reference system to use. In this case, the code stores the data using the WGS84 projected coordinate system (SRID 4326) that allows you to calculate things such as the distance between two points. I found [this](https://stackoverflow.com/questions/21935863/srid-meaning-in-postgis) Stack Overflow post helpful in explaining `SRID`.
+The `EstablishmentsController` uses ActiveRecord to retrieve the top 50 establishments closest to the user. The `<->` function determines the distance between the user and the given establishment. Note, the user's location is passed in through params and converted to the datatype of geography. `SRID` stands for "spatial reference id" and tells Postgis which spatial reference system to use. In this case, the code stores the data using the WGS84 projected coordinate system (SRID 4326) that allows you to calculate things such as the distance between two points. I found [this](https://stackoverflow.com/questions/21935863/srid-meaning-in-postgis) Stack Overflow post helpful in explaining `SRID`.
 
 ```ruby
 class EstablishmentsController < ApplicationController
@@ -115,6 +113,4 @@ FROM "establishments"
 ORDER BY establishments.location <-> 'SRID=4326;POINT(#{params[:lng].to_f} #{params[:lat].to_f})'::geography
 LIMIT 50
 ```
-
-Hopefully, this post gave you a better understanding not only about the Filth Finder's backend, but also about geocoding using PostGIS.
 
