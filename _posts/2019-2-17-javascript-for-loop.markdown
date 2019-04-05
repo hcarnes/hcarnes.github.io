@@ -1,15 +1,15 @@
 ---
 layout: post
-title:      "JavaScript ES6+ for loop"
+title:      "JavaScript's for loop: A Retrospective"
 date:       2019-2-17 00:08:15 -0500
 permalink:  javascript_for_loop
 ---
 
-When I started learning JavaScript, ES8 was already released, and I was initially pretty confused about the difference between the older style versus the ES6+ style. Once I started picking up the language, it became easier to recognize and appreciate how ES6 made many aspects of JavaScript not only more readable, but also easier to maintain. For this post, let's take a closer look at the traditional versus the modern `for loop`.
+When I started learning JavaScript, ES6+ was already released, and I was initially pretty confused about the difference between the older style versus the ES6+ style. Once I started picking up the language, it became easier to recognize and appreciate how ES6 made many aspects of JavaScript not only more readable, but also easier to maintain. For this post, let's take a closer look at the traditional versus the modern `for loop`.
 
 <img src="https://i.imgur.com/PkqpWMk.png" title="source: imgur.com" width="200" class="img-responsive">
 
-## the old for loop
+## The old for loop
 The old `for loop` was not exactly easy on the eyes. We want the code to take each element in the array and log it out into the console. But, there is a lot of setup: we have to initialize the index variable, ensure the loop will exit once it reaches the upper bound limit (the length of the array), and then make sure that the index variable increases on each iteration. Not only that, but we must access the variable using the index. The index with the traditional `for loop` is mutable, which means the value could be changed, which increases the likelihood of errors.
 
 ```javascript
