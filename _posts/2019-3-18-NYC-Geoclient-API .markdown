@@ -82,7 +82,7 @@ end
 
 In Postico, you can see how the `location` column stores the geocoded location of the establishment.
 
-<img src="https://i.imgur.com/M6sEYH7.png" alt="view of the database in Postico" title="data" />
+<img src="https://i.imgur.com/M6sEYH7.png?1" alt="view of the database in Postico" title="data" />
 
 ## How does the API provide the 50 closest locations?
 
