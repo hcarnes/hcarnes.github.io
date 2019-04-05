@@ -1,11 +1,11 @@
 ---
 layout: post
-title:      "JavaScript ES6+ Symbols"
+title:      "A Brief Overview of JavaScript's New Primitive Type: Symbol"
 date:       2019-2-24 012:08:15 -0500
 permalink:  javascript_symbol
 ---
 
-In the last post, we learned that we can access the index of an array in the modern `for...of` loop by using the `entries()` iterator which implements a method of the new primitive type Symbol. You are probably familiar with the older primitive types: undefined, null, boolean, Number, String, and Object. Symbol is a **new** primitive type! What can Symbols be used for?
+In the last post, we learned that we can access the index of an array in the modern `for...of` loop by using the `entries()` iterator which implements a method of the new primitive type Symbol. You are probably familiar with the older primitive types: undefined, null, Boolean, Number, String, and Object. Symbol is a **new** primitive type! What can Symbols be used for?
 
 1. to define properties for objects for iteration
 2. to define a global registry of objects
@@ -13,7 +13,7 @@ In the last post, we learned that we can access the index of an array in the mod
 
 This post will review these 3 three use cases, so let's start at the top.
 
-## defining properties for objects in iteration
+## Defining properties for objects in iteration
 Symbols are defined using the `Symbol()` function. The argument passed to this function serves as a description of the Symbol. Each Symbol defined with `Symbol()` is distinct, even if they have the same argument value.
 
 ```javascript
