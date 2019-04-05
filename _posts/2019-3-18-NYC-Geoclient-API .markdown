@@ -112,4 +112,4 @@ ORDER BY establishments.location <-> 'SRID=4326;POINT(#{params[:lng].to_f} #{par
 LIMIT 50
 ```
 
-This API made is possible to compare the user's geolocation to each establishment geolocation and render the closests 50 establishments on the client. Thank you NYC GeoClient!
+This route and endpoint made is possible to compare the user's geolocation to each establishment geolocation and render the closests 50 establishments on the client. Thank you NYC GeoClient for making it all possible!
