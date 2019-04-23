@@ -16,9 +16,11 @@ This post will cover how I implemented a dropdown menu for an app I recently sta
 
 # How it works
 
+To implement the dropdown, the first thing you need is the `<details>` tag.
+
 > According to MDN, the (`<details>`) creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label can be provided using the `<summary>` element.
 
-To implement the dropdown, you need the `<details>` tag, the `<summary>` tag that holds the title of the information being viewed, and then content inside of the `<summary>` tag that can actually be viewed.
+Inside that, you'll need the `<summary>` tag, which holds the visible title of the information being viewed. Below that, you'll the content that you would like to toggle. Here's an example:
 
 ```html
 <details>
@@ -29,10 +31,9 @@ To implement the dropdown, you need the `<details>` tag, the `<summary>` tag tha
 </details>
 ```
 
-## An example from Congress Connect
+## Here's an example from Congress Connect
 
-<a href="https://imgur.com/ZYLCkOo"><img src="https://i.imgur.com/ZYLCkOo.gif" title="source: imgur.com" /></a>
-
+<a href="https://imgur.com/ZYLCkOo"><img src="https://i.imgur.com/ZYLCkOo.gif" title="drop down menu demo" /></a>
 Here's a snippet of the code to give you another example:
 
 ```jsx
@@ -52,3 +53,5 @@ Here's a snippet of the code to give you another example:
   </details>
 </>
 ```
+
+You can checkout the full implementation [here](https://github.com/hcarnes/congress_connect).
