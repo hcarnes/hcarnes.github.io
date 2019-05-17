@@ -18,13 +18,17 @@ span.archive-date {
 }
 
 .flexColumn {
-  height: 100%;                     /* take height of nav parent */
+  height: 100%;
+  /* take height of nav parent */
   list-style-type: none;
-  padding-left: 0;                  /* remove default UL padding */
+  padding-left: 0;
+  /* remove default UL padding */
   display: flex;
-  justify-content: flex-start; 
-  flex-direction: column;   /* horizontal alignment (applies to child elements) */
-  align-items: left;   /* horizontal alignment (applies to child elements) */
+  justify-content: flex-start;
+  flex-direction: column;
+  /* horizontal alignment (applies to child elements) */
+  align-items: left;
+  /* horizontal alignment (applies to child elements) */
 }
 
 .flexRow {
@@ -70,3 +74,6 @@ div .tech {
   font-style: italic;
 }
 
+.friends {
+  height: 350px;
+}
