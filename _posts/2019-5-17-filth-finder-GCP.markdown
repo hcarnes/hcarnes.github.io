@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Making Filth Finder Faster with GCP Storage"
+title: "Making Filth Finder Faster with Google Cloud"
 date: 2019-5-21 00:09:15 -0500
 permalink: making_filth_finder_faster
 ---
@@ -11,22 +11,49 @@ I've written a bit about Filth Finder, an app that surfaces health inspections f
 
 ## Why was it slow?
 
-Previously, the app was hosted on Heroku as two different apps, each of which required 5-10 seconds to spin up since they were on the free plan. The frontend served up the React app, and the backend served up all the restaurants. Also, these apps were not concurrent, which also slowed things down. Specifically, the backend only would spin up once the frontend had finished.
+Previously, the app was hosted on Heroku as two different apps, each of which required 5-10 seconds to spin up since they were on the free plan. The frontend served up the React app, and the backend served up the restaurant listing API. Finally, these apps didn't start up at the same time, meaning the backend only would begin spinning up once the frontend had finished. The end result was a user would need to wait nearly 20 seconds to begin using the app if it hadn't been visited in a while.
 
 ## Moving to the cloud
 
-With the help of the [Google Cloud Storage: Node.js Client](https://www.npmjs.com/package/@google-cloud/storage), we now have a [script](https://github.com/hcarnes/filth_finder/blob/40ea0759ae863bd5b6b020c28b671b92275cdcbf/scripts/build-geocode-index.js) that grabs all the restaurants from the NYC Open Data API and puts them in a Google Cloud Storage bucket. The city updates the health inspection info pretty often, so this script will allow us to grab the new restaurants and the updated inspection info. It takes about 45 minutes to load the restaurants.
+With the help of the [Google Cloud Storage: Node.js Client](https://www.npmjs.com/package/@google-cloud/storage), I now have a [script](https://github.com/hcarnes/filth_finder/blob/40ea0759ae863bd5b6b020c28b671b92275cdcbf/scripts/build-geocode-index.js) that grabs all the restaurants from the NYC Open Data API and puts them in a Google Cloud Storage bucket. The city updates the health inspection info daily, so this script needs to run regularly to allow data from newly opened restaurants to be pulled. It takes about 45 minutes to load the restaurants.
 
 ## Updating the Establishment model
 
 > According to Wikipedia, the haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes.
 
-I also updated the [Establishment model](https://github.com/hcarnes/filth_finder/blob/40ea0759ae863bd5b6b020c28b671b92275cdcbf/src/models/Establishment.js) to fetch data from the newly created Google Cloud Storage bucket instead of the old backend. The [haversine library](https://www.npmjs.com/package/haversine) allowed the Establishment model to calculate the distance between the user (the latitude and longitude is passed in the through the params) and the restaurants. The restaurants are still returned in ascending order based on the length of the distance between the user and the restaurants. The closest 20 restaurants are still rendered for the user.
+I also updated the [Establishment model](https://github.com/hcarnes/filth_finder/blob/40ea0759ae863bd5b6b020c28b671b92275cdcbf/src/models/Establishment.js#L13) to fetch data from the newly created Google Cloud Storage bucket instead of the old backend. The [haversine library](https://www.npmjs.com/package/haversine) allows the Establishment model to calculate the distance between the user (the latitude and longitude is passed in the through the params) and each of the nearly 27,000 restaurants. The restaurants are then returned in ascending according to the distance between the user and the restaurants, then limited to 20 total results to keep the frontend zippy. The JSON file is really simple, and looks something like this:
+
+```javascript
+[
+   {
+      "latitude" : 40.7178921762742,
+      "camis" : "41631962",
+      "longitude" : -74.0008766031009,
+      "dba" : "POPEYES LOUISIANA KITCHEN"
+   },
+   {
+      "latitude" : 40.7560475658859,
+      "camis" : "50072138",
+      "dba" : "HUI'S GARDEN",
+      "longitude" : -73.8335953523179
+   },
+   {
+      "longitude" : -73.8279669765882,
+      "dba" : "JIN DAL LAE 8",
+      "latitude" : 40.7648883680589,
+      "camis" : "50087614"
+   },
+   // 26k+ more restaurants...
+]
+```
+
+## Firebase
+In order to make the app load even faster, I followed [this guide](https://medium.freecodecamp.org/react-and-firebase-are-all-you-need-to-host-your-web-apps-f7ab55919f53) to take advantage of Google Cloud Firebase's free static hosting. This removes the need for Heroku completely, and Firebase static hosting doesn't require any spinning up.
 
 ## Final notes
 
-Now the app runs faster because the React frontend can spin up and immediately get the restauraunts from the Google Cloud Storage bucket.
+Now the app runs faster because the React frontend loads from Firebase immediately, and quickly fetches the restauraunt list from Google Cloud Storage.
 
-Google Cloud Storage + Filth Finder = friends forever (or at least until something better comes along!).
+Google Cloud + Filth Finder = friends forever (or at least until something better comes along!).
 
 <a href="/img/friends.svg"><img src="/img/friends.svg" alt="drawing of cat and shiba hugging" class="friends" /></a>
