@@ -2,7 +2,7 @@
 layout: post
 title: "Making Filth Finder Faster with Google Cloud"
 date: 2019-5-21 00:09:15 -0500
-permalink: making_filth_finder_faster
+permalink: making-filth-finder-faster
 ---
 
 I've written a bit about Filth Finder, an app that surfaces health inspections from NYC restaurants near you. Most recently, I [wrote](https://codehannah.nyc/nyc_geo_client_api) about the API that served the restaurants to the frontend. While this implementation worked, it was pretty slow to load. In an effort to speed up the loading time, I [rewrote the backend](https://github.com/hcarnes/filth_finder/commit/40ea0759ae863bd5b6b020c28b671b92275cdcbf) to pull the of index restaurants from Google Cloud Storage. Check out how much faster it [loads](https://filth-finder.codehannah.nyc/).
