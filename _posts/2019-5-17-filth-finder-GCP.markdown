@@ -56,4 +56,8 @@ Now the app runs faster because the React frontend loads from Firebase immediate
 
 Google Cloud + Filth Finder = friends forever (or at least until something better comes along!).
 
-<a href="/img/friends.svg"><img src="/img/friends.svg" alt="drawing of cat and shiba hugging" class="friends" /></a>
+<div class="friends">
+  <a href="/img/friends.svg">
+    <img src="/img/friends.svg" alt="drawing of cat and shiba hugging"/>
+  </a>
+</div>

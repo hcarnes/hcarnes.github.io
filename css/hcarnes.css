@@ -75,5 +75,9 @@ div .tech {
 }
 
 .friends {
-  height: 350px;
+  text-align: center;
+}
+
+.friends > img {
+  display: inline;
 }
