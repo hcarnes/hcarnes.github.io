@@ -21,7 +21,7 @@ With the help of the [Google Cloud Storage: Node.js Client](https://www.npmjs.co
 
 > According to Wikipedia, the haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes.
 
-I also updated the [Establishment model](https://github.com/hcarnes/filth_finder/blob/40ea0759ae863bd5b6b020c28b671b92275cdcbf/src/models/Establishment.js#L13) to fetch data from the newly created Google Cloud Storage bucket instead of the old backend. The [haversine library](https://www.npmjs.com/package/haversine) allows the Establishment model to calculate the distance between the user (the latitude and longitude is passed in the through the params) and each of the nearly 27,000 restaurants. The restaurants are then returned in ascending according to the distance between the user and the restaurants, then limited to 20 total results to keep the frontend zippy. The JSON file is really simple, and looks something like this:
+I also updated the [Establishment model](https://github.com/hcarnes/filth_finder/blob/40ea0759ae863bd5b6b020c28b671b92275cdcbf/src/models/Establishment.js#L13) to fetch data from the newly created Google Cloud Storage bucket instead of the old backend. The [haversine library](https://www.npmjs.com/package/haversine) allows the Establishment model to calculate the distance between the user (the latitude and longitude is passed in the through the params) and each of the nearly 27,000 restaurants. The restaurants are then returned in ascending order according to the distance between the user and the restaurants, then limited to 20 total results to keep the frontend zippy. The JSON file is really simple, and looks something like this:
 
 ```javascript
 [
