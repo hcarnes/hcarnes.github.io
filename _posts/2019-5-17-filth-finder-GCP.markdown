@@ -52,7 +52,7 @@ In order to make the app load even faster, I followed [this guide](https://mediu
 
 ## Final notes
 
-Now the app runs faster because the React frontend loads from Firebase immediately, and quickly fetches the restauraunt list from Google Cloud Storage.
+Now the app runs faster because the React frontend loads from Firebase immediately, and quickly fetches the restaurant list from Google Cloud Storage.
 
 Google Cloud + Filth Finder = friends forever (or at least until something better comes along!).
 
