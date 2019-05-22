@@ -7,7 +7,7 @@ permalink: making-filth-finder-faster
 
 I've written a bit about Filth Finder, an app that surfaces health inspections from NYC restaurants near you. Most recently, I [wrote](https://codehannah.nyc/nyc_geo_client_api) about the API that served the restaurants to the frontend. While this implementation worked, it was pretty slow to load. In an effort to speed up the loading time, I [rewrote the backend](https://github.com/hcarnes/filth_finder/commit/40ea0759ae863bd5b6b020c28b671b92275cdcbf) to pull the of index restaurants from Google Cloud Storage. Check out how much faster it [loads](https://filth-finder.codehannah.nyc/).
 
-> If you're interesed, here is another [post](https://codehannah.nyc/filth_finder_react_hooks) about rewriting Filth Finder with React Hooks.
+> If you're interested, here is another [post](https://codehannah.nyc/filth_finder_react_hooks) about rewriting Filth Finder with React Hooks.
 
 ## Why was it slow?
 
