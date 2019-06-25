@@ -152,11 +152,11 @@ LIMIT 1
 </table>
 
 # JavaScript's reduce method
-What if you're working in JavaScript and have an array of objects you need to group by a particular property? Well, let's extend the example above by assuming we have an array of city objects, and each object has the property of `name` and `state`. JavaScript's `reduce` method is one way to approach the problem.
+What if you're working in JavaScript and have an array of objects you need to group by a particular property? Well, let's extend the example above by assuming we have an array of location objects, and each object has the property of `name` and `city` and `state`. JavaScript's `reduce` method is one way to approach the problem.
 
 > According to the the MDN documentation, "the reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
-You can write a function that takes 2 parameters: the array of objects and the property that you would like to group the object by. The property will represent the "bucket" that you put your cities in based on their state. 
+You can write a function that takes 2 parameters: the array of objects and the properties that you would like to group the object by. The properties will represent the "bucket" that you put your `locations` in based on their state. 
 
 
 The reduce method below takes the following arguments:
@@ -167,44 +167,77 @@ The reduce method below takes the following arguments:
 * **initialValue** - The initial value of the accumulator will be equal to this argument. Below, the `initialValue` is `{}`. 
 
 ```javascript
-const cities = [
-  { name: 'San Antonio', state: 'TX' },
-  { name: 'Atlanta', state: 'GA' },
-  { name: 'Austin', state: 'TX' },
-  { name: 'New York City', state: 'NY' },
-  { name: 'Houston', state: 'TX' },
+const locations = [
+  { name: "Hannah", city: 'San Antonio', state: 'TX' },
+  { name: "Hannah",  city: 'Atlanta', state: 'GA' },
+  { name: "Adam",  city: 'Austin', state: 'TX' },
+  { name: "Preston", city: 'New York City', state: 'NY' },
+  { name: "Hannah", city: 'Houston', state: 'TX' },
 ];
 
-const groupBy = (objectArray, property) => {
-  return objectArray.reduce((accumulator, object) => {
-    const key = object[property];
+const groupBy = (objectArray, ...properties) => {
+  return [...Object.values(objectArray.reduce((accumulator, object) => {
+    const key = JSON.stringify(properties.flatMap((x) => object[x] || null));
+
     if (!accumulator[key]) {
       accumulator[key] = [];
     }
     accumulator[key].push(object);
     return accumulator;
-  }, {});
+  }, {}))];
 }
 
-const groupedCities = groupBy(cities, 'state');
+const groupedLocations = groupBy(locations, 'state');
 
-// groupedCities is:
-// { 
-//   TX: [
-//     { name: 'San Antonio', state: TX }, 
-//     { name: 'Austin', state: 'TX' },
-//     { name: 'Houston', state: 'TX' }
-//   ], 
-//   NY: [{ name: 'New York City', state: 'NY' }] ,
-//   GA: [{ name: 'Atlanta', state: 'GA' }] 
-// }
+groupedLocations
+```
+
+`groupedLocations` looks like:
+
+```javascript
+[
+  [
+    { name: 'Hannah', city: 'San Antonio', state: TX },
+    { name: 'Adam', city: 'Austin', state: 'TX' },
+    { name: 'Hannah', city: 'Houston', state: 'TX' }],
+  [
+    { name: 'Hannah', city: 'Atlanta', state: 'GA' }],
+  [ { name: 'Preston', city: 'New York City', state: 'NY' }
+  ]
+]
 ```
 
 The callback steps include the following:
 
-* Determine the city object's state property, and store that in the `key` variable.
-* If the accumulator doesn't have a matching `key` value/bucket for the current city, create a new bucket
-* Put the city object in a bucket/key value based on its state
+* Determine the city object's properties, and store that in the `key` variable.
+* If the accumulator doesn't have a matching `key` value/bucket for the current object, create a new bucket
+* Put the object in a bucket/key value based on its state
+
+You could also group by more than one property, just like you can using `GROUP BY` in PostgreSQL:
+
+```javascript
+const groupedLocations = groupBy(locations, 'name', 'state');
+```
+
+In this case, `groupedLocations` returns:
+
+```javascript
+[
+  [
+    { name: "Hannah", city: "San Antonio", state: "TX" },
+    { name: 'Hannah', city: 'Houston', state: 'TX' }
+  ],
+  [
+    { name: "Hannah", city: "Atlanta", state: "GA" }
+  ],
+  [
+    { name: "Adam",  city: 'Austin', state: 'TX' }
+  ],
+  [
+    { name: 'Preston', city: 'New York City', state: 'NY' }
+  ]
+]
+```
 
 *Source: [MDN: Reduce: Grouping objects by property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Grouping_objects_by_a_property)*
 
@@ -213,12 +246,10 @@ After you reduce data to buckets of information with key value stores, you can m
 
 
 ```javascript
-const groupedCities = groupBy(cities, 'state');
+const groupedCities = groupBy(cities, ['state']);
 
-// create an array of array with the key values
-let arr = Object.values(groupedCities)
 // sort by length of array
-let sortedArr = arr.sort((a, b) => b.length - a.length);
+let sortedArr = groupedCities.sort((a, b) => b.length - a.length);
 // get the state of the first array, which would have the greatest length
 sortedArr[0][0]['state'];
 
