@@ -246,7 +246,7 @@ After you reduce data to buckets of information with key value stores, you can m
 
 
 ```javascript
-const groupedCities = groupBy(cities, ['state']);
+const groupedCities = groupBy(cities, 'state');
 
 // sort by length of array
 let sortedArr = groupedCities.sort((a, b) => b.length - a.length);
