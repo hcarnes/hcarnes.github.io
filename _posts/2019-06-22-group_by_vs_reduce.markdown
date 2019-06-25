@@ -83,9 +83,7 @@ Below is a visual representation of the result of the query. You can see that `G
 
 # Getting insights from the data
 
-The `GROUP BY` clause sets you up to answer questions about your data. Once you have have the data in buckets/group, you can determine things like "How many cities are in each state?" and "Which state has the most cities".
-
-Below lists some of the aggregate functions that you can use to answer these questions (*Source: [PostgreSQL Documentation](http://www.postgresqltutorial.com/postgresql-aggregate-functions/)*).
+Aggregate functions operate on the groups created by `GROUP BY` to help you answer interesting questions about your data. Below lists some of the aggregate functions: (*Source: [PostgreSQL Documentation](http://www.postgresqltutorial.com/postgresql-aggregate-functions/)*).
 
 * AVG() – return the average value.
 * COUNT() – return the number of values.
@@ -93,7 +91,7 @@ Below lists some of the aggregate functions that you can use to answer these que
 * MIN() – return the minimum value.
 * SUM() – return the sum of all or distinct values.
 
-Let's answer some questions using PostgreSQL queries!
+Let's answer some questions about our data using `GROUP BY` and aggregate functions!
 
 *How many cities are in each state?*
 
