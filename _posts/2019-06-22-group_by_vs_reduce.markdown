@@ -166,7 +166,7 @@ The reduce method below takes the following arguments:
 * **accumulator** - This stores the return values created each time the callback function is invoked. This is returned when the method is complete (assuming the array passed in is not empty, in which case the initial value is returned).
 * **object** - This is the current object being manipulated in the array.
 * **callback** - This is the function you want to execute on each object in the array.
-* **initial value** -  This is the value returned in the case the array passed in is empty. If the array is empty and doesn't have an initial value, you will get a type error.
+* **initialValue** - The initial value of the accumulator will be equal to this argument. Below, the `initialValue` is `{}`. 
 
 ```javascript
 const cities = [
