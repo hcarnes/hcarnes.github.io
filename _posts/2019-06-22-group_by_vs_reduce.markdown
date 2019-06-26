@@ -5,7 +5,7 @@ date: 2019-6-25 00:01:15 -0500
 permalink:  group_by_reduce
 ---
 
-This post explores how PostreSQL's `GROUP BY` clause and JavaScript's `reduce` method both have the ability to help you group objects/rows of data based on properties. I'm assuming you are already familiar with both `GROUP BY` and `reduce`, and that you are also (mildly) interested in gaining a deeper understanding of each.
+This post explores how PostgreSQL's `GROUP BY` clause and JavaScript's `reduce` method both have the ability to help you group objects/rows of data based on properties. I'm assuming you are already familiar with both `GROUP BY` and `reduce`, and that you are also (mildly) interested in gaining a deeper understanding of each.
 
 # PostgreSQL's GROUP BY clause
 
