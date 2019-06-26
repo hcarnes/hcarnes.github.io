@@ -220,6 +220,26 @@ The callback steps include the following:
 * If the accumulator doesn't have an existing group for the values in `key`, create a new group
 * Put the object in the group
 
+*Source: [MDN: Reduce: Grouping objects by property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Grouping_objects_by_a_property)*
+
+# Getting insights from the data
+After you reduce data to buckets of information with key value stores, you can map the same data to answer interesting questions, like the question we answered above: *"Which state has the most cities?"*.
+
+
+```javascript
+const groupedCities = groupBy(cities, 'state');
+
+// sort by length of array
+let sortedArr = groupedCities.sort((a, b) => b.length - a.length);
+// get the state of the first array, which would have the greatest length
+sortedArr[0][0]['state'];
+
+// returns:
+// "TX"
+```
+
+# Multiple properties
+
 This function also supports grouping by multiple properties, so it works like `GROUP BY` in SQL:
 
 ```javascript
@@ -264,29 +284,16 @@ returning:
   { location: 'New York City, NY', numberOfStaff: 1 },
 ]
 ```
+# JSON.stringify‽‽‽
 
-*Source: [MDN: Reduce: Grouping objects by property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Grouping_objects_by_a_property)*
-
-# Getting insights from the data
-After you reduce data to buckets of information with key value stores, you can map the same data to answer interesting questions, like the question we answered above: *"Which state has the most cities?"*.
-
-
-```javascript
-const groupedCities = groupBy(cities, 'state');
-
-// sort by length of array
-let sortedArr = groupedCities.sort((a, b) => b.length - a.length);
-// get the state of the first array, which would have the greatest length
-sortedArr[0][0]['state'];
-
-// returns:
-// "TX"
+```js
+const key = JSON.stringify(properties.flatMap((x) => object[x] || null));
 ```
 
-The steps above mirror the SQL used to answer the same question. Both `GROUP BY` and `reduce` can set up you up to answer questions about your data. And that's pretty cool.
-
+When reading through the `groupBy` method, did you notice that the `key` was JSON? In order to ensure that multiple grouping properties can be passed into the function (`state`, `name`, or `city`), `key` had to be an array of the corresponding values. In JavaScript, `Object`s can only use strings and symbols as keys. Transforming the group (`key`) to JSON allows us to cheat JavaScript's lack of deep structural equality by using simple JSON string comparison. When the values in the group convert to the same JSON, they'll be considered part of the same group. While this probably hurts performance, it's the most succinct way I've found with vanilla JavaScript to use arrays as keys.
+ 
 <div class="friends">
   <a href="/img/cool.svg">
-    <img src="/img/cool.svg" alt="a cat saying 'cool" width="500px"/>
+    <img src="/img/cool.svg" alt="a cat saying 'cool'" width="500px"/>
   </a>
 </div>
