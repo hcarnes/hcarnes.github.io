@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "SQL's Group By & JavaScript's Reduce"
-date:       2019-6-24 00:01:15 -0500
+title: "SQL's Group By & JavaScript's Reduce"
+date: 2019-6-25 00:01:15 -0500
 permalink:  group_by_reduce
 ---
 
@@ -152,11 +152,11 @@ LIMIT 1
 </table>
 
 # JavaScript's reduce method
-What if you're working in JavaScript and have an array of objects you need to group by a particular property? Well, let's extend the example above by assuming we have an array of location objects, and each object has the property of `name` and `city` and `state`. JavaScript's `reduce` method is one way to approach the problem.
+What if you're working in JavaScript and have an array of objects you need to group by a particular property? Well, let's extend the example above by assuming we have an array of staff location objects, and each object has the property of `name` and `city` and `state`. JavaScript's `reduce` method is one way to approach the problem.
 
 > According to the the MDN documentation, "the reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
-You can write a function that takes 2 parameters: the array of objects and the properties that you would like to group the object by. The properties will represent the "bucket" that you put your `locations` in based on their state. 
+You can write a function that takes 2 parameters: the array of objects and the properties that you would like to group the object by. The properties will represent the "bucket" that you put your `staffLocations` in based on their state. 
 
 
 The reduce method below takes the following arguments:
@@ -164,15 +164,17 @@ The reduce method below takes the following arguments:
 * **accumulator** - This stores the return values created each time the callback function is invoked. This is returned when the method is complete (assuming the array passed in is not empty, in which case the initial value is returned).
 * **object** - This is the current object being manipulated in the array.
 * **callback** - This is the function you want to execute on each object in the array.
-* **initialValue** - The initial value of the accumulator will be equal to this argument. Below, the `initialValue` is `{}`. 
+* **initialValue** - The first time the reducer function runs, this will be the accumulator value. Below, the `initialValue` is `{}`. 
 
 ```javascript
-const locations = [
-  { name: "Hannah", city: 'San Antonio', state: 'TX' },
-  { name: "Hannah",  city: 'Atlanta', state: 'GA' },
+const staffLocations = [
+  { name: "Hannah", city: 'Houston', state: 'GA' },
+  { name: "Ilhan",  city: 'Atlanta', state: 'GA' },
+  { name: "Preet",  city: 'Houston', state: 'TX' },
   { name: "Adam",  city: 'Austin', state: 'TX' },
   { name: "Preston", city: 'New York City', state: 'NY' },
-  { name: "Hannah", city: 'Houston', state: 'TX' },
+  { name: "Anna", city: 'Houston', state: 'TX' },
+  { name: "Jakub",  city: 'Atlanta', state: 'GA' },
 ];
 
 const groupBy = (objectArray, ...properties) => {
@@ -187,55 +189,79 @@ const groupBy = (objectArray, ...properties) => {
   }, {}))];
 }
 
-const groupedLocations = groupBy(locations, 'state');
+const groupedStaffLocations = groupBy(staffLocations, 'state');
 
-groupedLocations
+groupedStaffLocations
 ```
 
-`groupedLocations` looks like:
+`groupedStaffLocations` looks like:
 
 ```javascript
 [
   [
-    { name: 'Hannah', city: 'San Antonio', state: TX },
-    { name: 'Adam', city: 'Austin', state: 'TX' },
-    { name: 'Hannah', city: 'Houston', state: 'TX' }],
+    { name: "Preet", city: "Houston", state: "TX" },
+    { name: "Adam", city: "Austin", state: "TX" },
+    { name: "Anna", city: "Houston", state: "TX" },
+  ],
   [
-    { name: 'Hannah', city: 'Atlanta', state: 'GA' }],
-  [ { name: 'Preston', city: 'New York City', state: 'NY' }
+    { name: "Hannah", city: "Houston", state: "GA" },
+    { name: "Ilhan", city: "Atlanta", state: "GA" },
+    { name: "Jakub", city: "Atlanta", state: "GA" },
+  ],
+  [
+    { name: "Preston", city: "New York City", state: "NY" },
   ]
 ]
 ```
 
 The callback steps include the following:
 
-* Determine the city object's properties, and store that in the `key` variable.
-* If the accumulator doesn't have a matching `key` value/bucket for the current object, create a new bucket
-* Put the object in a bucket/key value based on its state
+* Read the values of the grouping properties, and store them in `key`. This symbolizes the group
+* If the accumulator doesn't have an existing group for the values in `key`, create a new group
+* Put the object in the group
 
-You could also group by more than one property, just like you can using `GROUP BY` in PostgreSQL:
+This function also supports grouping by multiple properties, so it works like `GROUP BY` in SQL:
 
 ```javascript
-const groupedLocations = groupBy(locations, 'name', 'state');
+const cityGroupedStaffLocations = groupBy(staffLocations, 'state', 'city');
 ```
 
-In this case, `groupedLocations` returns:
+In this case, `cityGroupedStaffLocations` returns groups representing staff that live in the same city:
 
 ```javascript
 [
   [
-    { name: "Hannah", city: "San Antonio", state: "TX" },
-    { name: 'Hannah', city: 'Houston', state: 'TX' }
+    { name: 'Hannah', city: 'Houston', state: 'GA' },
   ],
   [
-    { name: "Hannah", city: "Atlanta", state: "GA" }
+    { name: 'Ilhan', city: 'Atlanta', state: 'GA' },
+    { name: 'Jakub', city: 'Atlanta', state: 'GA' },
   ],
   [
-    { name: "Adam",  city: 'Austin', state: 'TX' }
+    { name: 'Preet', city: 'Houston', state: 'TX' },
+    { name: 'Anna', city: 'Houston', state: 'TX' },
   ],
   [
-    { name: 'Preston', city: 'New York City', state: 'NY' }
+    { name: 'Adam', city: 'Austin', state: 'TX' },
+  ],
+  [
+    { name: 'Preston', city: 'New York City', state: 'NY' },
   ]
+]
+```
+
+This can be easily paired up with `map` to get the number of staff in each city:
+```js
+cityGroupedStaffLocations.map(cityStaff => ({location: `${cityStaff[0].city}, ${cityStaff[0].state}`, numberOfStaff: cityStaff.length}))
+```
+returning:
+```js
+[
+  { location: 'Houston, GA', numberOfStaff: 1 },
+  { location: 'Atlanta, GA', numberOfStaff: 2 },
+  { location: 'Houston, TX', numberOfStaff: 2 },
+  { location: 'Austin, TX', numberOfStaff: 1 },
+  { location: 'New York City, NY', numberOfStaff: 1 },
 ]
 ```
 
