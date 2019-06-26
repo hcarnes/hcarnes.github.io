@@ -178,7 +178,7 @@ const staffLocations = [
 
 const groupBy = (objectArray, ...properties) => {
   return [...Object.values(objectArray.reduce((accumulator, object) => {
-    const key = JSON.stringify(properties.flatMap((x) => object[x] || null));
+    const key = JSON.stringify(properties.map((x) => object[x] || null));
 
     if (!accumulator[key]) {
       accumulator[key] = [];
