@@ -291,6 +291,9 @@ const key = JSON.stringify(properties.flatMap((x) => object[x] || null));
 ```
 
 When reading through the `groupBy` method, did you notice that the `key` was JSON? In order to ensure that multiple grouping properties can be passed into the function (`state`, `name`, or `city`), `key` had to be an array of the corresponding values. In JavaScript, `Object`s can only use strings and symbols as keys. Transforming the group (`key`) to JSON allows us to cheat JavaScript's lack of deep structural equality by using simple JSON string comparison. When the values in the group convert to the same JSON, they'll be considered part of the same group. While this probably hurts performance, it's the most succinct way I've found with vanilla JavaScript to use arrays as keys.
+
+# In conclusion
+Both GROUP BY and reduce can set up you up to answer questions about your data by allowing you to group objects/rows. And that’s pretty cool.
  
 <div class="friends">
   <a href="/img/cool.svg">
