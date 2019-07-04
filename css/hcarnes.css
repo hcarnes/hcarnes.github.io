@@ -81,3 +81,10 @@ div .tech {
 .friends > img {
   display: inline;
 }
+
+hr.row-bottom {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
